@@ -122,10 +122,6 @@ if __name__ == "__main__":
         export_asgi_app = True
     )
     
-    app.openapi_url = None
-    app.docs_url = None
-    app.redoc_url = None
-    
     add_routes(app)
     
     uvicorn.run(
