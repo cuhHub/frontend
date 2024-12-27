@@ -30,6 +30,7 @@ import config
 
 # // Main
 async def main(page: flet.Page):
+    page.title = "cuhHub"
     page.bgcolor = flet.Colors.WHITE
     page.vertical_alignment = flet.MainAxisAlignment.CENTER
     page.horizontal_alignment = flet.CrossAxisAlignment.CENTER
