@@ -1,0 +1,14 @@
+# python cache
+__pycache__
+
+# data
+data
+
+# configs
+.vscode
+config.toml
+# ^ see `example_config.toml`
+
+# https
+cert.pem
+key.pem

@@ -1,0 +1,4 @@
+aiofiles==24.1.0
+flet==0.25.2
+toml==0.10.2
+uvicorn==0.34.0
