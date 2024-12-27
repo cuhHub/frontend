@@ -1,6 +1,10 @@
 [environment]
 mode = "dev" # "dev", "prod"
 
+[site]
+name = "cuhHub" # the name of the site (shown in site title and meta tags)
+description = "The official website for cuhHub, a community hosting numerous servers for Stormworks: Build and Rescue." # the description of the site (shown in meta tags)
+
 [data] # relative to cwd
 upload_dir = "../data/uploads"
 

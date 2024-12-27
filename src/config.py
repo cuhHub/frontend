@@ -28,6 +28,9 @@ with open("../config.toml", "r") as file:
 
 MODE: str = config["environment"]["mode"]
 
+SITE_NAME: str = config["site"]["name"]
+SITE_DESCRIPTION: str = config["site"]["description"]
+
 UPLOAD_DIR: str = config["data"]["upload_dir"]
 
 if MODE == "dev":
