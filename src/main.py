@@ -38,7 +38,7 @@ def _get_fastapi_web_app(session_handler, page_name: str, assets_dir: str, uploa
     Replacement for `flet_web.fastapi.serve_fastapi_web_app.get_fastapi_web_app`.
 
     Args:
-        session_handler (_type_): The session handler
+        session_handler: The session handler
         page_name (str): The page name
         assets_dir (str): The assets directory
         upload_dir (str): The upload directory
