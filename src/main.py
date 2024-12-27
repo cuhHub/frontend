@@ -22,10 +22,10 @@ limitations under the License.
 # // Imports
 import flet
 import flet_web.fastapi
-from flet.utils.pip import ensure_flet_web_package_installed
 from typing import Optional
 from flet_web.fastapi import serve_fastapi_web_app, FastAPI # import get_fastapi_web_app
 import uvicorn
+from routes import add_routes
 
 from libs.color import rgb
 import controls
@@ -116,13 +116,17 @@ async def main(page: flet.Page):
     )
 
 if __name__ == "__main__":
-    ensure_flet_web_package_installed()
-    
     app = flet.app(
         target = main,
         assets_dir = "assets",
         export_asgi_app = True
-    )   
+    )
+    
+    app.openapi_url = None
+    app.docs_url = None
+    app.redoc_url = None
+    
+    add_routes(app)
     
     uvicorn.run(
         app = app,
