@@ -4,7 +4,7 @@ cuhHub: A community hosting numerous servers for Stormworks: Build and Rescue
 https://github.com/cuhHub/frontend
 ----------------------------------------------
 
-Copyright (C) 2024 cuhHub
+Copyright (C) 2025 cuhHub
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
