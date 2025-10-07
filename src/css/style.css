@@ -87,6 +87,7 @@ button:hover {
 }
 
 .icon {
+    filter: var(--shadow);
     aspect-ratio: 1;
 }
 
