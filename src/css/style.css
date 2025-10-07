@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --text-color: #212121;
+    --clickable-text-color: #1b85cc;
+    --bg-color: #eaeaea;
+    --bg-alt-color: #fcfcfc;
+    --warning-bg-color: #eb6e34;
+    --button-color: #27ACFF;
+    --button-alt-color: #63d6a4;
+    --shadow-color: rgba(38, 38, 38, 0.6);
+    --shadow: drop-shadow(var(--shadow-color) 0px 3px 4px);
+    
+    --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+
+    --header-height: 35px;
+
+    --bg-offset: 100px; /* prevents faded white border from bg blur */
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    margin: 15px;
+    flex: auto;
+    flex-direction: row;
+    display: flex;
+    gap: 15px;
+}
+
+header {
+    background-color: var(--bg-color);
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: calc(var(--header-height) * 1.5);
+    filter: var(--shadow);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--bg-alt-color);
+    padding: 5px 10px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    font-family: var(--primary-font);
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    filter: var(--shadow);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+button:hover {
+    animation-name: button-hover;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-hover {
+    0% {
+        background-color: var(--button-color);
+    }
+
+    100% {
+        background-color: var(--button-alt-color);
+    }
+}
+
+.icon {
+    aspect-ratio: 1;
+}
+
+.background {
+    position: fixed;
+    top: calc(0px - (var(--bg-offset) / 2));
+    left: calc(0px - (var(--bg-offset) / 2));
+    width: calc(100% + var(--bg-offset));
+    height: calc(100% + var(--bg-offset));
+    background: url("../images/game-screenshots/25.png") center / cover no-repeat;
+    z-index: -1;
+    filter: blur(1.5rem) brightness(1.1) brightness(0.4);
+}
+
+.text, p, h1, h2, h3, h4, h5, h6, a, li, button {
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    margin: 0px;
+}
+
+a {
+    color: var(--clickable-text-color)
+}
+
+.header-icon {
+    height: var(--header-height);
+    width: var(--header-height);
+    filter: var(--shadow);
+}
+
+.header-text {
+    font-size: var(--header-height);
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-item {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    box-shadow: inset 0px -2px 0px var(--drop-shadow-color);
+    filter: var(--shadow);
+}
+
+.navbar-item:hover {
+    animation-name: button-hover;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.server-card {
+    background-color: var(--bg-alt-color);
+    border-radius: 10px;
+    filter: var(--shadow);
+    max-width: 300px;
+    padding: 5px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;;
+}
+
+.server-card-title {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.server-card-title img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: blur(4px);
+}
+
+.server-card-title p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white; /* change for contrast */
+    font-weight: 700;
+    font-size: 20px;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.server-card-description {
+    margin-bottom: 7px;
+}
+
+.server-card-players {
+    font-size: 12px;
+    font-weight: 450;
+    margin-top: 0px;
+}
+
+.server-card-players-number {
+    font-weight: 700;
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    border-radius: 15px;
+    padding: 2px 5px;
+}
+
+.server-card-button {
+    display: block;
+    margin: 10px auto;
+    margin-top: auto;
+    transform: translateY(-10px);
+}
+
+.banner {
+    background-color: var(--warning-bg-color);
+    width: 95%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 50px;
+    filter: var(--shadow);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-right {
+    padding: 0 25px;
+    margin-left: auto;
+}
