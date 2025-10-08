@@ -23,4 +23,4 @@ server {
 Ensure required ports are forwarded and allowed through firewall.
 
 ## ✨ Credit
-- [**Cuh4**](https://github.com/Cuh4) - Main Developerv
+- [**Cuh4**](https://github.com/Cuh4) - Main Developer
