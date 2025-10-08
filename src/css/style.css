@@ -5,7 +5,6 @@
     --clickable-text-color: #1b85cc;
     --bg-color: #eaeaea;
     --bg-alt-color: #fcfcfc;
-    --warning-bg-color: #eb6e34;
     --button-color: #27ACFF;
     --button-alt-color: #63d6a4;
     --shadow-color: rgba(38, 38, 38, 0.6);
@@ -212,9 +211,11 @@ a {
     transform: translateY(-10px);
 }
 
-.banner {
-    background-color: var(--warning-bg-color);
-    width: 95%;
+.under-construction-banner {
+    background-image: url("../images/other/under-construction.webp");
+    background-size: contain;
+    background-repeat: repeat-x;
+    padding: 0px 150px;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -227,6 +228,13 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.under-construction-banner > * {
+    background-color: var(--bg-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    filter: var(--shadow);
 }
 
 .footer-right {
