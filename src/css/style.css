@@ -215,8 +215,7 @@ a {
     background-image: url("../images/other/under-construction.webp");
     background-size: contain;
     background-repeat: repeat-x;
-    padding: 0px 150px;
-    height: 100px;
+    padding: 25px 150px;
     display: flex;
     justify-content: center;
     align-items: center;
