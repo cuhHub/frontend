@@ -39,8 +39,8 @@ Full terms governed by the laws of England and Wales.
     --negative-button-color-hover: hsl(0, 98%, 86%);
 
     --shadow-color: hsla(0, 0%, 0%, 0.5);
-    --shadow-down: drop-shadow(var(--shadow-color) 0px 2px 4px);
-    --shadow-up: drop-shadow(var(--shadow-color) 0px -2px 4px);
+    --shadow-down: drop-shadow(var(--shadow-color) 0px 2px 1px);
+    --shadow-up: drop-shadow(var(--shadow-color) 0px -2px 1px);
 
     --primary-font: "Montserrat", sans-serif;
     --secondary-font: "Roboto", sans-serif;
