@@ -1,3 +1,23 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2025 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -5,7 +25,6 @@
     --clickable-text-color: #1b85cc;
     --bg-color: #eaeaea;
     --bg-alt-color: #fcfcfc;
-    --warning-bg-color: #eb6e34;
     --button-color: #27ACFF;
     --button-alt-color: #63d6a4;
     --shadow-color: rgba(38, 38, 38, 0.6);
@@ -212,10 +231,11 @@ a {
     transform: translateY(-10px);
 }
 
-.banner {
-    background-color: var(--warning-bg-color);
-    width: 95%;
-    height: 100px;
+.under-construction-banner {
+    background-image: url("../images/other/under-construction.webp");
+    background-size: contain;
+    background-repeat: repeat-x;
+    padding: 25px 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,6 +247,13 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.under-construction-banner > * {
+    background-color: var(--bg-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    filter: var(--shadow);
 }
 
 .footer-right {
