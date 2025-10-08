@@ -22,16 +22,17 @@ Full terms governed by the laws of England and Wales.
 
 /* only light theme for now */
 :root {
-    --bg-color-dark: hsl(197, 5%, 75%);
+    --bg-color-dark: hsl(197, 5%, 80%);
     --bg-color: hsl(197, 5%, 85%);
-    --bg-color-light: hsl(0, 5%, 95%);
+    --bg-color-light: hsl(0, 5%, 100%);
+    --bg-gradient: linear-gradient(-45deg, var(--bg-color-dark), var(--bg-color-light));
 
     --text-color: hsl(240, 4%, 5%);
     --text-color-muted: hsl(240, 4%, 20%);
     --clickable-text-color: hsl(209, 100%, 50%);
 
-    --button-color: hsl(216, 35%, 93%);
-    --button-color-hover: hsl(216, 35%, 100%);
+    --button-color: hsl(216, 15%, 95%);
+    --button-color-hover: hsl(216, 15%, 100%);
     --positive-button-color: hsl(117, 58%, 73%);
     --positive-button-color-hover: hsl(117, 58%, 80%);
     --negative-button-color: hsl(0, 98%, 79%);
@@ -62,7 +63,7 @@ main {
 }
 
 header {
-    background-color: var(--bg-color-light);
+    background: var(--bg-gradient);
     padding: 1px;
     display: flex;
     align-items: center;
@@ -79,7 +80,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--bg-color-dark);
+    background: var(--bg-gradient);
     padding: 5px 10px;
     flex-direction: row;
     display: flex;
@@ -169,18 +170,19 @@ a {
 }
 
 .server-card > * {
-    padding: 2px 5px;
+    padding: 2px 10px;
 }
 
 .server-card {
     overflow: hidden;
-    background-color: var(--bg-color-light);
+    background: var(--bg-gradient);
     border-radius: 10px;
     filter: var(--shadow-down);
     max-width: 300px;
     height: 200px;
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .server-card-title {
@@ -213,10 +215,6 @@ a {
     z-index: 1;
 }
 
-.server-card-description {
-    margin-bottom: 7px;
-}
-
 .server-card-players {
     font-size: 12px;
     font-weight: 450;
@@ -225,8 +223,8 @@ a {
 
 .server-card-players-number {
     font-weight: 700;
-    color: var(--bg-color);
-    background-color: var(--text-color);
+    color: var(--text-color);
+    background-color: var(--bg-color);
     border-radius: 15px;
     padding: 2px 5px;
 }
@@ -257,7 +255,7 @@ a {
 }
 
 .under-construction-banner > * {
-    background-color: var(--bg-color);
+    background: var(--bg-gradient);
     padding: 5px 10px;
     border-radius: 5px;
     filter: var(--shadow-down);
