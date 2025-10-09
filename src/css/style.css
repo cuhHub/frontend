@@ -66,6 +66,9 @@ main {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: var(--bg-gradient);
     padding: 1px;
     display: flex;
@@ -76,11 +79,11 @@ header {
     padding-right: 10px;
     height: calc(var(--header-height) * 1.5);
     filter: var(--shadow-down);
+    z-index: 10;
 }
 
 footer {
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     background: var(--bg-gradient);
@@ -90,6 +93,7 @@ footer {
     align-items: center;
     gap: 15px;
     filter: var(--shadow-up);
+    z-index: 10;
 }
 
 .button {
@@ -128,9 +132,18 @@ footer {
     background-color: var(--negative-button-color-hover);
 }
 
-.icon {
+.icon, .icon-button {
     filter: var(--shadow-down);
     aspect-ratio: 1;
+}
+
+.icon-button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
 }
 
 .background {
