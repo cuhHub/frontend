@@ -30,4 +30,4 @@ Copyright (c) 2025 cuhHub. All rights reserved.
     This License shall be governed by and construed in accordance with the laws of England and Wales. Any disputes arising under or in connection with this License shall be subject to the exclusive jurisdiction of the courts of England and Wales.
 */
 
-function foo(){console.log("temporary");};foo();
+function showVersion(){console.log("Version: 0.1.0");};showVersion();

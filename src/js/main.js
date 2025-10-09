@@ -1,5 +1,5 @@
-function foo() {
-    console.log("temporary");
+function showVersion() {
+    console.log("Version: __VERSION__");
 }
 
-foo();
+showVersion();
