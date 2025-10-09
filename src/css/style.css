@@ -18,7 +18,7 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* only light theme for now */
 :root {
@@ -44,6 +44,7 @@ Full terms governed by the laws of England and Wales.
 
     --primary-font: "Montserrat", sans-serif;
     --secondary-font: "Roboto", sans-serif;
+    --letter-spacing: -0.8px;
 
     --header-height: 35px;
 
@@ -51,6 +52,8 @@ Full terms governed by the laws of England and Wales.
 }
 
 body {
+    font-family: var(--primary-font);
+    letter-spacing: var(--letter-spacing);
     margin: 0px;
 }
 
@@ -91,9 +94,9 @@ footer {
 
 .button {
     text-decoration: none;
-    font-family: var(--primary-font);
     font-size: 18px;
     font-weight: 600;
+    text-align: center;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -106,6 +109,7 @@ footer {
 
 .button:hover {
     background-color: var(--button-color-hover);
+    padding: 5px 15px;
 }
 
 .positive-button {
@@ -142,7 +146,6 @@ footer {
 
 .text, .muted-text, p, h1, h2, h3, h4, h5, h6, a, li, button {
     color: var(--text-color);
-    font-family: var(--primary-font);
     margin: 0px;
 }
 
@@ -151,7 +154,12 @@ footer {
 }
 
 a {
-    color: var(--clickable-text-color)
+    color: var(--clickable-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .header-icon {
