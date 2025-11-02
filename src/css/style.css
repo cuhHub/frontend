@@ -25,11 +25,20 @@ Full terms governed by the laws of England and Wales.
     --bg-color-dark: hsl(197, 5%, 80%);
     --bg-color: hsl(197, 5%, 85%);
     --bg-color-light: hsl(0, 5%, 100%);
-    --bg-gradient: linear-gradient(-45deg, var(--bg-color-dark), var(--bg-color-light));
+    --bg-gradient: linear-gradient(
+        -45deg,
+        color-mix(in srgb, var(--bg-color-dark) 90%, transparent),
+        color-mix(in srgb, var(--bg-color-light) 90%, transparent)
+    );
 
-    --text-color: hsl(240, 4%, 5%);
-    --text-color-muted: hsl(240, 4%, 20%);
-    --clickable-text-color: hsl(209, 100%, 50%);
+    --border-color: hsla(197, 5%, 85%, 50%);
+
+    --body-horizontal-padding: 100px;
+
+    --text-color: hsl(197, 5%, 90%);
+    --text-color-muted: hsl(197, 5%, 70%);
+    --clickable-text-color: hsl(209, 94%, 70%);
+    --clickable-text-color-hover: hsl(209, 94%, 75%);
 
     --button-color: hsl(216, 15%, 95%);
     --button-color-hover: hsl(216, 15%, 100%);
@@ -38,64 +47,114 @@ Full terms governed by the laws of England and Wales.
     --negative-button-color: hsl(0, 98%, 79%);
     --negative-button-color-hover: hsl(0, 98%, 86%);
 
-    --shadow-color: hsla(0, 0%, 0%, 0.5);
-    --shadow-down: drop-shadow(var(--shadow-color) 0px 2px 1px);
-    --shadow-up: drop-shadow(var(--shadow-color) 0px -2px 1px);
-
-    --primary-font: "Montserrat", sans-serif;
+    --primary-font: "Noto Sans", sans-serif;
     --secondary-font: "Roboto", sans-serif;
     --letter-spacing: -0.8px;
-
-    --header-height: 35px;
-
-    --bg-offset: 200px; /* prevents faded white border from bg blur */
 }
 
+/*
+    Body
+*/
 body {
     font-family: var(--primary-font);
     letter-spacing: var(--letter-spacing);
-    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 main {
-    margin: 15px;
-    flex: auto;
-    flex-direction: row;
-    display: flex;
-    gap: 15px;
+    padding: 60px var(--body-horizontal-padding);
 }
 
-header {
+/*
+    Background
+*/
+.background {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background: var(--bg-gradient);
-    padding: 1px;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image {
+    background: url("../images/game-screenshots/11.png") center / cover no-repeat;
+    filter: blur(0.1rem);
+    scale: 1.2; /* to hide border coming from the blur */
+}
+
+.background-shadow {
+    background: linear-gradient(90deg, hsla(0, 0%, 0%, 0.6), hsla(0, 0%, 0%, 0));
+    width: 100%;
+}
+
+/*
+    Header
+*/
+header {
+    width: 100%;
+    padding: 0 var(--body-horizontal-padding);
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: calc(var(--header-height) * 1.5);
-    filter: var(--shadow-down);
-    z-index: 10;
+    height: 80px;
+    border-bottom: 1px solid var(--border-color);
+    box-sizing: border-box;
 }
 
+.navbar {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-button {
+    font-weight: 500;
+    color: var(--button-color);
+    font-size: 20px;
+    text-decoration: none;
+    text-underline-offset: 10px;
+    transition: 0.3s;
+}
+
+.navbar-button:hover {
+    color: var(--button-color-hover);
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    transform: scale(1.1);
+}
+
+/*
+    Footer
+*/
 footer {
     position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
-    background: var(--bg-gradient);
-    padding: 5px 10px;
-    flex-direction: row;
-    display: flex;
+    height: 80px;
     align-items: center;
-    gap: 15px;
-    filter: var(--shadow-up);
-    z-index: 10;
+    padding: 5px var(--body-horizontal-padding);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
+/*
+    Buttons
+*/
 .button {
     text-decoration: none;
     font-size: 18px;
@@ -105,7 +164,6 @@ footer {
     border: none;
     border-radius: 5px;
     background-color: var(--button-color);
-    filter: var(--shadow-down);
     color: var(--text-color);
     cursor: pointer;
     transition: 0.3s;
@@ -132,8 +190,10 @@ footer {
     background-color: var(--negative-button-color-hover);
 }
 
+/*
+    Icons
+*/
 .icon, .icon-button {
-    filter: var(--shadow-down);
     aspect-ratio: 1;
 }
 
@@ -146,143 +206,93 @@ footer {
     transform: scale(1.1);
 }
 
-.background {
-    position: fixed;
-    top: calc(0px - (var(--bg-offset) / 2));
-    left: calc(0px - (var(--bg-offset) / 2));
-    width: calc(100% + var(--bg-offset));
-    height: calc(100% + var(--bg-offset));
-    background: url("../images/game-screenshots/25.png") center / cover no-repeat;
-    z-index: -1;
-    filter: blur(1.5rem) brightness(1.1) brightness(0.4);
-}
-
-.text, .muted-text, p, h1, h2, h3, h4, h5, h6, a, li, button {
+/*
+    Text
+*/
+.text, .muted-text, p, h1, h2, h3, h4, a, li, button {
     color: var(--text-color);
     margin: 0px;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .muted-text {
     color: var(--text-color-muted);
 }
 
+/*
+    Links
+*/
 a {
     color: var(--clickable-text-color);
-    text-decoration: none;
-}
-
-a:hover {
     text-decoration: underline;
+    transition: 0.5s;
+    text-underline-offset: 8px;
 }
 
-.header-icon {
-    height: var(--header-height);
-    width: var(--header-height);
-    filter: var(--shadow-down);
+a:not(.button):not(.icon-button):not(.navbar-button):hover {
+    color: var(--clickable-text-color-hover);
+    cursor: pointer;
+    text-underline-offset: 12px;
+    transform: scale(1.05);
 }
 
-.header-text {
-    font-size: var(--header-height);
-}
-
-.navbar {
+/*
+    Utility
+*/
+.row {
     display: flex;
-    gap: 20px;
-}
-
-.server-card > * {
-    padding: 2px 10px;
-}
-
-.server-card {
-    overflow: hidden;
-    background: var(--bg-gradient);
-    border-radius: 10px;
-    filter: var(--shadow-down);
-    max-width: 300px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.server-card-title {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    overflow: hidden;
-    padding: 0px;
-}
-
-.server-card-title img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: blur(4px);
-}
-
-.server-card-title p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    color: white; /* change for contrast */
-    font-weight: 700;
-    font-size: 20px;
-    text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.server-card-players {
-    font-size: 12px;
-    font-weight: 450;
-    margin-top: 0px;
-}
-
-.server-card-players-number {
-    font-weight: 700;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    border-radius: 15px;
-    padding: 2px 5px;
-}
-
-.server-card-button {
-    margin: 10px auto;
-    margin-top: auto;
-    transform: translateY(-10px);
-}
-
-.under-construction-banner {
-    background-image: url("../images/other/under-construction.webp");
-    background-size: contain;
-    background-repeat: repeat-x;
-    white-space: nowrap;
-    padding: 25px 125px;
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    gap: 25px;
+}
+
+/*
+    Page Content
+*/
+.ingame-images {
+    display: flex;
     flex-direction: column;
-    gap: 5px;
-    border-radius: 50px;
-    filter: var(--shadow-down);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    gap: 20px;
+    padding: 60px 0;
 }
 
-.under-construction-banner > * {
-    background: var(--bg-gradient);
-    padding: 5px 10px;
-    border-radius: 5px;
-    filter: var(--shadow-down);
+.ingame-images img {
+    height: 100px;
+    border: 2px solid var(--border-color);
+    padding: 3px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
 }
 
-.footer-right {
-    padding: 0 25px;
-    margin-left: auto;
+.ingame-images img:hover {
+    transform: scale(1.1);
+    margin: 0 15px;
+}
+
+.main-attention {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
