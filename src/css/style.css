@@ -89,7 +89,7 @@ main {
 }
 
 .background-image {
-    background: url("../images/game-screenshots/13.png") center / cover no-repeat;
+    background: url("../images/game-screenshots/26.png") center / cover no-repeat;
     filter: blur(1rem);
     scale: 1.2; /* to hide border coming from the blur */
 }
