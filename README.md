@@ -7,7 +7,8 @@ This repository contains all of the code for cuhHub's frontend hosted at https:/
 
 ## 💡 Setup
 1) Clone the repo: `git clone https://github.com/cuhHub/frontend` (`git` required)
-2) Setup nginx to serve the site (use `dist` directory, not `src`!).
+2) Build the site via `build.bat` (`pip install -r requirements.txt` first! Requires `Python >=3.13`)
+3) Setup nginx to serve the site (use `dist` directory, not `src`!).
 ```nginx
 server {
     listen 80;
