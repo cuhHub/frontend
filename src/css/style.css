@@ -28,7 +28,7 @@ Full terms governed by the laws of England and Wales.
 
     --border-color: hsla(197, 5%, 85%, 50%);
 
-    --body-horizontal-padding: 100px;
+    --body-horizontal-padding: 200px;
 
     --warning-text-color: hsl(0, 100%, 82%);
     --text-color: hsl(197, 5%, 90%);
@@ -97,6 +97,11 @@ main {
 .background-shadow {
     background: linear-gradient(90deg, hsla(213, 70%, 11%, 1), hsla(0, 0%, 0%, 0.2));
     width: 100%;
+}
+
+.ignore-horizontal-padding {
+    margin: 0 calc(var(--body-horizontal-padding) * -1);
+    padding: 25px var(--body-horizontal-padding);
 }
 
 /*
@@ -323,6 +328,14 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     gap: 50px;
 }
 
+.gap75 {
+    gap: 75px;
+}
+
+.gap100 {
+    gap: 100px;
+}
+
 .left-right {
     display: flex;
     flex-direction: row;
@@ -388,7 +401,12 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
 }
 
 .gamemodes-container {
-    perspective: 1920px
+    perspective: 1920px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px
 }
 
 .gamemode {
@@ -447,5 +465,53 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
 
 .gamemode-description > p {
     font-size: 16px;
-    font-weight: 400
+    font-weight: 400;
+}
+
+.servers-content {
+    background-color: hsla(227, 33%, 35%, 0.4);
+}
+
+.profile-icon {
+    border-radius: 100%;
+    outline: 1px solid var(--border-color);
+}
+
+.reviews-container {
+    perspective: 1200px;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 25px 0;
+    background: 
+        linear-gradient(145deg, hsla(56, 100%, 40%, 0.2), rgba(0, 0, 0, 0))
+        hsl(0, 0%, 78%);
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    outline: 1px solid var(--border-color);
+    outline-offset: 3px;
+    width: 300px;
+    height: 100px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.review:hover {
+    transform: scale(1.05) rotateX(7deg);
+}
+
+.review-content > p {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: hsl(36, 8%, 12%);
+}
+
+.review-name {
+    font-weight: 400;
+    font-size: 15px;
 }
