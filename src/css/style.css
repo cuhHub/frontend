@@ -387,6 +387,10 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     text-underline-offset: 6px;
 }
 
+.gamemodes-container {
+    perspective: 1920px
+}
+
 .gamemode {
     position: relative;
     display: flex;
@@ -397,10 +401,12 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     transition: 0.5s;
     border-radius: 15px;
     overflow: hidden;
+    border: 2px solid var(--border-color);
+    transform-style: preserve-3d;
 }
 
 .gamemode:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotateX(7deg);
 }
 
 .gamemode p {
