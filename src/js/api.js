@@ -26,7 +26,7 @@ export const API = {}
 /**
     The API URL.
 */
-const API_URL = "https://api.cuhhub.com"
+const API_URL = "https://api.cuhhub.com";
 
 /**
     Returns the amount of registered players.
@@ -34,16 +34,16 @@ const API_URL = "https://api.cuhhub.com"
 */
 API.getRegisteredPlayerCount = async function() {
     try {
-        const response = await fetch(API_URL + "/players/count")
+        const response = await fetch(API_URL + "/players/count");
 
         if (!response.ok) {
-            return null
+            return null;
         }
 
-        const data = await response.json()
-        return data.count
+        const data = await response.json();
+        return data.count;
     } catch (error) {
-        console.error(`getRegisteredPlayerCount(): ${error}`)
-        return 0
+        console.error(`getRegisteredPlayerCount(): ${error}`);
+        return 0;
     }
 };

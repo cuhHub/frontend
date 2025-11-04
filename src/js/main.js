@@ -24,12 +24,12 @@ Full terms governed by the laws of England and Wales.
 /**
     Imports
 */
-import { API } from "./api.js"
+import { API } from "./api.js";
 
 /**
     The version of the site.
 */
-const SITE_VERSION = "__VERSION__"
+const SITE_VERSION = "__VERSION__";
 
 async function updatePlayerCount() {
     const playerCount = await API.getRegisteredPlayerCount();
@@ -46,4 +46,4 @@ async function init() {
     await updatePlayerCount();
 }
 
-init()
+init();
