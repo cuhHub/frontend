@@ -113,15 +113,15 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    height: 80px;
-    border-bottom: 1px solid var(--border-color);
+    height: 100px;
     box-sizing: border-box;
 }
 
-.navbar {
+nav {
     display: flex;
+    flex-direction: row;
     gap: 40px;
-    align-items: center;;
+    align-items: center;
 }
 
 .navbar-button {
@@ -137,13 +137,28 @@ header {
     color: var(--button-color-hover);
     text-decoration: underline;
     text-underline-offset: 15px;
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.navbar-support-us {
+    color: hsl(51, 100%, 90%);
+    transition: 0.5s;
+}
+
+.navbar-support-us:hover {
+    filter: drop-shadow(0 0 10px hsla(51, 100%, 79%, 0.4));
 }
 
 .navbar-current {
     color: var(--button-color-hover);
     text-decoration: underline;
     text-underline-offset: 15px;
+}
+
+.navbar-sep {
+    width: 1px;
+    height: 30px;
+    background-color: var(--border-color);
 }
 
 /*
@@ -155,7 +170,6 @@ footer {
     height: 50px;
     align-items: center;
     padding: 5px var(--body-horizontal-padding);
-    border-top: 1px solid var(--border-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -273,6 +287,22 @@ h4 {
     color: var(--warning-text-color);
 }
 
+.centered-text {
+    text-align: center;
+}
+
+.emphasised-text {
+    font-weight: 700;
+    color: var(--text-color-emphasised);
+    transition: 0.3s;
+    text-underline-offset: 5px;
+}
+
+.emphasised-text:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
 /*
     Links
 */
@@ -336,6 +366,14 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     gap: 100px;
 }
 
+.gap125 {
+    gap: 125px;
+}
+
+.gap150 {
+    gap: 150px;
+}
+
 .left-right {
     display: flex;
     flex-direction: row;
@@ -364,6 +402,12 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     background-color: var(--border-color);
 }
 
+.horizontal-separator {
+    width: 1px;
+    align-self: stretch;
+    background-color: var(--border-color);
+}
+
 .ingame-images {
     display: flex;
     flex-direction: column;
@@ -386,18 +430,6 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     transform: scale(1.1);
     margin: 0 15px;
     filter: drop-shadow(0 15px 5px rgba(0, 0, 0, 0.3)) brightness(1.5);
-}
-
-.emphasised-text {
-    font-weight: 700;
-    color: var(--text-color-emphasised);
-    transition: 0.3s;
-    text-underline-offset: 5px;
-}
-
-.emphasised-text:hover {
-    text-decoration: underline;
-    text-underline-offset: 6px;
 }
 
 .gamemodes-container {
@@ -468,10 +500,6 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     font-weight: 400;
 }
 
-.servers-content {
-    background-color: hsla(227, 33%, 35%, 0.4);
-}
-
 .profile-icon {
     border-radius: 100%;
     outline: 1px solid var(--border-color);
@@ -481,13 +509,45 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     perspective: 1200px;
 }
 
+.offering {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 235px;
+    background-color: hsl(219, 38%, 18%);
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.5s;
+    outline: 1px solid var(--border-color);
+    outline-offset: 3px;
+}
+
+.offering:hover {
+    transform: scale(1.05) translateY(15px);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}
+
+.offering-title {
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--text-color-emphasised);
+    text-align: left;
+}
+
+.offering-text {
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+}
+
 .review {
     display: flex;
     flex-direction: row;
     gap: 25px;
     padding: 25px 0;
     background: 
-        linear-gradient(145deg, hsla(56, 100%, 40%, 0.2), rgba(0, 0, 0, 0))
+        linear-gradient(145deg, hsla(56, 100%, 84%, 0.602), rgba(0, 0, 0, 0))
         hsl(0, 0%, 78%);
     border-radius: 10px;
     padding: 10px;
@@ -504,14 +564,43 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     transform: scale(1.05) rotateX(7deg);
 }
 
-.review-content > p {
+.review-text > p {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    color: hsl(36, 8%, 12%);
+    color: hsl(0, 0%, 22%);
 }
 
 .review-name {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 15px;
+}
+
+.border-top {
+    border-top: 1px solid var(--border-color);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/*
+    Sectinos
+*/
+.servers-section {
+    background-color: hsla(227, 33%, 35%, 0.4);
+    align-items: center;
+    padding: 75px 0;
+}
+
+.reviews-section {
+    background-color: hsla(42, 32%, 76%, 0.4);
+    align-items: center;
+    padding: 75px 0;
+}
+
+.offering-section {
+    background-color: hsla(214, 25%, 45%, 0.4);
+    align-items: center;
+    padding: 75px 0;
 }
