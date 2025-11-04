@@ -46,6 +46,9 @@ Full terms governed by the laws of England and Wales.
     --primary-font: "Noto Sans", sans-serif;
     --secondary-font: "Roboto", sans-serif;
     --letter-spacing: -0.8px;
+
+    --gallery-shadow: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+    --ingame-images-shadow: drop-shadow(0 15px 5px rgba(0, 0, 0, 0.3));
 }
 
 /*
@@ -422,13 +425,13 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     object-position: center;
     transition: 0.5s;
     border-radius: 10px;
-    filter: drop-shadow(0 15px 5px rgba(0, 0, 0, 0.3));
+    filter: var(--ingame-images-shadow);
 }
 
 .ingame-images img:hover {
     transform: scale(1.1);
     margin: 0 15px;
-    filter: drop-shadow(0 15px 5px rgba(0, 0, 0, 0.3)) brightness(1.5);
+    filter: var(--ingame-images-shadow) brightness(1.5);
 }
 
 .gamemodes-container {
@@ -512,32 +515,34 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
-    height: 235px;
+    width: 210px;
+    height: 280px;
+    gap: 15px;
     background-color: hsl(219, 38%, 18%);
     border-radius: 10px;
     padding: 15px;
     transition: 0.5s;
     outline: 1px solid var(--border-color);
     outline-offset: 3px;
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.2));
 }
 
 .offering:hover {
     transform: scale(1.05) translateY(15px);
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
 }
 
 .offering-title {
     font-weight: 600;
     font-size: 25px;
     color: var(--text-color-emphasised);
-    text-align: left;
+    text-align: center;
 }
 
 .offering-text {
     font-weight: 400;
-    font-size: 15px;
-    text-align: left;
+    font-size: 18px;
+    text-align: center;
 }
 
 .review {
@@ -590,6 +595,22 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     filter: drop-shadow(0 0 5px hsla(220, 100%, 77%, 0.6));
 }
 
+.gallery-image {
+    border-radius: 10px;
+    outline: 1px solid var(--border-color);
+    outline-offset: 3px;
+    transition: 0.5s;
+    width: 800px;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(1) var(--gallery-shadow);
+}
+
+.gallery-image:hover {
+    filter: brightness(1.2) var(--gallery-shadow);
+    transform: scale(1.05);
+}
+
 /*
     Sections
 */
@@ -607,6 +628,12 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
 
 .offering-section {
     background-color: hsla(214, 25%, 45%, 0.4);
+    align-items: center;
+    padding: 75px 0;
+}
+
+.gallery-section {
+    background-color: hsla(210, 19%, 34%, 0.4);
     align-items: center;
     padding: 75px 0;
 }
