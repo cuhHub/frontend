@@ -583,6 +583,13 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     border-bottom: 1px solid var(--border-color);
 }
 
+.registered-player-count {
+    color: hsl(220, 100%, 77%);
+    font-weight: 600;
+    font-size: 25px;
+    filter: drop-shadow(0 0 5px hsla(220, 100%, 77%, 0.6));
+}
+
 /*
     Sections
 */
