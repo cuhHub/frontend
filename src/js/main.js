@@ -31,6 +31,9 @@ import { API } from "./api.js";
 */
 const SITE_VERSION = "__VERSION__";
 
+/**
+    Updates the player count.
+*/
 async function updatePlayerCount() {
     const playerCount = await API.getRegisteredPlayerCount();
 
