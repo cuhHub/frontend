@@ -12,16 +12,24 @@ This repository contains all of the code for cuhHub's frontend hosted at https:/
 ```nginx
 server {
     listen 80;
-    server_name cuhhub.com;
+    server_name cuhhub.com www.cuhhub.com;
     root /path/to/dist;
+    index index.html;
 
     location / {
-        try_files $uri $uri/ /index.html;
+        try_files $uri $uri/ $uri.html =404;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
     }
 }
 ```
 
 Ensure required ports are forwarded and allowed through firewall.
+
+If developing, use `run.bat` (runs `py run.py`. Use `pip install -r requirements` first) to start a localhost server hosting the website. It will hot-reload with every change to the site's content.
 
 ## ©️ | License
 ```

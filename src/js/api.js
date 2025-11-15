@@ -21,32 +21,29 @@ Full terms governed by the laws of England and Wales.
 // Not familiar with JavaScript. Still learning, so expect bad practices.
 // Will be improved with time! - Cuh4
 
-/**
-    Imports
-*/
-import { API } from "./api.js";
+export const API = {}
 
 /**
-    The version of the site.
+    The API URL.
 */
-const SITE_VERSION = "__VERSION__";
+const API_URL = "https://api.cuhhub.com";
 
 /**
-    Updates the player count.
+    Returns the amount of registered players.
+    @returns {number|null}
 */
-async function updatePlayerCount() {
-    const playerCount = await API.getRegisteredPlayerCount();
+API.getRegisteredPlayerCount = async function() {
+    try {
+        const response = await fetch(API_URL + "/players/count");
 
-    document.querySelectorAll(".registered-player-count").forEach(element => {
-       element.innerText = playerCount;
-    });
-}
+        if (!response.ok) {
+            return null;
+        }
 
-/**
-    Main site code.
-*/
-async function init() {
-    await updatePlayerCount();
-}
-
-init();
+        const data = await response.json();
+        return data.count;
+    } catch (error) {
+        console.error(`getRegisteredPlayerCount(): ${error}`);
+        return 0;
+    }
+};

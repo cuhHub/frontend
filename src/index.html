@@ -26,7 +26,7 @@ Full terms governed by the laws of England and Wales.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta charset="UTF-8"/>
 
-        <script src="js/main.js" defer></script>
+        <script type="module" src="js/main.js" defer></script>
 
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="icon" href="images/icons/logo_transparent.png"/>
@@ -34,14 +34,14 @@ Full terms governed by the laws of England and Wales.
         <link rel="canonical" href="https://cuhhub.com">
         <meta name="robots" content="index, follow">
 
-        <meta property="og:title" content="Home">
+        <meta property="og:title" content="cuhHub">
         <meta property="og:description" content="The website for the gameserver-hosting community cuhHub.">
         <meta property="og:url" content="https://cuhhub.com/">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://cuhhub.com/images/banners/cuhhub.png">
 
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Home">
+        <meta name="twitter:title" content="cuhHub">
         <meta name="twitter:description" content="The website for the gameserver-hosting community cuhHub.">
         <meta name="twitter:image" content="https://cuhhub.com/images/banners/cuhhub.png">
     </head>
@@ -52,62 +52,182 @@ Full terms governed by the laws of England and Wales.
             <div class="background-shadow"></div>
         </div>
 
-        <header>
-            <nav class="navbar">
-                <a class="navbar-button" href="#">Home</a>
-                <a class="navbar-button" href="#">Servers</a>
+        <header class="border-bottom">
+            <nav>
+                <img class="icon-button" href="/" src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=50px>
+                <a class="navbar-button navbar-current" href="/">Home</a>
+                <a class="navbar-button" href="/about-us">About Us</a>
+                <a class="navbar-button" href="/applications">Applications</a>
+
+                <div class="navbar-sep"></div>
+
+                <a class="navbar-button navbar-support-us" href="https://patreon.com/cuhhubsw">Support Us</a>
             </nav>
         </header>
 
         <main>
-            <div class="main-attention">
-                <div class="row">
-                    <img src="images/icons/logo_transparent.png" alt="cuhHub Logo" height=50px>
-                    <h1>cuhHub</h1>
+            <div class="column gap75">
+                <div class="left-right align-center">
+                    <div class="column gap25">
+                        <div class="row gap25">
+                            <img src="images/icons/logo_transparent.png" alt="cuhHub Logo" height=69px>
+                            <h1>cuhHub</h1>
+                        </div>
+
+                        <h2>
+                            The <span class="emphasised-text">go-to</span> servers for experiencing unique gamemodes
+                            in Stormworks and Archean.
+                        </h2>
+
+                        <h4>
+                            Join our <span class="registered-player-count">0 (fetching)</span> unique players on our servers!
+                        </h4>
+
+                        <div class="row gap25">
+                            <a href="https://dsc.gg/cuhhubsw">Chat with the community</a>
+                            <a href="https://github.com/cuhHub">See our open-source projects</a>
+                        </div>
+                    </div>
+
+                    <div class="ingame-images">
+                        <div class="row gap25">
+                            <img src="images/game-screenshots/1.png" alt="Game Screenshot">
+                            <img src="images/game-screenshots/5.png" alt="Game Screenshot">
+                        </div>
+
+                        <div class="row gap25">
+                            <img src="images/game-screenshots/9.png" alt="Game Screenshot">
+                            <img src="images/game-screenshots/19.png" alt="Game Screenshot">
+                        </div>
+
+                        <div class="row gap25">
+                            <img src="images/game-screenshots/30.png" alt="Game Screenshot">
+                            <img src="images/game-screenshots/16.png" alt="Game Screenshot">
+                        </div>
+                    </div>
                 </div>
 
-                <h3>
-                    The goto servers for experiencing unique gamemodes<br>
-                    in Stormworks and Archean.
-                </h3>
+                <div class="column">
+                    <div class="reviews-section ignore-horizontal-padding column gap30">
+                        <h2>See what our players say:</h2>
 
-                <div class="row">
-                    <a class="link" href="https://dsc.gg/cuhhubsw">Chat with the community</a>
-                    <a class="link" href="https://github.com/cuhHub">See our open-source projects</a>
-                </div>
-            </div>
+                        <div class="reviews-container row gap50">
+                            <div class="review">
+                                <img class="profile-icon" height=60px src="images/icons/profile-icons/kadermonkey.png" alt="Profile Icon Of Reviewer">
 
-            <div class="ingame-images">
-                <div class="row">
-                    <img src="images/game-screenshots/1.png" alt="Game Screenshot">
-                    <img src="images/game-screenshots/5.png" alt="Game Screenshot">
-                    <img src="images/game-screenshots/8.png" alt="Game Screenshot">
-                </div>
+                                <div class="review-text">
+                                    <p>"that sh*t was peak"</p>
+                                    <p class="review-name">- Kadermonkey</p>
+                                </div>
+                            </div>
 
-                <div class="row">
-                    <img src="images/game-screenshots/9.png" alt="Game Screenshot">
-                    <img src="images/game-screenshots/28.png" alt="Game Screenshot">
-                </div>
+                            <div class="review">
+                                <img class="profile-icon" height=60px src="images/icons/profile-icons/wretcheds.png" alt="Profile Icon Of Reviewer">
 
-                <div class="row">
-                    <img src="images/game-screenshots/12.png" alt="Game Screenshot">
-                    <img src="images/game-screenshots/16.png" alt="Game Screenshot">
+                                <div class="review-text">
+                                    <p>"missions are going to be sick as f*ck because cuh4 is a sick as f*ck developer"</p>
+                                    <p class="review-name">- wretcheds</p>
+                                </div>
+                            </div>
+
+                            <div class="review">
+                                <img class="profile-icon" height=60px src="images/icons/profile-icons/big-slime.png" alt="Profile Icon Of Reviewer">
+
+                                <div class="review-text">
+                                    <p>"cuhhub is back !  why didnt anyone tell me !"</p>
+                                    <p class="review-name">- big slime</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offering-section ignore-horizontal-padding column gap50">
+                        <h2>But what do we have to offer?</h2>
+
+                        <div class="row gap50">
+                            <div class="offering">
+                                <p class="offering-title">Unique Gamemodes</p>
+                                <p class="offering-text">
+                                    From missions, to zombies, to a sandbox experience.
+                                    We offer it all when it comes to gamemodes.
+                                </p>
+                            </div>
+
+                            <div class="offering">
+                                <p class="offering-title">More-Than-Enjoyable Servers</p>
+                                <p class="offering-text">
+                                    Most servers on Stormworks are the same-old. cuhHub is
+                                    purposely different. We offer unique yet enjoyable experiences
+                                    to our players. Come find out for yourself!
+                                </p>
+                            </div>
+
+                            <div class="offering">
+                                <p class="offering-title">Workshop Addons</p>
+                                <p class="offering-text">
+                                    We don't just host servers, we also create and publish addons
+                                    to the Stormworks Steam workshop for all to use and enjoy.
+                                </p>
+                            </div>
+
+                            <div class="offering">
+                                <p class="offering-title">Great Moderation</p>
+                                <p class="offering-text">
+                                    Our moderation system is custom-coded and top-notch. We handle tickets quickly
+                                    and efficiently.<br>
+                                    We also have auto-moderation which will automatically detect and handle misuse of
+                                    the in-game chat.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="centered-text">
+                            Everything behind the scenes is hand-coded from the bottom up!<br>
+                            This allows us to provide what other servers cannot - a truly unique experience.
+                        </p>
+                    </div>
+
+                    <div class="gallery-section ignore-horizontal-padding column gap50">
+                        <h2>Gallery</h2>
+
+                        <div class="column gap50">
+                            <div class="row gap50">
+                                <img class="gallery-image" src="images/game-screenshots/1.png" alt="Gallery Image">
+                                <img class="gallery-image" src="images/game-screenshots/5.png" alt="Gallery Image">
+                            </div>
+
+                            <div class="row gap50">
+                                <img class="gallery-image" src="images/game-screenshots/15.png" alt="Gallery Image">
+                                <img class="gallery-image" src="images/game-screenshots/25.png" alt="Gallery Image">
+                            </div>
+
+                            <div class="row gap50">
+                                <img class="gallery-image" src="images/game-screenshots/27.png" alt="Gallery Image">
+                                <img class="gallery-image" src="images/game-screenshots/30.png" alt="Gallery Image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-section ignore-horizontal-padding column gap50">
+                        <h2>FAQ</h2>
+
+                        <p>Oops, we're still working on this part.</p>
+
+                        <!-- <div class="column gap25 faq-container">
+                            <details>
+                                <summary class="faq-question">What is cuhHub?</summary>
+                                <p>
+                                    lorem islum
+                                </p>
+                            </details>
+                        </div> -->
+                    </div>
                 </div>
             </div>
         </main>
 
-        <footer>
-            <div class="row">
-                <a href="https://dsc.gg/cuhhubsw" target="_blank">
-                    <img src="images/icons/discord.png" alt="Discord Server Logo Button" height=40px class="icon-button">
-                </a>
-
-                <a href="https://github.com/cuhHub" target="_blank">
-                    <img src="images/icons/github.png" alt="GitHub Org Logo Button" height=40px class="icon-button">
-                </a>
-            </div>
-
-            <p>© 2025 cuhHub. All rights reserved.</p>
+        <footer class="border-top">
+            <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
         </footer>
     </body>
 </html>
