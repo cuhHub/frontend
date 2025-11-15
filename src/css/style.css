@@ -242,6 +242,7 @@ footer {
 .text,
 .muted-text,
 .warning-text,
+summary,
 p,
 h1, h2, h3, h4,
 a,
@@ -274,6 +275,12 @@ h3 {
 
 h4 {
     font-weight: 350;
+    font-size: 20px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 400;
     font-size: 20px;
 }
 
@@ -611,6 +618,29 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
     transform: scale(1.05);
 }
 
+.faq-question {
+    color: hsl(220, 100%, 86%);
+    font-weight: 600;
+    font-size: 30px;
+    filter: drop-shadow(0 0 5px hsla(219, 23%, 40%, 0.6));
+    transition: 0.3s;
+    text-underline-offset: 2px;
+    background-color: hsla(0, 0%, 0%, 0.6);
+    padding: 15px;
+    width: 80%;
+    text-align: center;
+}
+
+.faq-question:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.faq-container {
+    width: 100%;
+    justify-content: center;
+}
+
 /*
     Sections
 */
@@ -621,19 +651,25 @@ a:not(.button):not(.icon-button):not(.navbar-button):hover {
 }
 
 .reviews-section {
-    background-color: hsla(42, 32%, 76%, 0.4);
+    background-color: hsla(42, 32%, 76%, 0.1);
     align-items: center;
     padding: 75px 0;
 }
 
 .offering-section {
-    background-color: hsla(214, 25%, 45%, 0.4);
+    background-color: hsla(214, 25%, 45%, 0.1);
     align-items: center;
     padding: 75px 0;
 }
 
 .gallery-section {
-    background-color: hsla(210, 19%, 34%, 0.4);
+    background-color: hsla(210, 19%, 34%, 0.1);
+    align-items: center;
+    padding: 75px 0;
+}
+
+.faq-section {
+    background-color: hsla(232, 100%, 84%, 0.1);
     align-items: center;
     padding: 75px 0;
 }
