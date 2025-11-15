@@ -46,4 +46,4 @@ def serve(path: str):
     return flask.send_from_directory(SITE_PATH, path)
 
 if __name__ == "__main__":
-    hot_reload_server.serve()
+    hot_reload_server.serve(port = 3000)
