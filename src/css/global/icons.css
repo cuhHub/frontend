@@ -18,12 +18,28 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-@import url("global/consts.css");
-@import url("global/fonts.css");
-@import url("global/utility.css");
-@import url("global/text.css");
-@import url("global/icons.css");
-@import url("global/background.css");
-@import url("global/body.css");
-@import url("global/header.css");
-@import url("global/footer.css");
+.icon, .icon-button {
+    aspect-ratio: 1;
+}
+
+.icon-button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.profile-icon {
+    border-radius: 100%;
+    outline: 1px solid var(--border-color);
+}
+
+iconify-icon {
+    font-size: 30px;
+    color: var(--icon-color);
+    transition: 0.3s;
+    display: inline-block;
+    stroke-width: 5;
+}

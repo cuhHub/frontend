@@ -1,0 +1,83 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2025 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+/* Top */
+.topbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    background-color: var(--bg-color-dark);
+    z-index: 5;
+}
+
+.topbar > * {
+    padding: var(--topbar-padding) var(--body-horizontal-padding);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    height: var(--header-height);
+    justify-content: space-between;
+}
+
+/* Navbar */
+nav {
+    gap: 40px;
+    height: var(--navbar-height);
+}
+
+.navbar-link {
+    color: var(--accent-color-lightest);
+    font-size: 17px;
+    text-decoration: none;
+    text-underline-offset: 10px;
+    transition: 0.3s;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    transform: scale(1.05);
+}
+
+.navbar-support-us:hover {
+    color: hsl(51, 100%, 90%);
+    filter: drop-shadow(0 0 10px var(--accent-color-lightest));
+}
+
+.navbar-current {
+    color: var(--accent-color-lightest);
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+
+.navbar-sep {
+    width: 1px;
+    height: 30px;
+    background-color: var(--border-color);
+}

@@ -18,12 +18,31 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-@import url("global/consts.css");
-@import url("global/fonts.css");
-@import url("global/utility.css");
-@import url("global/text.css");
-@import url("global/icons.css");
-@import url("global/background.css");
-@import url("global/body.css");
-@import url("global/header.css");
-@import url("global/footer.css");
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image {
+    background: url("../../images/game-screenshots/7.png") center / cover no-repeat;
+    filter: blur();
+    scale: 1.2; /* to hide border coming from the blur */
+}
+
+.background-shadow {
+    background: linear-gradient(90deg, var(--accent-color-darkest), hsla(0, 0%, 0%, 0.2));
+    width: 100%;
+}

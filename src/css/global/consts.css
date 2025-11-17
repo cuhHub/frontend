@@ -1,0 +1,56 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2025 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+:root {
+    --bg-color-dark: hsla(0, 0%, 7%, 0.4);
+    --bg-color: hsla(0, 0%, 12%, 0.4);
+    --bg-color-light: hsla(0, 0%, 16%, 0.4);
+
+    --accent-color-lightest: hsl(217, 58%, 75%);
+    --accent-color-light: hsl(217, 58%, 60%);
+    --accent-color: hsl(217, 58%, 38%);
+    --accent-color-dark: hsl(217, 58%, 25%);
+    --accent-color-darkest: hsl(217, 58%, 15%);
+
+    --border-color: hsla(197, 5%, 85%, 0.5);
+    --accent-border-color: hsla(217, 53%, 75%, 0.5);
+
+    --icon-color: hsl(217, 48%, 56%);
+
+    --body-vertical-padding: 10px;
+    --body-horizontal-padding: 150px;
+
+    --header-height: 55px;
+    --navbar-height: 70px;
+    --topbar-padding: 10px;
+    --topbar-height: calc(var(--header-height) + var(--navbar-height));
+    --footer-height: 50px;
+
+    --warning-text-color: hsl(0, 100%, 82%);
+    --text-color: hsl(197, 5%, 90%);
+    --text-color-emphasised: hsl(197, 5%, 95%);
+    --text-color-muted: hsl(197, 5%, 80%);
+    --clickable-text-color: hsl(209, 94%, 70%);
+    --clickable-text-color-hover: hsl(209, 94%, 75%);
+
+    --primary-font: "Noto Sans", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+    --letter-spacing: -0.8px;
+}

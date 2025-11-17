@@ -1,0 +1,89 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2025 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+/* Main Attention */
+.main-attention {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 70px;
+    padding: 100px 0;
+}
+
+.main-attention-left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.main-attention-right-content {
+    display: flex;
+    flex-direction: column;;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.ingame-images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.ingame-images img {
+    width: 350px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+    transition-behavior: allow-discrete;
+    border-radius: 10px;
+    filter: none;
+    margin: 5px;
+    z-index: inherit;
+    border: 1px solid var(--border-color);
+}
+
+.ingame-images img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    filter: brightness(1.1);
+    border: 1px solid var(--accent-border-color);
+}
+
+/* FAQ */
+.faq-section {
+    background-color: var(--bg-color-light);
+}
+
+.offering-section {
+    background-color: color-mix(in hsl, var(--accent-color-dark) 20%, transparent);
+}
+
+/* Misc */
+.registered-player-count {
+    color: var(--accent-color-lightest);
+    font-weight: 600;
+    font-size: 25px;
+    filter: drop-shadow(0 0 5px var(--accent-color-lightest));
+}
