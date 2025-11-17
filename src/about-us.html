@@ -27,8 +27,11 @@ Full terms governed by the laws of England and Wales.
         <meta charset="UTF-8"/>
 
         <script type="module" src="js/main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
 
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/page/about-us.css"/>
+
         <link rel="icon" href="images/icons/logo_transparent.png"/>
 
         <link rel="canonical" href="https://cuhhub.com/about-us">
@@ -47,103 +50,60 @@ Full terms governed by the laws of England and Wales.
     </head>
 
     <body>
+        <!-- Background -->
         <div class="background">
             <div class="background-image"></div>
             <div class="background-shadow"></div>
         </div>
 
-        <header class="border-bottom">
-            <nav>
-                <img class="icon-button" href="/" src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=50px>
-                <a class="navbar-button" href="/">Home</a>
-                <a class="navbar-button navbar-current" href="/about-us">About Us</a>
-                <a class="navbar-button" href="/applications">Applications</a>
+        <div class="topbar">
+            <!-- Header -->
+            <header class="border-bottom">
+                <div class="row gap1">
+                    <a href="/">
+                        <img class="icon-button" src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=30px>
+                    </a>
 
-                <div class="navbar-sep"></div>
+                    <h2>cuhHub</h2>
+                </div>
 
-                <a class="navbar-button navbar-support-us" href="https://patreon.com/cuhhubsw">Support Us</a>
+                <div class="row gap1">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank">
+                        <iconify-icon class="icon-button" icon="ion:logo-discord"></iconify-icon>
+                    </a>
+
+                    <a href="https://github.com/cuhHub" target="_blank">
+                        <iconify-icon class="icon-button" icon="ion:logo-github"></iconify-icon>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Navigation Bar -->
+            <nav class="border-bottom">
+                <a class="navbar-link" href="/">Home</a>
+                <a class="navbar-link navbar-current" href="/about-us">About Us</a>
+                <a class="navbar-link" href="/applications">Applications</a>
+
+                <div class="horizontal-separator"></div>
+
+                <a class="navbar-link navbar-support-us" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
             </nav>
-        </header>
+        </div>
 
-        <main>
-            <div class="column gap75">
-                <!-- About Us -->
-                <div class="column gap25">
-                    <h1>About Us</h1>
-
-                    <p>
-                        cuhHub is a gameserver-hosting community for the games <span class="emphasised-text">Stormworks</span>
-                        and <span class="emphasised-text">Archean</span>.<br>
-                        We started back in 2022 with a unique minigames server only on Stormworks. Since then, we have adapted to the playerbase<br>
-                        and have released enjoyable, quality-assured gamemodes for all to enjoy.<br><br>
-                        We are always open to suggestions, join our <a href="https://dsc.gg/cuhhubsw">Discord server</a> to get in touch!
-                    </p>
+        <!-- Page Content -->
+        <main class="main-center">
+            <div class="column gap1">
+                <div>
+                    <h1>Oops.</h1>
+                    <h2>We're still working on this page.</h2>
+                    <h2>Come back another time!</h2>
                 </div>
 
-                <!-- Servers -->
-                <div class="servers-section ignore-horizontal-padding column gap25">
-                    <h3>We offer a <span class="emphasised-text">multitude</span> of servers, including:</h1>
-
-                    <div class="column gap40">
-                        <div class="gamemodes-container">
-                            <div class="gamemode">
-                                <img class="gamemode-image" src="images/game-screenshots/21.png" alt="Outbreak Image">
-
-                                <div class="gamemode-title">
-                                    <p>Sandbox</p>
-                                </div>
-
-                                <div class="gamemode-description">
-                                    <p>
-                                        Sandbox, a server featured on both <span class="emphasised-text">Stormworks</span>
-                                        and <span class="emphasised-text">Archean</span> where players can spawn vehicles
-                                        and play together.
-                                        <br>
-                                        <br>
-                                        Comes with unique features such as safe zones, danger zones, anti-lag, and so on!
-                                    <p>
-                                </div>
-                            </div>
-
-                            <div class="gamemode">
-                                <img class="gamemode-image" src="images/game-screenshots/30.png" alt="Outbreak Image">
-
-                                <div class="gamemode-title">
-                                    <p>Outbreak</p>
-                                </div>
-
-                                <div class="gamemode-description">
-                                    <p>
-                                        A server with a never-seen before zombies gamemode specifically for <span class="emphasised-text">Stormworks</span>.
-                                        It features zombie apocalypse gameplay where you must use your vehicles to
-                                        fight against zombies.<br><br>
-                                        Complete with an economy system, missions and more!
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="gamemode">
-                                <img class="gamemode-image" src="images/game-screenshots/10.png" alt="Missions Image">
-
-                                <div class="gamemode-title">
-                                    <p>Missions</p>
-                                </div>
-
-                                <div class="gamemode-description">
-                                    <p>
-                                        A server dedicated to career-like gameplay. Earn money by transporting passengers, transporting cargo,
-                                        towing vehicles and more!<br><br>
-                                        Build your reputation with companies or go freelancer-style, but at the end of the day, become a known name!<br><br>
-                                        This server is exclusive to <span class="emphasised-text">Stormworks</span>.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a href="/">Head back</a>
             </div>
         </main>
 
+        <!-- Footer -->
         <footer class="border-top">
             <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
         </footer>

@@ -27,34 +27,65 @@ Full terms governed by the laws of England and Wales.
         <meta charset="UTF-8"/>
 
         <script type="module" src="js/main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
 
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/page/applications.css"/>
+
         <link rel="icon" href="images/icons/logo_transparent.png"/>
 
         <meta name="robots" content="noindex">
     </head>
 
     <body>
+        <!-- Background -->
         <div class="background">
             <div class="background-image"></div>
             <div class="background-shadow"></div>
         </div>
 
-        <main>
-            <div class="column gap30 align-center vertical-center">
-                <div class="row gap25">
-                    <img src="images/icons/logo_transparent.png" alt="cuhHub Logo" height=40px>
-                    <h2 class="warning-text">404 - Unknown Page</h2>
+        <div class="topbar">
+            <!-- Header -->
+            <header class="border-bottom">
+                <div class="row gap1">
+                    <a href="/">
+                        <img class="icon-button" src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=30px>
+                    </a>
+
+                    <h2>cuhHub</h2>
                 </div>
 
-                <h4>
-                    The page you tried to navigate to does not exist.<br>
-                    Please check the URL and try again, otherwise<br>
-                    head to the home page.
-                </h4>
+                <div class="row gap1">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank">
+                        <iconify-icon class="icon-button" icon="ion:logo-discord"></iconify-icon>
+                    </a>
 
-                <a href="/">To the home page I go!</a>
+                    <a href="https://github.com/cuhHub" target="_blank">
+                        <iconify-icon class="icon-button" icon="ion:logo-github"></iconify-icon>
+                    </a>
+                </div>
+            </header>
+        </div>
+
+        <!-- Page Content -->
+        <main class="main-center">
+            <div class="column gap1">
+                <div class="column">
+                    <div class="row gap2 center">
+                        <iconify-icon icon="ion:warning-outline" height=60px></iconify-icon>
+                        <h1>Awkward...</h1>
+                    </div>
+
+                    <p>The page you attempted to access does not exist. (404)</p>
+                </div>
+
+                <a href="/">Head back</a>
             </div>
         </main>
+
+        <!-- Footer -->
+        <footer class="border-top">
+            <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
+        </footer>
     </body>
 </html>
