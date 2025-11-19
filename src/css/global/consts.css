@@ -30,11 +30,11 @@ Full terms governed by the laws of England and Wales.
     --accent-color-darkest: hsl(217, 58%, 15%);
 
     --border-color: hsla(197, 5%, 85%, 0.5);
-    --accent-border-color: hsla(217, 53%, 75%, 0.5);
+    --accent-border-color: hsla(217, 58%, 38%, 0.8);
 
-    --icon-color: hsl(217, 48%, 56%);
+    --icon-color: hsl(217, 48%, 76%);
 
-    --body-vertical-padding: 10px;
+    --body-vertical-padding: 100px;
     --body-horizontal-padding: 150px;
 
     --header-height: 55px;
@@ -53,4 +53,10 @@ Full terms governed by the laws of England and Wales.
     --primary-font: "Noto Sans", sans-serif;
     --secondary-font: "Roboto", sans-serif;
     --letter-spacing: -0.8px;
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --body-horizontal-padding: 40px;
+    }
 }
