@@ -21,13 +21,32 @@ Full terms governed by the laws of England and Wales.
 footer {
     background-color: var(--bg-color-dark);
     width: 100%;
-    height: var(--footer-height);
-    align-items: center;
-    padding: 5px var(--body-horizontal-padding);
+    padding: 15px var(--body-horizontal-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.footer-links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+}
+
+.footer-links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .footer-copyright-text {
