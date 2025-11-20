@@ -31,7 +31,7 @@ main {
     padding: 0 var(--body-horizontal-padding);
     padding-top: var(--body-vertical-padding);
     margin-top: var(--topbar-height);
-    min-height: calc(100vh - var(--topbar-height) - var(--footer-height) - var(--body-vertical-padding));
+    min-height: calc(100vh - var(--topbar-height) - var(--body-vertical-padding));
 }
 
 .main-center {
@@ -50,13 +50,8 @@ main {
     text-align: center;
 }
 
-.ignore-horizontal-padding {
-    margin: 0 calc(var(--body-horizontal-padding) * -1);
-    padding: 25px var(--body-horizontal-padding);
-}
-
 .section {
     width: 100%;
     margin: 0 calc(var(--body-horizontal-padding) * -1);
-    padding: var(--body-horizontal-padding);
+    padding: var(--section-vertical-padding) var(--body-horizontal-padding);
 }
