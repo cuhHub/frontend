@@ -42,7 +42,7 @@ def read_file(path: str, mode: str = "r") -> Any:
         str: Content of the file.
     """
     
-    with open(path, mode) as file:
+    with open(path, mode, encoding = "utf-8" if mode == "r" else None) as file:
         return file.read()
     
 def write_file(path: str, content: Any, mode: str = "w"):
