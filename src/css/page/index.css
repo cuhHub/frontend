@@ -151,9 +151,20 @@ Full terms governed by the laws of England and Wales.
     }
 }
 
-/* Offering */
-.offering-section {
+/* cuhhub-experience */
+.cuhhub-experience-section {
     background-color: color-mix(in hsl, var(--accent-color-dark) 20%, transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuhhub-experience-video {
+    width: 90%;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin: 15px;
 }
 
 /* FAQ */
