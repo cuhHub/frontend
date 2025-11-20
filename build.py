@@ -84,8 +84,8 @@ def build_file(src_path: str, dist_path: str, license: str, version: str):
             content = f"<!--\n{license}\n-->\n\n" + html_minify(content)
         case ".css":
             content = f"/*\n{license}\n*/\n\n" + css_minify(content)
-        case ".js":
-            content = f"/*\n{license}\n*/\n\n" + js_minify(content)
+        # case ".js": # caused too many fucking issues
+        #     content = f"/*\n{license}\n*/\n\n" + js_minify(content)
         
     write_file(dist_path, content, mode = "w" if isinstance(content, str) else "wb")
     
