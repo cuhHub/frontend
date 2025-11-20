@@ -99,6 +99,10 @@ a:not(.button):not(.icon-button):not(.navbar-link):hover {
     text-underline-offset: 7px;
 }
 
+p a {
+    padding: 0;
+}
+
 .external-link {
     color: var(--external-clickable-text-color);
 }
