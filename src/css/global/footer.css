@@ -49,6 +49,10 @@ footer {
     gap: 5px;
 }
 
+.footer-link-header {
+    border-bottom: 2px solid var(--accent-color);
+}
+
 .footer-copyright-text {
     font-size: 15px;
 }
