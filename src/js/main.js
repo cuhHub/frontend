@@ -26,9 +26,6 @@ Full terms governed by the laws of England and Wales.
 */
 import { API } from "./api.js";
 
-import "https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.5.1/SmoothScroll.min.js";
-import "https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"
-
 /**
     The version of the site.
 */
