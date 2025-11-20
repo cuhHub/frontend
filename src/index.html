@@ -27,7 +27,6 @@ Full terms governed by the laws of England and Wales.
         <meta charset="UTF-8"/>
 
         <script type="module" src="js/main.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
 
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/page/index.css"/>
@@ -56,6 +55,7 @@ Full terms governed by the laws of England and Wales.
             <div class="background-shadow"></div>
         </div>
 
+        <!-- Topbar -->
         <div class="topbar">
             <!-- Header -->
             <header class="border-bottom">
@@ -83,10 +83,7 @@ Full terms governed by the laws of England and Wales.
                 <a class="navbar-link navbar-current" href="/">Home</a>
                 <a class="navbar-link" href="/about-us">About Us</a>
                 <a class="navbar-link" href="/applications">Applications</a>
-
-                <div class="horizontal-separator"></div>
-
-                <a class="navbar-link navbar-support-us" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
+                <a class="navbar-link navbar-support-us external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
             </nav>
         </div>
 
@@ -101,16 +98,16 @@ Full terms governed by the laws of England and Wales.
 
                     <h2>
                         The <span class="emphasised-text">go-to</span> servers for experiencing unique gamemodes
-                        in Stormworks and Archean.
+                        in Stormworks.
                     </h2>
 
-                    <h4>
+                    <p>
                         Join our <span class="registered-player-count">0 (fetching)</span> unique players on our servers!
-                    </h4>
+                    </p>
 
                     <div class="row gap3">
-                        <a href="https://dsc.gg/cuhhubsw">Chat with the community</a>
-                        <a href="https://github.com/cuhHub">See our open-source projects</a>
+                        <a href="https://dsc.gg/cuhhubsw" class="external-link">Chat with the community</a>
+                        <a href="https://github.com/cuhHub" class="external-link">See our open-source projects</a>
                     </div>
                 </div>
 
@@ -134,12 +131,63 @@ Full terms governed by the laws of England and Wales.
                 </div>
             </div>
 
+            <div class="section how-to-join-section">
+                <h1>
+                    How do I join?
+                </h1>
+
+                <div class="how-to-join">
+                    <div class="how-to-join-step">
+                        <div class="row gap1">
+                            <iconify-icon icon="ion:play-outline"></iconify-icon>
+                            <h2>Step 1</h2>
+                        </div>
+
+                        <p>
+                            Start up <a class="external-link" href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank">Stormworks</a> via your Steam library (or whatever app you use).
+                        </p>
+
+                        <img src="images/join-steps/1.png" alt="Step 1 Screenshot">
+                    </div>
+
+                    <iconify-icon icon="ion:arrow-forward-outline" class="arrow"></iconify-icon>
+
+                    <div class="how-to-join-step">
+                        <div class="row gap1">
+                            <iconify-icon icon="ion:people-outline"></iconify-icon>
+                            <h2>Step 2</h2>
+                        </div>
+
+                        <p>
+                            Click the "Multiplayer" button on the main menu.
+                        </p>
+
+                        <img src="images/join-steps/2.png" alt="Step 2 Screenshot">
+                    </div>
+
+                    <iconify-icon icon="ion:arrow-forward-outline" class="arrow"></iconify-icon>
+
+                    <div class="how-to-join-step">
+                        <div class="row gap1">
+                            <iconify-icon icon="ion:wifi-outline"></iconify-icon>
+                            <h2>Step 3</h2>
+                        </div>
+
+                        <p>
+                            Enter the "Internet" tab, search "cuhHub" and choose a server, then click the join button.
+                        </p>
+
+                        <img src="images/join-steps/3.png" alt="Step 3 Screenshot">
+                    </div>
+                </div>
+            </div>
+
             <div class="section offering-section">
                 <h1>
                     The cuhHub Experience
                 </h1>
 
-                <p>todo</p>
+                <p>todo: make video</p>
             </div>
 
             <div class="section faq-section">
@@ -150,7 +198,7 @@ Full terms governed by the laws of England and Wales.
                 <div class="column gap1">
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline"></iconify-icon>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
                             How do I apply for staff or a tester position?
                         </summary>
 
@@ -161,7 +209,7 @@ Full terms governed by the laws of England and Wales.
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline"></iconify-icon>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
                             How long has cuhHub been around for?
                         </summary>
 
@@ -173,25 +221,87 @@ Full terms governed by the laws of England and Wales.
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline"></iconify-icon>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
                             Is there a Discord server for cuhHub?
                         </summary>
 
                         <p>
-                            Yup! You can join our Discord through <a href="https://dsc.gg/cuhhubsw">this link</a>.
+                            Yup! You can join our Discord through <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">this link</a>.
                             You can get support from our staff and community there.
                         </p>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline"></iconify-icon>
-                            How long has cuhHub been around for?
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Is cuhHub's code open-source?
                         </summary>
 
                         <p>
-                            cuhHub has been around since 2022. We started with a niche minigames server and evolved
-                            from there.
+                            Most of our code is closed-source to prevent other servers copyign us, but we do have open-source code for people
+                            to check out <a href="https://github.com/cuhHub" class="external-link" target="_blank">here</a>.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Where are the servers located?
+                        </summary>
+
+                        <div class="row gap1">
+                            <iconify-icon icon="flagpack:fi"></iconify-icon>
+                            <p>
+                                Our servers are hosted in Finland to provide low latency to players across Europe.<br>
+                                We may expand to other regions in the future!
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            I got moderated (banned, etc), what do I do?
+                        </summary>
+
+                        <p>
+                            If you were moderated, it was likely for breaking the server rules.
+                            Please read over the rules available in the <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.<br>
+                            If you believe it was a mistake, you can also appeal it through the Discord server via the support channel.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            How do I report a player?
+                        </summary>
+
+                        <p>
+                            You can report a player via our support channel in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Where can I suggest features or report bugs?
+                        </summary>
+
+                        <p>
+                            You can provide feedback via our feedback channel in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Where can I ask questions?
+                        </summary>
+
+                        <p>
+                            You can ask questions in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>. The community
+                            and staff will be happy to assist! If your question requires privacy, you can DM a staff member or make a ticket in our support channel.
                         </p>
                     </details>
                 </div>
@@ -200,7 +310,33 @@ Full terms governed by the laws of England and Wales.
 
         <!-- Footer -->
         <footer class="border-top">
-            <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <a href="/">Home</a>
+                    <a href="/about-us">About Us</a>
+                    <a href="/applications">Applications</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <a class="external-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
+                    <a class="external-link" href="https://github.com/cuhHub/cuhHub" target="_blank">Open-Source</a>
+                    <a class="external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
+
+                    <div class="footer-socials">
+                        <a class="icon-button" href="https://dsc.gg/cuhhubsw" target="_blank">
+                            <iconify-icon icon="ion:logo-discord"></iconify-icon>
+                        </a>
+
+                        <a class="icon-button" href="https://github.com/cuhHub" target="_blank">
+                            <iconify-icon icon="ion:logo-github"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
+            </div>
         </footer>
     </body>
 </html>
