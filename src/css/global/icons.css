@@ -1,0 +1,48 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2025 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+.icon, .icon-button {
+    aspect-ratio: 1;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.profile-icon {
+    border-radius: 100%;
+    outline: 1px solid var(--border-color);
+}
+
+iconify-icon {
+    font-size: 30px;
+    color: var(--icon-color);
+    transition: 0.3s;
+    display: inline-block;
+    stroke-width: 5;
+}

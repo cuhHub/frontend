@@ -29,6 +29,8 @@ Full terms governed by the laws of England and Wales.
         <script type="module" src="js/main.js" defer></script>
 
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/page/index.css"/>
+
         <link rel="icon" href="images/icons/logo_transparent.png"/>
 
         <link rel="canonical" href="https://cuhhub.com">
@@ -44,190 +46,319 @@ Full terms governed by the laws of England and Wales.
         <meta name="twitter:title" content="cuhHub">
         <meta name="twitter:description" content="The website for the gameserver-hosting community cuhHub.">
         <meta name="twitter:image" content="https://cuhhub.com/images/banners/cuhhub.png">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=__GOOGLE_ANALYTICS_ID__"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '__GOOGLE_ANALYTICS_ID__');
+        </script>
     </head>
 
     <body>
+        <!-- Background -->
         <div class="background">
             <div class="background-image"></div>
             <div class="background-shadow"></div>
         </div>
 
-        <header class="border-bottom">
-            <nav>
-                <img class="icon-button" href="/" src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=50px>
-                <a class="navbar-button navbar-current" href="/">Home</a>
-                <a class="navbar-button" href="/about-us">About Us</a>
-                <a class="navbar-button" href="/applications">Applications</a>
+        <!-- Topbar -->
+        <div class="topbar">
+            <!-- Header -->
+            <header class="border-bottom">
+                <div class="row gap1">
+                    <a href="/" class="icon-button">
+                        <img src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=30px>
+                    </a>
 
-                <div class="navbar-sep"></div>
+                    <h2>cuhHub</h2>
+                </div>
 
-                <a class="navbar-button navbar-support-us" href="https://patreon.com/cuhhubsw">Support Us</a>
+                <div class="row gap1">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
+                        <iconify-icon icon="ion:logo-discord"></iconify-icon>
+                    </a>
+
+                    <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
+                        <iconify-icon icon="ion:logo-github"></iconify-icon>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Navigation Bar -->
+            <nav class="border-bottom">
+                <a class="navbar-link navbar-current" href="/">Home</a>
+                <a class="navbar-link" href="/about-us">About Us</a>
+                <a class="navbar-link" href="/applications">Applications</a>
+                <a class="navbar-link navbar-support-us external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
             </nav>
-        </header>
+        </div>
 
+        <!-- Page Content -->
         <main>
-            <div class="column gap75">
-                <div class="left-right align-center">
-                    <div class="column gap25">
-                        <div class="row gap25">
-                            <img src="images/icons/logo_transparent.png" alt="cuhHub Logo" height=69px>
-                            <h1>cuhHub</h1>
-                        </div>
-
-                        <h2>
-                            The <span class="emphasised-text">go-to</span> servers for experiencing unique gamemodes
-                            in Stormworks and Archean.
-                        </h2>
-
-                        <h4>
-                            Join our <span class="registered-player-count">0 (fetching)</span> unique players on our servers!
-                        </h4>
-
-                        <div class="row gap25">
-                            <a href="https://dsc.gg/cuhhubsw">Chat with the community</a>
-                            <a href="https://github.com/cuhHub">See our open-source projects</a>
-                        </div>
+            <div class="main-attention">
+                <div class="main-attention-left-content">
+                    <div class="row gap1">
+                        <img class="icon" href="/" src="images/icons/logo_transparent.png" alt="cuhHub Logo" height=70px>
+                        <h1>cuhHub</h1>
                     </div>
 
-                    <div class="ingame-images">
-                        <div class="row gap25">
-                            <img src="images/game-screenshots/1.png" alt="Game Screenshot">
-                            <img src="images/game-screenshots/5.png" alt="Game Screenshot">
-                        </div>
+                    <h2>
+                        The <span class="emphasised-text">go-to</span> servers for experiencing unique gamemodes
+                        in Stormworks.
+                    </h2>
 
-                        <div class="row gap25">
-                            <img src="images/game-screenshots/9.png" alt="Game Screenshot">
-                            <img src="images/game-screenshots/19.png" alt="Game Screenshot">
-                        </div>
+                    <p>
+                        Join our <span class="registered-player-count">0 (fetching)</span> unique players on our servers!
+                    </p>
 
-                        <div class="row gap25">
-                            <img src="images/game-screenshots/30.png" alt="Game Screenshot">
-                            <img src="images/game-screenshots/16.png" alt="Game Screenshot">
-                        </div>
+                    <div class="row gap3">
+                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="external-link">Chat with the community</a>
+                        <a href="https://github.com/cuhHub" target="_blank" class="external-link">See our open-source projects</a>
                     </div>
                 </div>
 
-                <div class="column">
-                    <div class="reviews-section ignore-horizontal-padding column gap30">
-                        <h2>See what our players say:</h2>
+                <div class="main-attention-right-content">
+                    <div class="ingame-images">
+                        <div class="row">
+                            <img src="images/game-screenshots/3.png" alt="Game Screenshot">
+                            <img src="images/game-screenshots/25.png" alt="Game Screenshot">
+                        </div>
 
-                        <div class="reviews-container row gap50">
-                            <div class="review">
-                                <img class="profile-icon" height=60px src="images/icons/profile-icons/kadermonkey.png" alt="Profile Icon Of Reviewer">
+                        <div class="row">
+                            <img src="images/game-screenshots/30.png" alt="Game Screenshot">
+                            <img src="images/game-screenshots/10.png" alt="Game Screenshot">
+                        </div>
 
-                                <div class="review-text">
-                                    <p>"that sh*t was peak"</p>
-                                    <p class="review-name">- Kadermonkey</p>
-                                </div>
-                            </div>
-
-                            <div class="review">
-                                <img class="profile-icon" height=60px src="images/icons/profile-icons/wretcheds.png" alt="Profile Icon Of Reviewer">
-
-                                <div class="review-text">
-                                    <p>"missions are going to be sick as f*ck because cuh4 is a sick as f*ck developer"</p>
-                                    <p class="review-name">- wretcheds</p>
-                                </div>
-                            </div>
-
-                            <div class="review">
-                                <img class="profile-icon" height=60px src="images/icons/profile-icons/big-slime.png" alt="Profile Icon Of Reviewer">
-
-                                <div class="review-text">
-                                    <p>"cuhhub is back !  why didnt anyone tell me !"</p>
-                                    <p class="review-name">- big slime</p>
-                                </div>
-                            </div>
+                        <div class="row">
+                            <img src="images/game-screenshots/21.png" alt="Game Screenshot">
+                            <img src="images/game-screenshots/22.png" alt="Game Screenshot">
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="offering-section ignore-horizontal-padding column gap50">
-                        <h2>But what do we have to offer?</h2>
+            <div class="section how-to-join-section">
+                <h1>
+                    How do I join?
+                </h1>
 
-                        <div class="row gap50">
-                            <div class="offering">
-                                <p class="offering-title">Unique Gamemodes</p>
-                                <p class="offering-text">
-                                    From missions, to zombies, to a sandbox experience.
-                                    We offer it all when it comes to gamemodes.
-                                </p>
-                            </div>
-
-                            <div class="offering">
-                                <p class="offering-title">More-Than-Enjoyable Servers</p>
-                                <p class="offering-text">
-                                    Most servers on Stormworks are the same-old. cuhHub is
-                                    purposely different. We offer unique yet enjoyable experiences
-                                    to our players. Come find out for yourself!
-                                </p>
-                            </div>
-
-                            <div class="offering">
-                                <p class="offering-title">Workshop Addons</p>
-                                <p class="offering-text">
-                                    We don't just host servers, we also create and publish addons
-                                    to the Stormworks Steam workshop for all to use and enjoy.
-                                </p>
-                            </div>
-
-                            <div class="offering">
-                                <p class="offering-title">Great Moderation</p>
-                                <p class="offering-text">
-                                    Our moderation system is custom-coded and top-notch. We handle tickets quickly
-                                    and efficiently.<br>
-                                    We also have auto-moderation which will automatically detect and handle misuse of
-                                    the in-game chat.
-                                </p>
-                            </div>
+                <div class="how-to-join">
+                    <div class="how-to-join-step">
+                        <div class="row gap1">
+                            <iconify-icon icon="ion:play-outline"></iconify-icon>
+                            <h2>Step 1</h2>
                         </div>
 
-                        <p class="centered-text">
-                            Everything behind the scenes is hand-coded from the bottom up!<br>
-                            This allows us to provide what other servers cannot - a truly unique experience.
+                        <p>
+                            Start up <a class="external-link" href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank">Stormworks</a> via your Steam library (or whatever app you use).
                         </p>
+
+                        <img src="images/join-steps/1.png" alt="Step 1 Screenshot">
                     </div>
 
-                    <div class="gallery-section ignore-horizontal-padding column gap50">
-                        <h2>Gallery</h2>
+                    <iconify-icon icon="ion:arrow-forward-outline" class="arrow"></iconify-icon>
 
-                        <div class="column gap50">
-                            <div class="row gap50">
-                                <img class="gallery-image" src="images/game-screenshots/1.png" alt="Gallery Image">
-                                <img class="gallery-image" src="images/game-screenshots/5.png" alt="Gallery Image">
-                            </div>
-
-                            <div class="row gap50">
-                                <img class="gallery-image" src="images/game-screenshots/15.png" alt="Gallery Image">
-                                <img class="gallery-image" src="images/game-screenshots/25.png" alt="Gallery Image">
-                            </div>
-
-                            <div class="row gap50">
-                                <img class="gallery-image" src="images/game-screenshots/27.png" alt="Gallery Image">
-                                <img class="gallery-image" src="images/game-screenshots/30.png" alt="Gallery Image">
-                            </div>
+                    <div class="how-to-join-step">
+                        <div class="row gap1">
+                            <iconify-icon icon="ion:people-outline"></iconify-icon>
+                            <h2>Step 2</h2>
                         </div>
+
+                        <p>
+                            Click the "Multiplayer" button on the main menu.
+                        </p>
+
+                        <img src="images/join-steps/2.png" alt="Step 2 Screenshot">
                     </div>
 
-                    <div class="faq-section ignore-horizontal-padding column gap50">
-                        <h2>FAQ</h2>
+                    <iconify-icon icon="ion:arrow-forward-outline" class="arrow"></iconify-icon>
 
-                        <p>Oops, we're still working on this part.</p>
+                    <div class="how-to-join-step">
+                        <div class="row gap1">
+                            <iconify-icon icon="ion:wifi-outline"></iconify-icon>
+                            <h2>Step 3</h2>
+                        </div>
 
-                        <!-- <div class="column gap25 faq-container">
-                            <details>
-                                <summary class="faq-question">What is cuhHub?</summary>
-                                <p>
-                                    lorem islum
-                                </p>
-                            </details>
-                        </div> -->
+                        <p>
+                            Enter the "Internet" tab, search "cuhHub" and choose a server, then click the join button.
+                        </p>
+
+                        <img src="images/join-steps/3.png" alt="Step 3 Screenshot">
                     </div>
+                </div>
+            </div>
+
+            <div class="section cuhhub-experience-section">
+                <h1>
+                    The cuhHub Experience
+                </h1>
+
+                <video class="cuhhub-experience-video" autoplay loop muted>
+                    <source src="videos/cuhhub-experience.mp4" type="video/mp4">
+                    <p class="warning-text">Video unavailable. Your browser does not support the video tag.</p>
+                </video>
+            </div>
+
+            <div class="section faq-section">
+                <h1>
+                    FAQ
+                </h1>
+
+                <div class="column gap1">
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            How do I apply for staff or a tester position?
+                        </summary>
+
+                        <p>
+                            Head over to <a href="/applications">the applications page</a> to apply.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            How long has cuhHub been around for?
+                        </summary>
+
+                        <p>
+                            cuhHub has been around since 2022. We started with a niche minigames server and evolved
+                            from there.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Is there a Discord server for cuhHub?
+                        </summary>
+
+                        <p>
+                            Yup! You can join our Discord through <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">this link</a>.
+                            You can get support from our staff and community there.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Is cuhHub's code open-source?
+                        </summary>
+
+                        <p>
+                            Most of our code is closed-source to prevent other servers copyign us, but we do have open-source code for people
+                            to check out <a href="https://github.com/cuhHub" class="external-link" target="_blank">here</a>.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Where are the servers located?
+                        </summary>
+
+                        <div class="row gap1">
+                            <iconify-icon icon="flagpack:fi"></iconify-icon>
+                            <p>
+                                Our servers are hosted in Finland to provide low latency to players across Europe.<br>
+                                We may expand to other regions in the future!
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            I got moderated (banned, etc), what do I do?
+                        </summary>
+
+                        <p>
+                            If you were moderated, it was likely for breaking the server rules.
+                            Please read over the rules available in the <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.<br>
+                            If you believe it was a mistake, you can also appeal it through the Discord server via the support channel.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            How do I report a player?
+                        </summary>
+
+                        <p>
+                            You can report a player via our support channel in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Where can I suggest features or report bugs?
+                        </summary>
+
+                        <p>
+                            You can provide feedback via our feedback channel in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Where can I ask questions?
+                        </summary>
+
+                        <p>
+                            You can ask questions in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>. The community
+                            and staff will be happy to assist! If your question requires privacy, you can DM a staff member or make a ticket in our support channel.
+                        </p>
+                    </details>
                 </div>
             </div>
         </main>
 
+        <!-- Footer -->
         <footer class="border-top">
-            <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Contact</p>
+                    <a href="mailto:cuhhub@proton.me" class="external-link" target="_blank">cuhhub@proton.me</a>
+                    <p>Discord: <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">dsc.gg/cuhhubsw</a></p>
+                </div>
+
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Pages</p>
+                    <a href="/">Home</a>
+                    <a href="/about-us">About Us</a>
+                    <a href="/applications">Applications</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Links</p>
+                    <a class="external-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
+                    <a class="external-link" href="https://github.com/cuhHub/cuhHub" target="_blank">Open-Source</a>
+                    <a class="external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
+
+                    <div class="footer-socials">
+                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
+                            <iconify-icon icon="ion:logo-discord"></iconify-icon>
+                        </a>
+
+                        <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
+                            <iconify-icon icon="ion:logo-github"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
+            </div>
         </footer>
     </body>
 </html>

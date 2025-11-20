@@ -29,32 +29,108 @@ Full terms governed by the laws of England and Wales.
         <script type="module" src="js/main.js" defer></script>
 
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/page/404.css"/>
+
         <link rel="icon" href="images/icons/logo_transparent.png"/>
 
         <meta name="robots" content="noindex">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=__GOOGLE_ANALYTICS_ID__"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '__GOOGLE_ANALYTICS_ID__');
+        </script>
     </head>
 
     <body>
+        <!-- Background -->
         <div class="background">
             <div class="background-image"></div>
             <div class="background-shadow"></div>
         </div>
 
-        <main>
-            <div class="column gap30 align-center vertical-center">
-                <div class="row gap25">
-                    <img src="images/icons/logo_transparent.png" alt="cuhHub Logo" height=40px>
-                    <h2 class="warning-text">404 - Unknown Page</h2>
+        <!-- Topbar -->
+        <div class="topbar">
+            <!-- Header -->
+            <header class="border-bottom">
+                <div class="row gap1">
+                    <a href="/" class="icon-button">
+                        <img src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=30px>
+                    </a>
+
+                    <h2>cuhHub</h2>
                 </div>
 
-                <h4>
-                    The page you tried to navigate to does not exist.<br>
-                    Please check the URL and try again, otherwise<br>
-                    head to the home page.
-                </h4>
+                <div class="row gap1">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
+                        <iconify-icon icon="ion:logo-discord"></iconify-icon>
+                    </a>
 
-                <a href="/">To the home page I go!</a>
+                    <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
+                        <iconify-icon icon="ion:logo-github"></iconify-icon>
+                    </a>
+                </div>
+            </header>
+        </div>
+
+        <!-- Page Content -->
+        <main class="main-center">
+            <div class="column gap1">
+                <div class="column">
+                    <div class="row gap2 center">
+                        <iconify-icon icon="ion:warning-outline" height=60px></iconify-icon>
+                        <h1>Awkward...</h1>
+                    </div>
+
+                    <p>The page you attempted to access does not exist. (404)</p>
+                </div>
+
+                <a href="/">Head back</a>
             </div>
         </main>
+
+        <!-- Footer -->
+        <footer class="border-top">
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Contact</p>
+                    <a href="mailto:cuhhub@proton.me" class="external-link" target="_blank">cuhhub@proton.me</a>
+                    <p>Discord: <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">dsc.gg/cuhhubsw</a></p>
+                </div>
+
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Pages</p>
+                    <a href="/">Home</a>
+                    <a href="/about-us">About Us</a>
+                    <a href="/applications">Applications</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Links</p>
+                    <a class="external-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
+                    <a class="external-link" href="https://github.com/cuhHub/cuhHub" target="_blank">Open-Source</a>
+                    <a class="external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
+
+                    <div class="footer-socials">
+                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
+                            <iconify-icon icon="ion:logo-discord"></iconify-icon>
+                        </a>
+
+                        <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
+                            <iconify-icon icon="ion:logo-github"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
+            </div>
+        </footer>
     </body>
 </html>

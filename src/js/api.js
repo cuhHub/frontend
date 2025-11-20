@@ -21,6 +21,9 @@ Full terms governed by the laws of England and Wales.
 // Not familiar with JavaScript. Still learning, so expect bad practices.
 // Will be improved with time! - Cuh4
 
+/**
+    A barebones wrapper for cuhHub's API.
+*/
 export const API = {}
 
 /**
@@ -46,4 +49,4 @@ API.getRegisteredPlayerCount = async function() {
         console.error(`getRegisteredPlayerCount(): ${error}`);
         return 0;
     }
-};
+}

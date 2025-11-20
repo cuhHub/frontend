@@ -6,9 +6,10 @@
 This repository contains all of the code for cuhHub's frontend hosted at https://cuhhub.com.
 
 ## 💡 Setup
-1) Clone the repo: `git clone https://github.com/cuhHub/frontend` (`git` required)
-2) Build the site via `build.bat` (`pip install -r requirements.txt` first! Requires `Python >=3.13`)
-3) Setup nginx to serve the site (use `dist` directory, not `src`!).
+1) Clone the repo: `git clone https://github.com/cuhHub/frontend` (`git` required).
+2) Rename `example.env` to `.env` and configure it.
+3) Build the site via `build.bat` (`pip install -r requirements.txt` first! Requires `Python >=3.13`).
+4) Setup nginx to serve the site (use `dist` directory, not `src`!).
 
 If developing, use `run.bat` (runs `py run.py`. Use `pip install -r requirements` first) to start a localhost server hosting the website. It will hot-reload with every change to the site's content.
 

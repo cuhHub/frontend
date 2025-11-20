@@ -1,0 +1,57 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2025 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+body {
+    font-family: var(--primary-font);
+    letter-spacing: var(--letter-spacing);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 var(--body-horizontal-padding);
+    padding-top: var(--body-vertical-padding);
+    margin-top: var(--topbar-height);
+    min-height: calc(100vh - var(--topbar-height) - var(--body-vertical-padding));
+}
+
+.main-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(calc(var(--body-vertical-padding) * -1)); /* i know its hacky */
+}
+
+.main-horizontal-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section {
+    width: 100%;
+    margin: 0 calc(var(--body-horizontal-padding) * -1);
+    padding: var(--section-vertical-padding) var(--body-horizontal-padding);
+}

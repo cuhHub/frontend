@@ -1,0 +1,161 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2025 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+.text,
+.muted-text,
+.warning-text,
+summary,
+p,
+h1, h2, h3, h4,
+a,
+li,
+button {
+    color: var(--text-color);
+    margin: 0px;
+    font-weight: 400;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+    padding: 5px;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-weight: 350;
+    font-size: 1.4rem;
+}
+
+.muted-text {
+    color: var(--text-color-muted);
+}
+
+.linethrough-text {
+    text-decoration: line-through;
+}
+
+.warning-text {
+    color: var(--warning-text-color);
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.emphasised-text {
+    font-weight: 700;
+    color: var(--text-color-emphasised);
+    transition: 0.3s;
+    text-underline-offset: 5px;
+}
+
+.emphasised-text:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+a {
+    color: var(--clickable-text-color);
+    text-decoration: underline;
+    transition: 0.3s;
+    text-underline-offset: 5px;
+}
+
+a:not(.button):not(.icon-button):not(.navbar-link):hover {
+    color: var(--clickable-text-color-hover);
+    cursor: pointer;
+    text-underline-offset: 7px;
+}
+
+p a {
+    padding: 0;
+}
+
+.external-link {
+    color: var(--external-clickable-text-color);
+}
+
+.external-link::after {
+    content: "↗";
+    font-size: 0.8rem;
+    padding-left: 2px;
+}
+
+details {
+    overflow: hidden;
+}
+
+details p {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+details summary {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    list-style: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+details summary:hover {
+    cursor: pointer;
+}
+
+details .arrow-icon {
+    transition: 0.3s;
+    padding: 0 5px;
+    transform: rotate(0);
+}
+
+details[open] {
+    background-color: var(--bg-color);
+    border: 1px solid var(--accent-border-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+details[open] summary {
+    background-color: var(--bg-color-dark);
+    border: none;
+}
+
+details[open] .arrow-icon {
+    transform: rotate(90deg);
+}

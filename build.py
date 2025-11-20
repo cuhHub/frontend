@@ -21,7 +21,7 @@ Full terms governed by the laws of England and Wales.
 # // Imports
 import os
 from typing import Any
-from enum import Enum
+from dotenv import load_dotenv
 
 from css_html_js_minify import (
     js_minify,
@@ -30,16 +30,6 @@ from css_html_js_minify import (
 )
 
 # // Main
-class MinifyType(Enum):
-    """
-    Enum for representing what minification should be applied to a file.
-    """
-
-    HTML = "html"
-    CSS = "css"
-    JS = "js"
-    NONE = "none"
-
 def read_file(path: str, mode: str = "r") -> Any:
     """
     Reads the content of a file.
@@ -68,28 +58,7 @@ def write_file(path: str, content: Any, mode: str = "w"):
     with open(path, mode) as file:
         file.write(content)
         
-def get_minify_type_for_file_type(file_type: str) -> MinifyType:
-    """
-    Gets the minify type for a given file type.
-
-    Args:
-        file_type (str): File extension/type (e.g: ".js")
-
-    Returns:
-        MinifyType: Corresponding MinifyType enum value.
-    """
-    
-    match file_type:
-        case ".html":
-            return MinifyType.HTML
-        case ".css":
-            return MinifyType.CSS
-        case ".js":
-            return MinifyType.JS
-        case _:
-            return MinifyType.NONE
-        
-def build_file(src_path: str, dist_path: str, license: str, version: str, minify_type: MinifyType):
+def build_file(src_path: str, dist_path: str, license: str, version: str):
     """
     Builds a single file.
 
@@ -97,10 +66,7 @@ def build_file(src_path: str, dist_path: str, license: str, version: str, minify
         src_path (str): Path to the source file.
         dist_path (str): Path to the destination file.
         license (str): License text to prepend to the file.
-        minify_type (MinifyType): Type of minification to apply.
-        
-    Raises:
-        ValueError: If an invalid minify type is provided.
+        version (str): Version string to replace in the file.
     """
     
     try:
@@ -110,18 +76,15 @@ def build_file(src_path: str, dist_path: str, license: str, version: str, minify
     
     if isinstance(content, str):
         content = content.replace("__VERSION__", version)
+        content = content.replace("__GOOGLE_ANALYTICS_ID__", os.getenv("GOOGLE_ANALYTICS_ID", "G-XXXXXXX"))
     
-    match minify_type:
-        case MinifyType.HTML:
+    match os.path.splitext(src_path)[1].lower():
+        case ".html":
             content = f"<!--\n{license}\n-->\n\n" + html_minify(content)
-        case MinifyType.CSS:
+        case ".css":
             content = f"/*\n{license}\n*/\n\n" + css_minify(content)
-        case MinifyType.JS:
+        case ".js":
             content = f"/*\n{license}\n*/\n\n" + js_minify(content)
-        case MinifyType.NONE:
-            pass
-        case _:
-            raise ValueError("Invalid minify type")
         
     write_file(dist_path, content, mode = "w" if isinstance(content, str) else "wb")
     
@@ -129,6 +92,8 @@ def main():
     """
     Main logic.
     """
+    
+    load_dotenv()
 
     src_path = os.path.join("src")
     dist_path = os.path.join("dist")
@@ -150,14 +115,11 @@ def main():
             if not os.path.exists(dist_file_dir):
                 os.makedirs(dist_file_dir)
                 
-            minify_type = get_minify_type_for_file_type(os.path.splitext(file)[1])
-
             build_file(
                 src_path = src_file_path,
                 dist_path = dist_file_path,
                 license = license,
-                version = version,
-                minify_type = minify_type
+                version = version
             )
                 
     print("Build complete!")

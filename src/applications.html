@@ -29,99 +29,165 @@ Full terms governed by the laws of England and Wales.
         <script type="module" src="js/main.js" defer></script>
 
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/page/applications.css"/>
+
         <link rel="icon" href="images/icons/logo_transparent.png"/>
 
-        <link rel="canonical" href="https://cuhhub.com/about-us">
+        <link rel="canonical" href="https://cuhhub.com">
         <meta name="robots" content="index, follow">
 
-        <meta property="og:title" content="cuhHub - Applications">
-        <meta property="og:description" content="Apply for a staff position, tester position, etc.">
-        <meta property="og:url" content="https://cuhhub.com/about-us">
+        <meta property="og:title" content="cuhHub">
+        <meta property="og:description" content="Apply for a staff or tester position at cuhHub.">
+        <meta property="og:url" content="https://cuhhub.com/">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://cuhhub.com/images/banners/cuhhub.png">
 
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="cuhHub  - Applications">
-        <meta name="twitter:description" content="Apply for a staff position, tester position, etc.">
+        <meta name="twitter:title" content="cuhHub">
+        <meta name="twitter:description" content="Apply for a staff or tester position at cuhHub.">
         <meta name="twitter:image" content="https://cuhhub.com/images/banners/cuhhub.png">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=__GOOGLE_ANALYTICS_ID__"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '__GOOGLE_ANALYTICS_ID__');
+        </script>
     </head>
 
     <body>
+        <!-- Background -->
         <div class="background">
             <div class="background-image"></div>
             <div class="background-shadow"></div>
         </div>
 
-        <header class="border-bottom">
-            <nav>
-                <img class="icon-button" href="/" src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=50px>
-                <a class="navbar-button" href="/">Home</a>
-                <a class="navbar-button" href="/about-us">About Us</a>
-                <a class="navbar-button navbar-current" href="/applications">Applications</a>
+        <!-- Topbar -->
+        <div class="topbar">
+            <!-- Header -->
+            <header class="border-bottom">
+                <div class="row gap1">
+                    <a href="/" class="icon-button">
+                        <img src="images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=30px>
+                    </a>
 
-                <div class="navbar-sep"></div>
+                    <h2>cuhHub</h2>
+                </div>
 
-                <a class="navbar-button navbar-support-us" href="https://patreon.com/cuhhubsw">Support Us</a>
+                <div class="row gap1">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
+                        <iconify-icon icon="ion:logo-discord"></iconify-icon>
+                    </a>
+
+                    <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
+                        <iconify-icon icon="ion:logo-github"></iconify-icon>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Navigation Bar -->
+            <nav class="border-bottom">
+                <a class="navbar-link" href="/">Home</a>
+                <a class="navbar-link" href="/about-us">About Us</a>
+                <a class="navbar-link navbar-current" href="/applications">Applications</a>
+                <a class="navbar-link navbar-support-us external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
             </nav>
-        </header>
+        </div>
 
-        <main>
-            <div class="column gap25">
+        <!-- Page Content -->
+        <main class="main-horizontal-center">
+            <div class="column gap1">
                 <h1>Applications</h1>
+                <p>If you would like to volunteer and help cuhHub, refer to the links below.</p>
+            </div>
 
-                <div class="column gap50">
+            <div class="application-cards border-top">
+                <div class="application-card">
+                    <div class="application-card-top">
+                        <h2>
+                            Staff
+                        </h2>
+                    </div>
+
                     <p>
-                        If you would like to personally volunteer for cuhHub, you can use the applications<br>
-                        below.<br><br>
-
-                        <span class="warning-text">
-                            Aside from in-game perks, you do not get monetary rewards for these positions.<br>
-                            This is a volunteer position.
-                        </span>
+                        As staff, you will help moderate the servers and provide support to the community.
                     </p>
 
-                    <div class="vertical-separator"></div>
+                    <a href="#" _target="_blank" class="external-link">Apply</a>
+                </div>
 
-                    <div class="row gap40 space-around">
-                        <div class="column gap20">
-                            <p>
-                                Help ensure the quality of upcoming gamemodes<br>
-                                stays top-notch. You get early-access to in-progress<br>
-                                updates and more.
-                            </p>
-
-                            <a href="https://forms.gle/7ow95VrC7QCs2DD68">Become a tester</a>
-                        </div>
-
-                        <div class="column gap20">
-                            <p>
-                                Help keep cuhHub clean of rulebreakers!<br>
-                                Ensure people don't break the rules and help<br>
-                                players have a good time!
-                            </p>
-
-                            <a href="https://forms.gle/jq6P6DoiswB2L7Z56">Become staff</a>
-                        </div>
-
-                        <div class="column gap10">
-                            <p class="muted-text linethrough-text">
-                                Help develop the code running behind the<br>
-                                scenes of cuhHub.<br>
-                                Knowledge in Python and Lua is required, along<br>
-                                with experience in Stormworks addons.
-                            </p>
-
-                            <a class="warning-text linethrough-text" href="#">Become a developer</a>
-
-                            <p class="emphasised-text">Unavailable for now!</span>
-                        </div>
+                <div class="application-card">
+                    <div class="application-card-top">
+                        <h2>
+                            Tester
+                        </h2>
                     </div>
+
+                    <p>
+                        As a tester, you will help test upcoming updates and provide valuable feedback.
+                    </p>
+
+                    <a href="#" _target="_blank" class="external-link">Apply</a>
+                </div>
+
+                <div class="application-card">
+                    <div class="application-card-top">
+                        <h2>
+                            Developer
+                        </h2>
+                    </div>
+
+                    <p class="muted-text">
+                        As a developer, you will help improve the servers.<br>
+                        Knowledge in Python, Lua and Stormworks addons is required.
+                    </p>
+
+                    <p class="warning-text"><strong>Unavailable</strong></p>
                 </div>
             </div>
         </main>
 
+        <!-- Footer -->
         <footer class="border-top">
-            <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Contact</p>
+                    <a href="mailto:cuhhub@proton.me" class="external-link" target="_blank">cuhhub@proton.me</a>
+                    <p>Discord: <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">dsc.gg/cuhhubsw</a></p>
+                </div>
+
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Pages</p>
+                    <a href="/">Home</a>
+                    <a href="/about-us">About Us</a>
+                    <a href="/applications">Applications</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <p class="footer-link-header">Links</p>
+                    <a class="external-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
+                    <a class="external-link" href="https://github.com/cuhHub/cuhHub" target="_blank">Open-Source</a>
+                    <a class="external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
+
+                    <div class="footer-socials">
+                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
+                            <iconify-icon icon="ion:logo-discord"></iconify-icon>
+                        </a>
+
+                        <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
+                            <iconify-icon icon="ion:logo-github"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p class="footer-copyright-text">© 2025 cuhHub. All rights reserved.</p>
+            </div>
         </footer>
     </body>
 </html>
