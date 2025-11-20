@@ -23,6 +23,9 @@ Full terms governed by the laws of England and Wales.
 }
 
 .icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: 0.3s;
 }
