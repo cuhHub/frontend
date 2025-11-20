@@ -77,6 +77,7 @@ def build_file(src_path: str, dist_path: str, license: str, version: str):
     if isinstance(content, str):
         content = content.replace("__VERSION__", version)
         content = content.replace("__GOOGLE_ANALYTICS_ID__", os.getenv("GOOGLE_ANALYTICS_ID", "G-XXXXXXX"))
+        content = content.replace("__COOKIEBOT_ID__", os.getenv("COOKIEBOT_ID", ""))
     
     match os.path.splitext(src_path)[1].lower():
         case ".html":
