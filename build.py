@@ -55,7 +55,7 @@ def write_file(path: str, content: Any, mode: str = "w"):
         mode (str): Mode in which to open the file. Defaults to "w".
     """
     
-    with open(path, mode) as file:
+    with open(path, mode, encoding = "utf-8" if mode == "w" else None) as file:
         file.write(content)
         
 def build_file(src_path: str, dist_path: str, license: str, version: str):
