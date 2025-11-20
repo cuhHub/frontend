@@ -91,7 +91,6 @@ a {
     text-decoration: underline;
     transition: 0.3s;
     text-underline-offset: 5px;
-    padding: 0;
 }
 
 a:not(.button):not(.icon-button):not(.navbar-link):hover {
