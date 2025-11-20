@@ -51,6 +51,12 @@ nav {
     height: var(--navbar-height);
 }
 
+@media screen and (max-width: 768px) {
+    nav {
+        gap: 20px;
+    }
+}
+
 .navbar-link {
     color: var(--accent-color-lightest);
     font-size: 17px;
@@ -66,19 +72,16 @@ nav {
     transform: scale(1.05);
 }
 
-.navbar-support-us:hover {
+.navbar-support-us {
     color: hsl(51, 100%, 90%);
-    filter: drop-shadow(0 0 10px var(--accent-color-lightest));
+}
+
+.navbar-support-us:hover {
+    filter: drop-shadow(0 0 10px hsla(51, 100%, 90%, 0.4));
 }
 
 .navbar-current {
     color: var(--accent-color-lightest);
     text-decoration: underline;
     text-underline-offset: 15px;
-}
-
-.navbar-sep {
-    width: 1px;
-    height: 30px;
-    background-color: var(--border-color);
 }
