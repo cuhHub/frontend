@@ -26,6 +26,9 @@ Full terms governed by the laws of England and Wales.
 */
 import { API } from "./api.js";
 
+import "https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.5.1/SmoothScroll.min.js";
+import "https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"
+
 /**
     The version of the site.
 */
@@ -43,10 +46,21 @@ async function updatePlayerCount() {
 }
 
 /**
+    Configures SmoothScroll.
+*/
+function configureSmoothScroll() {
+    SmoothScroll({
+        animationTime: 500,
+        stepSize: 45
+    });
+}
+
+/**
     Main site code.
 */
 async function init() {
     await updatePlayerCount();
+    configureSmoothScroll();
 }
 
 init();
