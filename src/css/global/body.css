@@ -30,6 +30,7 @@ body {
     justify-content: center;
     margin: 0;
     overflow-x: hidden;
+    background-color: var(--body-bg-color); /* fallback in case background doesnt load or fully cover page */
 }
 
 main {

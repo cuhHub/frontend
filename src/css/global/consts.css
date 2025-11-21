@@ -19,6 +19,8 @@ Full terms governed by the laws of England and Wales.
 */
 
 :root {
+    --body-bg-color: hsl(0, 0%, 10%); /* fallback in case background doesnt load or fully cover page */
+
     --bg-color-dark: hsla(0, 0%, 7%, 0.4);
     --bg-color: hsla(0, 0%, 12%, 0.4);
     --bg-color-light: hsla(0, 0%, 16%, 0.4);
