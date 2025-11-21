@@ -40,14 +40,14 @@ Full terms governed by the laws of England and Wales.
 
     --icon-color: hsl(217, 48%, 76%);
 
-    --body-vertical-padding: 100px;
+    --body-vertical-padding: 40px;
     --body-horizontal-padding: 250px;
     --section-vertical-padding: 80px;
 
     --header-height: 55px;
     --navbar-height: 70px;
     --topbar-padding: 10px;
-    --topbar-height: calc(var(--header-height) + var(--navbar-height));
+    --topbar-height: calc(var(--header-height) + var(--navbar-height) + var(--topbar-padding));
 
     --warning-text-color: hsl(0, 100%, 88%);
     --text-color: hsl(197, 5%, 90%);
@@ -70,7 +70,12 @@ Full terms governed by the laws of England and Wales.
 
 @media screen and (max-width: 500px) {
     :root {
-        --topbar-padding: 5px;
         --body-horizontal-padding: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --body-horizontal-padding: 15px;
     }
 }
