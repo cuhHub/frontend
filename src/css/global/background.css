@@ -37,7 +37,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 .background-image {
-    background-image: url("../../images/game-screenshots/22.png");
+    background-image: url("../../images/game-screenshots/6.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,6 +46,6 @@ Full terms governed by the laws of England and Wales.
 }
 
 .background-shadow {
-    background: linear-gradient(90deg, var(--accent-color-darkest), hsla(0, 0%, 0%, 0.2));
+    background: linear-gradient(90deg, var(--accent-color-darkest), hsla(0, 0%, 0%, 0));
     width: 100%;
 }
