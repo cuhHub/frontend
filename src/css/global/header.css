@@ -43,6 +43,10 @@ header {
     justify-content: space-between;
 }
 
+header div h2 {
+    line-height: 0;
+}
+
 /* Navbar */
 nav {
     gap: 40px;
