@@ -19,12 +19,11 @@ Full terms governed by the laws of England and Wales.
 */
 
 /* Main Attention */
-.main-attention {
+.main-attention-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
     gap: 70px;
     margin-bottom: 100px;
 }

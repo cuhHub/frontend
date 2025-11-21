@@ -18,20 +18,24 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--primary-font);
     letter-spacing: var(--letter-spacing);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0;
     overflow-x: hidden;
 }
 
 main {
-    padding: 0 var(--body-horizontal-padding);
-    padding-top: var(--body-vertical-padding);
-    margin-top: var(--topbar-height);
-    min-height: calc(100vh - var(--topbar-height) - var(--body-vertical-padding));
+    padding: var(--body-vertical-padding) 0;
+    margin-top: calc(var(--topbar-height));
+    min-height: calc(100vh - var(--topbar-height));
 }
 
 .main-center {
@@ -40,7 +44,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: translateY(calc(var(--body-vertical-padding) * -1)); /* i know its hacky */
+    transform: translateY(calc(var(--topbar-height) / 2 * -1));
 }
 
 .main-horizontal-center {
@@ -52,6 +56,5 @@ main {
 
 .section {
     width: 100%;
-    margin: 0 calc(var(--body-horizontal-padding) * -1);
     padding: var(--section-vertical-padding) var(--body-horizontal-padding);
 }

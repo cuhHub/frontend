@@ -22,6 +22,7 @@ Full terms governed by the laws of England and Wales.
 import os
 from typing import Any
 from dotenv import load_dotenv
+import datetime
 
 from css_html_js_minify import (
     js_minify,
@@ -78,6 +79,7 @@ def build_file(src_path: str, dist_path: str, license: str, version: str):
         content = content.replace("__VERSION__", version)
         content = content.replace("__GOOGLE_ANALYTICS_ID__", os.getenv("GOOGLE_ANALYTICS_ID", "G-XXXXXXX"))
         content = content.replace("__COOKIEBOT_ID__", os.getenv("COOKIEBOT_ID", ""))
+        content = content.replace("__COPYRIGHT_YEAR__", str(datetime.datetime.now().year))
     
     match os.path.splitext(src_path)[1].lower():
         case ".html":

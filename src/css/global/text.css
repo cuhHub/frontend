@@ -108,7 +108,7 @@ p a {
 }
 
 .external-link::after {
-    content: "↗";
+    content: "\2197\FE0E"; /* prevents emoji presentation and shows: ↗ */
     font-size: 0.8rem;
     padding-left: 2px;
 }
