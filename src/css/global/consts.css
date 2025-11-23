@@ -31,9 +31,9 @@ Full terms governed by the laws of England and Wales.
     --accent-color-dark: hsl(217, 58%, 25%);
     --accent-color-darkest: hsl(217, 58%, 15%);
 
-    --bg-accent-color-dark: color-mix(in hsl, var(--accent-color-dark), transparent 40%);
-    --bg-accent-color: color-mix(in hsl, var(--accent-color), transparent 40%);
-    --bg-accent-color-light: color-mix(in hsl, var(--accent-color-light), transparent 40%);
+    --bg-accent-color-dark: color-mix(in hsl, var(--accent-color-dark), transparent 80%);
+    --bg-accent-color: color-mix(in hsl, var(--accent-color), transparent 80%);
+    --bg-accent-color-light: color-mix(in hsl, var(--accent-color-light), transparent 80%);
 
     --scrollbar-bg-color: rgb(20, 20, 20);
 
