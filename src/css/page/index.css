@@ -75,22 +75,12 @@ Full terms governed by the laws of England and Wales.
     border: 1px solid var(--border-color);
 }
 
-.ingame-images img:hover {
-    transform: scale(1.1);
-    z-index: 1;
-    filter: brightness(1.1);
-    border: 1px solid var(--accent-border-color);
-}
 
 /* How to join */
 .how-to-join-section {
-    background: linear-gradient(
-        0deg,
-        var(--bg-accent-color-dark) 0%,
-        var(--bg-accent-color-dark) 50%,
-        transparent
-    );
+
     text-align: center;
+
 }
 
 .how-to-join {
@@ -98,8 +88,8 @@ Full terms governed by the laws of England and Wales.
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding: 25px;
+    gap: 40px;
+    padding: 50px;
 }
 
 .how-to-join .arrow {
@@ -122,11 +112,7 @@ Full terms governed by the laws of England and Wales.
     justify-content: space-between;
 }
 
-.how-to-join-step:hover {
-    scale: 1.05;
-    border: 1px solid var(--accent-border-color);
-    margin: 0 15px;
-}
+
 
 .how-to-join-step iconify-icon {
     font-size: 35px;
@@ -155,23 +141,22 @@ Full terms governed by the laws of England and Wales.
 
 /* cuhhub-experience */
 .cuhhub-experience-section {
-    background-color: color-mix(in hsl, var(--accent-color-dark) 20%, transparent);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.cuhhub-experience-section-title {
+    text-align: center;
+}
+
 .cuhhub-experience-video {
-    width: 90%;
+    width: 75%;
     border: 1px solid var(--border-color);
     border-radius: 10px;
     margin: 15px;
-}
-
-/* FAQ */
-.faq-section {
-    background-color: var(--bg-color-light);
 }
 
 /* Misc */
@@ -181,3 +166,4 @@ Full terms governed by the laws of England and Wales.
     font-size: 25px;
     filter: drop-shadow(0 0 5px var(--accent-color-lightest));
 }
+
