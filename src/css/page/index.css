@@ -75,15 +75,9 @@ Full terms governed by the laws of England and Wales.
     border: 1px solid var(--border-color);
 }
 
-.ingame-images img:hover {
-    transform: scale(1.1);
-    z-index: 1;
-    filter: brightness(1.1);
-    border: 1px solid var(--accent-border-color);
-}
-
 /* How to join */
 .how-to-join-section {
+    text-align: center;
     background: linear-gradient(
         0deg,
         var(--bg-accent-color-dark) 0%,
@@ -97,8 +91,8 @@ Full terms governed by the laws of England and Wales.
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding: 25px;
+    gap: 40px;
+    padding: 50px;
 }
 
 .how-to-join .arrow {
@@ -111,18 +105,14 @@ Full terms governed by the laws of England and Wales.
     align-items: center;
     gap: 10px;
     width: 300px;
+    min-height: 450px;
     background-color: var(--bg-color-dark);
     padding: 20px;
     border-radius: 25px;
     border: 1px solid var(--border-color);
     text-align: center;
     transition: 0.3s;
-}
-
-.how-to-join-step:hover {
-    scale: 1.05;
-    border: 1px solid var(--accent-border-color);
-    margin: 0 15px;
+    justify-content: space-between;
 }
 
 .how-to-join-step iconify-icon {
@@ -150,17 +140,21 @@ Full terms governed by the laws of England and Wales.
     }
 }
 
-/* cuhhub-experience */
+/* cuhHub Experience */
 .cuhhub-experience-section {
-    background-color: color-mix(in hsl, var(--accent-color-dark) 20%, transparent);
+    background-color: var(--bg-color-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.cuhhub-experience-section-title {
+    text-align: center;
+}
+
 .cuhhub-experience-video {
-    width: 90%;
+    width: 75%;
     border: 1px solid var(--border-color);
     border-radius: 10px;
     margin: 15px;
@@ -168,7 +162,7 @@ Full terms governed by the laws of England and Wales.
 
 /* FAQ */
 .faq-section {
-    background-color: var(--bg-color-light);
+    background-color: var(--bg-accent-color-dark);
 }
 
 /* Misc */
