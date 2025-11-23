@@ -117,6 +117,7 @@ details {
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     margin-bottom: 8px;
+    border: 1px solid transparent; /* prevent default border appearance appearing for a split second during open animation */
 }
 
 details > * {
@@ -129,11 +130,11 @@ details p, details .row {
     opacity: 0;
     transform: translateY(0);
     max-height: 0;
-    animation: expandContent 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: expandContent 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 details a {
-    animation: fadeInSlide 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: fadeInSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes expandContent {
@@ -170,7 +171,7 @@ details summary {
     padding: 15px;
     margin: 5px 0;
     list-style: none;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
 }
@@ -182,7 +183,7 @@ details summary:hover {
 }
 
 details .arrow-icon {
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0 8px;
     transform: rotate(0);
 }
@@ -192,7 +193,7 @@ details[open] {
     border: 1px solid var(--accent-border-color);
     border-radius: 10px;
     padding: 15px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
