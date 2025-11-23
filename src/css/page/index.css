@@ -90,6 +90,7 @@ Full terms governed by the laws of England and Wales.
         var(--bg-accent-color-dark) 50%,
         transparent
     );
+    text-align: center;
 }
 
 .how-to-join {
@@ -111,12 +112,14 @@ Full terms governed by the laws of England and Wales.
     align-items: center;
     gap: 10px;
     width: 300px;
+    min-height: 450px;
     background-color: var(--bg-color-dark);
     padding: 20px;
     border-radius: 25px;
     border: 1px solid var(--border-color);
     text-align: center;
     transition: 0.3s;
+    justify-content: space-between;
 }
 
 .how-to-join-step:hover {
