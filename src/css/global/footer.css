@@ -26,6 +26,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    filter: drop-shadow(0 0 3px);
 }
 
 .footer-bottom {
@@ -64,5 +65,5 @@ footer {
 }
 
 .footer-link-header {
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-border-color);
 }
