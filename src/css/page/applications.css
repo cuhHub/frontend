@@ -39,7 +39,7 @@ Full terms governed by the laws of England and Wales.
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 230px;
+    width: 260px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
     padding: 25px;
