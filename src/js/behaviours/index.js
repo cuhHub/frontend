@@ -18,24 +18,5 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-/**
-    @typedef {Object} Behaviour
-    @property {() => Promise<void>} init Initializes the behaviour
-    @property {string} behaviourName The name of the behaviour
-*/
-
-/**
-    Creates a behaviour object.
-    @param {string} name The name of the behaviour.
-    @returns {Behaviour}
-*/
-export function behaviour(name) {
-    const behaviour = {};
-    behaviour.behaviourName = name;
-
-    return behaviour;
-}
-
 export * from "./player-count.js";
 export * from "./smooth-scroll.js";
-export * from "./header.js";

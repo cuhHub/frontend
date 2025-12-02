@@ -19,17 +19,25 @@ Full terms governed by the laws of England and Wales.
 */
 
 /**
-    A behaviour for configuring smooth scroll.
+    Imports
 */
-import { behaviour } from "./index.js"
-export const SmoothScrollBehaviour = behaviour("SmoothScroll");
+import { Behaviour } from "./behaviour.js"
 
 /**
-    Initializes this behaviour.
+    A behaviour for configuring smooth scroll.
 */
-SmoothScrollBehaviour.init = function() {
-    SmoothScroll({
-        animationTime: 500,
-        stepSize: 45
-    });
+export class SmoothScrollBehaviour extends Behaviour {
+    constructor() {
+        super("SmoothScroll")
+    }
+
+    /**
+        Initializes this behaviour.
+    */
+    init() {
+        SmoothScroll({
+            animationTime: 500,
+            stepSize: 45
+        });
+    }
 }

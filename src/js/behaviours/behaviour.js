@@ -19,34 +19,21 @@ Full terms governed by the laws of England and Wales.
 */
 
 /**
-    Imports
+    The base behaviour class.
 */
-import { Behaviour } from "./behaviour.js"
-import { API } from "../libs/api.js";
-
-/**
-    A behaviour for replacing player count placeholders with actual data.
-*/
-export class PlayerCountBehaviour extends Behaviour {
-    constructor() {
-        super("PlayerCount");
+export class Behaviour {
+    /**
+        @param {string} name The name of the behaviour.
+    */
+    constructor(name) {
+        this.behaviourName = name;
     }
 
     /**
-        Replaces player count placeholders with actual data.
+        Initializes the behaviour.
+        @abstract
     */
-    async replaceAll() {
-        const playerCount = await API.getRegisteredPlayerCount();
-        
-        document.querySelectorAll(".registered-player-count").forEach(element => {
-            element.innerText = playerCount;
-        });
-    }
-
-    /**
-        Initializes this behaviour.
-    */
-    async init() {
-        await this.replaceAll();
+    init() {
+        throw new Error("init() must be implemented by subclass");
     }
 }

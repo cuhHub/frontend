@@ -27,20 +27,21 @@ Full terms governed by the laws of England and Wales.
 import { CONSTS } from "./consts.js";
 
 import * as behaviours from "./behaviours/index.js";
+import { Behaviour } from "./behaviours/behaviour.js";
 
 /**
     Starts all behaviours.
 */
 function startBehaviours() {
     Object.values(behaviours).forEach(behaviour => {
-        init = behaviour.init;
-
-        if (!init) {
-            return
+        if (!behaviour instanceof Behaviour) {
+            return;
         }
 
-        console.log(`Initializing behaviour: ${behaviour.behaviourName}`);
-        init.call(behaviour);
+        var instance = new behaviour();
+        instance.init();
+
+        console.log("Initialized behaviour: " + instance.behaviourName)
     })
 }
 
