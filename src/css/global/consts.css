@@ -21,9 +21,9 @@ Full terms governed by the laws of England and Wales.
 :root {
     --body-bg-color: hsl(0, 0%, 10%); /* fallback in case background doesnt load or fully cover page */
 
-    --bg-color-dark: hsla(0, 0%, 7%, 0.4);
-    --bg-color: hsla(0, 0%, 12%, 0.4);
-    --bg-color-light: hsla(0, 0%, 16%, 0.4);
+    --bg-color-dark: hsl(220, 36%, 13%);
+    --bg-color: hsl(220, 36%, 17%);
+    --bg-color-light: hsl(220, 36%, 23%);
 
     --accent-color-lightest: hsl(217, 58%, 75%);
     --accent-color-light: hsl(217, 58%, 60%);
@@ -37,26 +37,24 @@ Full terms governed by the laws of England and Wales.
 
     --scrollbar-bg-color: rgb(20, 20, 20);
 
-    --border-color: hsla(197, 5%, 85%, 0.5);
-    --accent-border-color: hsla(217, 58%, 38%, 0.8);
+    --border-color: hsl(215, 21%, 30%);
+    --accent-border-color: hsl(217, 74%, 58%);
 
     --icon-color: hsl(217, 48%, 76%);
+    --accent-icon-color: hsl(217, 54%, 63%);
 
     --body-vertical-padding: 40px;
-    --body-horizontal-padding: 250px;
+    --body-horizontal-padding: 200px;
     --section-vertical-padding: 80px;
-
-    --header-height: 55px;
-    --navbar-height: 70px;
-    --topbar-padding: 10px;
-    --topbar-height: calc(var(--header-height) + var(--navbar-height) + var(--topbar-padding));
+    --main-margin-top: 30px;
 
     --warning-text-color: hsl(0, 100%, 88%);
-    --text-color: hsl(197, 5%, 90%);
-    --text-color-emphasised: hsl(197, 5%, 95%);
+    --heading-text-color: hsl(197, 5%, 95%);
+    --text-color: hsl(197, 5%, 80%);
+    --text-color-emphasised: hsl(197, 5%, 85%);
+    --special-text-color: hsl(217, 83%, 69%);
     --text-color-muted: hsl(0, 0%, 82%);
     --clickable-text-color: hsl(209, 94%, 70%);
-    --external-clickable-text-color: hsl(224, 100%, 75%);
     --clickable-text-color-hover: hsl(209, 94%, 75%);
 
     --primary-font: "Noto Sans", sans-serif;
@@ -70,9 +68,10 @@ Full terms governed by the laws of England and Wales.
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     :root {
         --body-horizontal-padding: 50px;
+        --main-margin-top: 90px;
     }
 }
 
