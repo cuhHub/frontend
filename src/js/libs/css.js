@@ -18,38 +18,25 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-// Not familiar with JavaScript. Still learning, so expect bad practices.
-// Will be improved with time! - Cuh4
+/**
+    CSS helper functions.
+*/
+export const CSS = {}
 
 /**
-    Imports
+    Returns the value of the root CSS variable provided.
+    @param {string} name The name of the CSS variable.
+    @returns {string}
 */
-import { CONSTS } from "./consts.js";
-
-import * as behaviours from "./behaviours/index.js";
-
-/**
-    Starts all behaviours.
-*/
-function startBehaviours() {
-    Object.values(behaviours).forEach(behaviour => {
-        init = behaviour.init;
-
-        if (!init) {
-            return
-        }
-
-        console.log(`Initializing behaviour: ${behaviour.behaviourName}`);
-        init.call(behaviour);
-    })
+CSS.getCSSVariable = function(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue("--" + name).trim();
 }
 
 /**
-    Main site code.
+    Returns the value of the root CSS variable (the variable must be a pixel value).
+    @param {string} name The name of the CSS variable.
+    @returns {number}
 */
-async function init() {
-    console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
-    startBehaviours();
+CSS.getCSSVariablePx = function(name) {
+    return Number(this.getCSSVariable(name).replace("px", ""));
 }
-
-init();

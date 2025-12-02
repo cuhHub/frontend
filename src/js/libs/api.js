@@ -18,9 +18,6 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-// Not familiar with JavaScript. Still learning, so expect bad practices.
-// Will be improved with time! - Cuh4
-
 /**
     A barebones wrapper for cuhHub's API.
 */
@@ -33,14 +30,14 @@ const API_URL = "https://api.cuhhub.com";
 
 /**
     Returns the amount of registered players.
-    @returns {number|null}
+    @returns {number}
 */
 API.getRegisteredPlayerCount = async function() {
     try {
         const response = await fetch(API_URL + "/players/count");
 
         if (!response.ok) {
-            return null;
+            return 0;
         }
 
         const data = await response.json();

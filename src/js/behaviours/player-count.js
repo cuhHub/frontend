@@ -18,38 +18,32 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-// Not familiar with JavaScript. Still learning, so expect bad practices.
-// Will be improved with time! - Cuh4
-
 /**
     Imports
 */
-import { CONSTS } from "./consts.js";
+import { behaviour } from "./index.js"
+import { API } from "../libs/api.js";
 
-import * as behaviours from "./behaviours/index.js";
 
 /**
-    Starts all behaviours.
+    A behaviour for replacing player count placeholders with actual data.
 */
-function startBehaviours() {
-    Object.values(behaviours).forEach(behaviour => {
-        init = behaviour.init;
+export const PlayerCountBehaviour = behaviour("PlayerCount");
 
-        if (!init) {
-            return
-        }
-
-        console.log(`Initializing behaviour: ${behaviour.behaviourName}`);
-        init.call(behaviour);
-    })
+/**
+    Replaces player count placeholders with actual data.
+*/
+PlayerCountBehaviour.replaceAll = async function() {
+    const playerCount = await API.getRegisteredPlayerCount();
+    
+    document.querySelectorAll(".registered-player-count").forEach(element => {
+        element.innerText = playerCount;
+    });
 }
 
 /**
-    Main site code.
+    Initializes this behaviour.
 */
-async function init() {
-    console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
-    startBehaviours();
+PlayerCountBehaviour.init = async function() {
+    await this.replaceAll();
 }
-
-init();
