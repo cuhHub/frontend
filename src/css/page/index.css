@@ -20,49 +20,26 @@ Full terms governed by the laws of England and Wales.
 
 /* Main Attention */
 .main-attention-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 70px;
-    margin-bottom: 100px;
-}
-
-.main-attention-left-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.main-attention-right-content {
-    display: flex;
-    flex-direction: column;;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-@media screen and (max-width: 1500px) {
-    .main-attention-right-content {
-        display: none;
-    }
-    
-    .main-attention-left-content {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+    gap: 30px;
 }
 
 .ingame-images {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 25px;
+}
+
+@media screen and (max-width: 900px) {
+    .ingame-images {
+        display: none;
+    }
 }
 
 .ingame-images img {
-    width: 350px;
+    width: 300px;
     height: 150px;
     object-fit: cover;
     object-position: center;
@@ -75,15 +52,69 @@ Full terms governed by the laws of England and Wales.
     border: 1px solid var(--border-color);
 }
 
+/* Offerings */
+.offering-section {
+    text-align: center;
+}
+
+.offerings {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 50px;
+    width: 100%;
+}
+
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    width: 30%;
+    background-color: var(--bg-color);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+    .offer-card {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .offer-card {
+        width: 100%;
+    }
+}
+
+.offer-card:hover {
+    border: 1px solid var(--accent-border-color);
+}
+
+.offer-card h3 {
+    font-weight: 700;
+}
+
+.offer-card iconify-icon {
+    font-size: 50px;
+    transition: 0.3s;
+}
+
+.offer-card:hover iconify-icon {
+    color: var(--accent-icon-color);
+    transform: scale(1.1);
+}
+
 /* How to join */
 .how-to-join-section {
     text-align: center;
-    background: linear-gradient(
-        0deg,
-        var(--bg-accent-color-dark) 0%,
-        var(--bg-accent-color-dark) 50%,
-        transparent
-    );
 }
 
 .how-to-join {
@@ -140,9 +171,14 @@ Full terms governed by the laws of England and Wales.
     }
 }
 
+@media screen and (max-width: 600px) {
+    .how-to-join-step {
+        width: 100%;
+    }
+}
+
 /* cuhHub Experience */
 .cuhhub-experience-section {
-    background-color: var(--bg-color-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,13 +198,15 @@ Full terms governed by the laws of England and Wales.
 
 /* FAQ */
 .faq-section {
-    background-color: var(--bg-accent-color-dark);
+    align-items: stretch;
 }
 
 /* Misc */
 .registered-player-count {
     color: var(--accent-color-lightest);
     font-weight: 600;
-    font-size: 25px;
-    filter: drop-shadow(0 0 5px var(--accent-color-lightest));
+    filter: drop-shadow(
+        0 0 5px 
+        color-mix(in hsl, var(--accent-color-lightest), transparent 40%)
+    );
 }
