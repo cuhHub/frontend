@@ -130,12 +130,8 @@ Full terms governed by the laws of England and Wales.
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
     padding: 50px;
-}
-
-.how-to-join .arrow {
-    font-size: 50px;
 }
 
 .how-to-join-step {
@@ -152,10 +148,15 @@ Full terms governed by the laws of England and Wales.
     text-align: center;
     transition: 0.3s;
     justify-content: space-between;
+    align-self: stretch;
+}
+
+.how-to-join-step:hover {
+    border: 1px solid var(--accent-border-color);
 }
 
 .how-to-join-step iconify-icon {
-    font-size: 35px;
+    font-size: 50px;
 }
 
 .how-to-join-step img {
@@ -172,10 +173,6 @@ Full terms governed by the laws of England and Wales.
 
     .how-to-join-step {
         width: 70%;
-    }
-
-    .how-to-join .arrow {
-        transform: rotate(90deg);
     }
 }
 
