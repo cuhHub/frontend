@@ -83,8 +83,8 @@ h4 {
     text-align: center;
 }
 
-.emphasised-text {
-    font-weight: 700;
+strong {
+    font-weight: 600;
     color: var(--text-color-emphasised);
 }
 
@@ -177,6 +177,7 @@ details summary:hover {
     cursor: pointer;
     background-color: color-mix(in srgb, var(--bg-color) 90%, var(--accent-color-lightest) 10%);
     transform: translateX(3px);
+    border: 1px solid var(--accent-border-color);
 }
 
 details .arrow-icon {
