@@ -20,6 +20,9 @@ Full terms governed by the laws of England and Wales.
 
 /* Main Attention */
 .main-attention-section {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 30px;
 }
 
@@ -36,10 +39,15 @@ Full terms governed by the laws of England and Wales.
     .ingame-images {
         display: none;
     }
+
+    .main-attention-section {
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 .ingame-images img {
-    width: 300px;
+    width: 40%;
     height: 150px;
     object-fit: cover;
     object-position: center;
@@ -198,13 +206,18 @@ Full terms governed by the laws of England and Wales.
 
 /* FAQ */
 .faq-section {
-    align-items: stretch;
+    
+}
+
+.faq {
+    width: 80%;
 }
 
 /* Misc */
 .registered-player-count {
     color: var(--accent-color-lightest);
     font-weight: 600;
+    font-size: 25px;
     filter: drop-shadow(
         0 0 5px 
         color-mix(in hsl, var(--accent-color-lightest), transparent 40%)
