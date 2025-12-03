@@ -23,6 +23,7 @@ Full terms governed by the laws of England and Wales.
 */
 import { Behaviour } from "./behaviour.js"
 import { API } from "../libs/api.js";
+import { Num } from "../libs/num.js";
 
 /**
     A behaviour for replacing player count placeholders with actual data.
@@ -39,7 +40,7 @@ export class PlayerCountBehaviour extends Behaviour {
         const playerCount = await API.getRegisteredPlayerCount();
         
         document.querySelectorAll(".registered-player-count").forEach(element => {
-            element.innerText = playerCount;
+            element.innerText = Num.formatNumber(playerCount);
         });
     }
 
