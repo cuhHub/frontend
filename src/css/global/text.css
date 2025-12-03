@@ -26,6 +26,8 @@ p,
 h1, h2, h3, h4,
 a,
 li,
+th,
+td,
 button {
     color: var(--text-color);
     margin: 0px;
@@ -57,6 +59,10 @@ h3 {
 h4 {
     font-weight: 350;
     font-size: 20px;
+}
+
+th {
+    font-weight: 700;
 }
 
 .text-color {
