@@ -35,8 +35,8 @@ body {
 
 main {
     padding: var(--body-vertical-padding) 0;
-    margin-top: calc(var(--topbar-height));
-    min-height: calc(100vh - var(--topbar-height));
+    margin-top: var(--main-margin-top);
+    min-height: calc(100vh - var(--main-margin-top));
 }
 
 .main-center {
@@ -45,7 +45,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: translateY(calc(var(--topbar-height) / 2 * -1));
+    transform: translateY(calc(var(--main-margin-top) * -1));
 }
 
 .main-horizontal-center {
@@ -55,7 +55,13 @@ main {
     text-align: center;
 }
 
-.section {
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
     width: 100%;
     padding: var(--section-vertical-padding) var(--body-horizontal-padding);
 }

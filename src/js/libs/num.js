@@ -18,14 +18,16 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-@import url("global/consts.css");
-@import url("global/fonts.css");
-@import url("global/utility.css");
-@import url("global/text.css");
-@import url("global/table.css");
-@import url("global/icons.css");
-@import url("global/background.css");
-@import url("global/body.css");
-@import url("global/header.css");
-@import url("global/footer.css");
-@import url("global/scrollbar.css");
+/**
+    Number-related helper functions.
+*/
+export const Num = {}
+
+/**
+    Formats a number (1772 --> 1,772).
+    @param {number} number The number to format
+    @return {number}
+*/
+Num.formatNumber = function(number) {
+    return number.toLocaleString();
+}

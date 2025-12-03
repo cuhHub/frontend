@@ -18,14 +18,22 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-@import url("global/consts.css");
-@import url("global/fonts.css");
-@import url("global/utility.css");
-@import url("global/text.css");
-@import url("global/table.css");
-@import url("global/icons.css");
-@import url("global/background.css");
-@import url("global/body.css");
-@import url("global/header.css");
-@import url("global/footer.css");
-@import url("global/scrollbar.css");
+/**
+    The base behaviour class.
+*/
+export class Behaviour {
+    /**
+        @param {string} name The name of the behaviour.
+    */
+    constructor(name) {
+        this.behaviourName = name;
+    }
+
+    /**
+        Initializes the behaviour.
+        @abstract
+    */
+    init() {
+        throw new Error("init() must be implemented by subclass");
+    }
+}

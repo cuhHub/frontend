@@ -18,14 +18,25 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-@import url("global/consts.css");
-@import url("global/fonts.css");
-@import url("global/utility.css");
-@import url("global/text.css");
-@import url("global/table.css");
-@import url("global/icons.css");
-@import url("global/background.css");
-@import url("global/body.css");
-@import url("global/header.css");
-@import url("global/footer.css");
-@import url("global/scrollbar.css");
+/**
+    CSS helper functions.
+*/
+export const CSS = {}
+
+/**
+    Returns the value of the root CSS variable provided.
+    @param {string} name The name of the CSS variable.
+    @returns {string}
+*/
+CSS.getCSSVariable = function(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue("--" + name).trim();
+}
+
+/**
+    Returns the value of the root CSS variable (the variable must be a pixel value).
+    @param {string} name The name of the CSS variable.
+    @returns {number}
+*/
+CSS.getCSSVariablePx = function(name) {
+    return Number(this.getCSSVariable(name).replace("px", ""));
+}

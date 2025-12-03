@@ -18,8 +18,8 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-/* Top */
-.topbar {
+/* Header */
+header {
     position: fixed;
     left: 0;
     top: 0;
@@ -27,41 +27,49 @@ Full terms governed by the laws of England and Wales.
     backdrop-filter: blur(5px);
     background-color: var(--bg-color-dark);
     z-index: 5;
+    padding: 5px var(--body-horizontal-padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0 0 3px);
 }
 
-.topbar > * {
-    padding: var(--topbar-padding) var(--body-horizontal-padding);
-    width: 100%;
+/* Branding */
+.header-branding {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 5px;
 }
 
-/* Header */
-header {
-    height: var(--header-height);
-    justify-content: space-between;
-}
-
-header div h2 {
-    line-height: 0;
+.header-branding h1 {
+    font-size: 30px;
+    font-weight: 600;
 }
 
 /* Navbar */
 nav {
-    gap: 40px;
-    height: var(--navbar-height);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
 }
 
-@media screen and (max-width: 768px) {
-    nav {
-        gap: 5px;
-    }
+.navbar-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
 }
 
 .navbar-link {
-    color: var(--accent-color-lightest);
+    color: var(--text-color);
     font-size: 17px;
+    font-weight: 500;
     text-decoration: none;
     text-underline-offset: 10px;
     transition: 0.3s;
@@ -86,4 +94,19 @@ nav {
     color: var(--accent-color-lightest);
     text-decoration: underline;
     text-underline-offset: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .navbar-icons {
+        display: none;
+    }
 }

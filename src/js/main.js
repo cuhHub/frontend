@@ -24,40 +24,33 @@ Full terms governed by the laws of England and Wales.
 /**
     Imports
 */
-import { API } from "./api.js";
+import { CONSTS } from "./consts.js";
+
+import * as behaviours from "./behaviours/index.js";
+import { Behaviour } from "./behaviours/behaviour.js";
 
 /**
-    The version of the site.
+    Starts all behaviours.
 */
-const SITE_VERSION = "__VERSION__";
+function startBehaviours() {
+    Object.values(behaviours).forEach(behaviour => {
+        if (!behaviour instanceof Behaviour) {
+            return;
+        }
 
-/**
-    Updates the player count.
-*/
-async function updatePlayerCount() {
-    const playerCount = await API.getRegisteredPlayerCount();
+        var instance = new behaviour();
+        instance.init();
 
-    document.querySelectorAll(".registered-player-count").forEach(element => {
-       element.innerText = playerCount;
-    });
-}
-
-/**
-    Configures SmoothScroll.
-*/
-function configureSmoothScroll() {
-    SmoothScroll({
-        animationTime: 500,
-        stepSize: 45
-    });
+        console.log("Initialized behaviour: " + instance.behaviourName)
+    })
 }
 
 /**
     Main site code.
 */
 async function init() {
-    await updatePlayerCount();
-    configureSmoothScroll();
+    console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
+    startBehaviours();
 }
 
 init();
