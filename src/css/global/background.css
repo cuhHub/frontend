@@ -37,9 +37,9 @@ Full terms governed by the laws of England and Wales.
 }
 
 .background-image {
-    background-image: url("../../images/game-screenshots/10.png");
+    background-image: url("../../images/game-screenshots/12.png");
     background-size: cover;
-    background-position: 55% 50%;
+    background-position: center;
     background-repeat: no-repeat;
     filter: blur(5px);
     scale: 1.2; /* to hide border coming from the blur */
