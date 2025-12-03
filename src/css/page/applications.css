@@ -23,14 +23,15 @@ Full terms governed by the laws of England and Wales.
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 .application-cards {
     padding: 25px;
-    margin-top: 25px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 100px;
 }
@@ -38,11 +39,11 @@ Full terms governed by the laws of England and Wales.
 .application-card {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 260px;
+    gap: 10px;
+    width: 400px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
-    padding: 25px;
+    padding: 15px;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -51,11 +52,21 @@ Full terms governed by the laws of England and Wales.
 }
 
 .application-card:hover {
-    transform: scale(1.05);
     border: 1px solid var(--accent-border-color);
 }
 
+@media screen and (max-width: 800px) {
+    .application-card {
+        width: 100%;
+    }
+}
+
 .application-card-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     width: 100%;
     border-bottom: 1px solid var(--border-color);
 }
