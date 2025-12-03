@@ -21,9 +21,10 @@ Full terms governed by the laws of England and Wales.
 :root {
     --body-bg-color: hsl(0, 0%, 10%); /* fallback in case background doesnt load or fully cover page */
 
-    --bg-color-dark: hsl(220, 36%, 13%);
-    --bg-color: hsl(220, 36%, 17%);
-    --bg-color-light: hsl(220, 36%, 23%);
+    --bg-color-dark: hsla(220, 36%, 13%, 0.6);
+    --bg-color: hsla(220, 36%, 17%, 0.6);
+    --bg-color-light: hsla(220, 36%, 23%, 0.6);
+    --bg-color-opaque: hsl(220, 36%, 17%);
 
     --accent-color-lightest: hsl(217, 58%, 75%);
     --accent-color-light: hsl(217, 58%, 60%);
@@ -37,7 +38,7 @@ Full terms governed by the laws of England and Wales.
 
     --scrollbar-bg-color: rgb(20, 20, 20);
 
-    --border-color: hsl(215, 21%, 30%);
+    --border-color: hsl(216, 15%, 35%);
     --accent-border-color: hsl(217, 74%, 58%);
 
     --icon-color: hsl(217, 48%, 76%);
@@ -46,7 +47,7 @@ Full terms governed by the laws of England and Wales.
     --body-vertical-padding: 40px;
     --body-horizontal-padding: 200px;
     --section-vertical-padding: 80px;
-    --main-margin-top: 30px;
+    --main-margin-top: 50px;
 
     --warning-text-color: hsl(0, 100%, 88%);
     --heading-text-color: hsl(197, 5%, 95%);
