@@ -1,0 +1,71 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2025 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+:root {
+    --background-image: url("../../images/game-screenshots/33.png");
+}
+
+/* Main Attention */
+.main-attention-section {
+    text-align: left;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+    min-height: 70vh;
+}
+
+/* Info Section */
+.info-section {
+    background-color: var(--bg-color-dark);
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.feature {
+    width: 30%;
+    align-self: stretch;
+}
+
+@media screen and (max-width: 900px) {
+    .feature {
+        width: 100%;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--bg-color-light);
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+}
