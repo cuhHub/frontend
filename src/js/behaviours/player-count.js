@@ -19,11 +19,13 @@ Full terms governed by the laws of England and Wales.
 */
 
 /* -------------- Imports */
+
 import { Behaviour } from "./behaviour.js"
 import { API } from "../libs/api.js";
 import { Num } from "../libs/num.js";
 
 /* -------------- Main */
+
 /**
     A behaviour for replacing player count placeholders with actual data.
 */

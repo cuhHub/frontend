@@ -19,9 +19,11 @@ Full terms governed by the laws of England and Wales.
 */
 
 /* -------------- Imports */
+
 import { Behaviour } from "./behaviour.js"
 
 /* -------------- Main */
+
 /**
     A behaviour for configuring smooth scroll.
 */

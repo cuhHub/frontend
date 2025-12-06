@@ -22,6 +22,7 @@ Full terms governed by the laws of England and Wales.
 // Will be improved with time! - Cuh4
 
 /* -------------- Imports */
+
 import { CONSTS } from "./consts.js";
 
 import * as behaviours from "./behaviours/index.js";
@@ -79,7 +80,7 @@ window.openPage = function(URL) {
 */
 window.init = function() {
     console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
-    startBehaviours();
+    window.startBehaviours();
 }
 
 window.init();

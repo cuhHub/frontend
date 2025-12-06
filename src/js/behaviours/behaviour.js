@@ -19,6 +19,7 @@ Full terms governed by the laws of England and Wales.
 */
 
 /* -------------- Main */
+
 /**
     The base behaviour class.
 */
