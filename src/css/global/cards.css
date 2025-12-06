@@ -31,7 +31,7 @@ Full terms governed by the laws of England and Wales.
     padding: 15px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
-    transition: 0.3s;
+    transition: var(--transition-duration);
 }
 
 .card:hover {
@@ -44,7 +44,7 @@ Full terms governed by the laws of England and Wales.
 
 .card iconify-icon {
     font-size: 50px;
-    transition: 0.3s;
+    transition: var(--transition-duration);
 }
 
 .card:hover iconify-icon {
