@@ -24,7 +24,7 @@ Full terms governed by the laws of England and Wales.
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-around;
     text-align: left;
     width: 30%;
     background-color: var(--bg-color);
@@ -38,31 +38,35 @@ Full terms governed by the laws of England and Wales.
     border: 1px solid var(--accent-border-color);
 }
 
-.card h3 {
+.card-title {
     font-weight: 700;
 }
 
-.card iconify-icon {
+.card-icon {
     font-size: 50px;
     transition: var(--transition-duration);
 }
 
-.card:hover iconify-icon {
+.card:hover .card-icon {
     color: var(--accent-icon-color);
     transform: scale(1.1);
 }
 
-.card img {
+.card-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    filter: blur(5px) brightness(50%);
+    filter: blur(5px) brightness(40%);
 }
 
-.card > *:not(img) {
+.card > *:not(.card-img) {
     z-index: 1;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.card-img-top .card-img {
+    top: -70%;
 }
