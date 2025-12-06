@@ -22,7 +22,9 @@ Full terms governed by the laws of England and Wales.
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%; /* fallback */
     width: 100lvw;
+    height: 100%; /* fallback */
     height: 100lvh;
     z-index: -1;
     pointer-events: none;
