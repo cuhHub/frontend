@@ -53,7 +53,7 @@ Full terms governed by the laws of England and Wales.
     --heading-text-color: hsl(197, 5%, 95%);
     --text-color: hsl(197, 5%, 80%);
     --text-color-emphasised: hsl(197, 5%, 85%);
-    --special-text-color: hsl(217, 83%, 69%);
+    --special-text-color: hsl(217, 100%, 81%);
     --text-color-muted: hsl(0, 0%, 82%);
     --clickable-text-color: hsl(209, 94%, 70%);
     --clickable-text-color-hover: hsl(209, 94%, 75%);
@@ -61,6 +61,19 @@ Full terms governed by the laws of England and Wales.
     --primary-font: "Noto Sans", sans-serif;
     --secondary-font: "Roboto", sans-serif;
     --letter-spacing: -0.8px;
+
+    --transition-duration: 0.1s;
+
+    --background-shadow: linear-gradient(
+        135deg,
+        color-mix(
+            in hsl,
+            var(--bg-color-opaque),
+            transparent 20%
+        ),
+        hsla(0, 0%, 0%, 0.4)
+    );
+    --background-image: url("../../images/game-screenshots/12.png");
 }
 
 @media screen and (max-width: 1400px) {
