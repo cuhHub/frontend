@@ -18,11 +18,10 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-/**
-    Imports
-*/
+/* -------------- Imports */
 import { Behaviour } from "./behaviour.js"
 
+/* -------------- Main */
 /**
     A behaviour for configuring smooth scroll.
 */
