@@ -53,7 +53,11 @@ Full terms governed by the laws of England and Wales.
     --heading-text-color: hsl(197, 5%, 95%);
     --text-color: hsl(197, 5%, 80%);
     --text-color-emphasised: hsl(197, 5%, 85%);
-    --special-text-color: hsl(217, 100%, 81%);
+    --special-text-gradient: linear-gradient(
+        90deg,
+        hsl(200, 100%, 71%),
+        hsl(245, 100%, 76%)
+    );
     --text-color-muted: hsl(0, 0%, 82%);
     --clickable-text-color: hsl(209, 94%, 70%);
     --clickable-text-color-hover: hsl(209, 94%, 75%);

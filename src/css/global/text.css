@@ -82,7 +82,10 @@ th {
 }
 
 .special-text {
-    color: var(--special-text-color);
+    background: var(--special-text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .centered-text {
