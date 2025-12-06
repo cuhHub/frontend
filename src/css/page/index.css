@@ -51,13 +51,17 @@ Full terms governed by the laws of England and Wales.
     height: 150px;
     object-fit: cover;
     object-position: center;
-    transition: 0.5s;
+    transition: 0.3s;
     transition-behavior: allow-discrete;
     border-radius: 10px;
     filter: none;
     margin: 5px;
     z-index: inherit;
     border: 1px solid var(--border-color);
+}
+
+.ingame-images img:hover {
+    border: 1px solid var(--accent-border-color);
 }
 
 /* Offerings */
@@ -77,17 +81,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 .offer-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
     width: 30%;
-    background-color: var(--bg-color);
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    transition: 0.3s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -100,24 +94,6 @@ Full terms governed by the laws of England and Wales.
     .offer-card {
         width: 100%;
     }
-}
-
-.offer-card:hover {
-    border: 1px solid var(--accent-border-color);
-}
-
-.offer-card h3 {
-    font-weight: 700;
-}
-
-.offer-card iconify-icon {
-    font-size: 50px;
-    transition: 0.3s;
-}
-
-.offer-card:hover iconify-icon {
-    color: var(--accent-icon-color);
-    transform: scale(1.1);
 }
 
 /* How to join */
