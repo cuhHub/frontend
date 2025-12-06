@@ -120,7 +120,6 @@ p a {
 details {
     text-align: left;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 8px;
     border: 1px solid transparent; /* prevent default border appearance appearing for a split second during open animation */
 }
 
