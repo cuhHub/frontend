@@ -35,6 +35,14 @@ Full terms governed by the laws of England and Wales.
     margin: 25px;
 }
 
+.main-attention-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
 @media screen and (max-width: 900px) {
     .ingame-images {
         display: none;
@@ -42,6 +50,10 @@ Full terms governed by the laws of England and Wales.
 
     .main-attention-section {
         text-align: center;
+        justify-content: center;
+    }
+
+    .main-attention-links {
         justify-content: center;
     }
 }
