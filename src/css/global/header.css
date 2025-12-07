@@ -96,7 +96,7 @@ nav {
     text-underline-offset: 15px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     header {
         flex-direction: column;
         gap: 5px;
