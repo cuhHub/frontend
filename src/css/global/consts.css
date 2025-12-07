@@ -77,7 +77,7 @@ Full terms governed by the laws of England and Wales.
         ),
         hsla(0, 0%, 0%, 0.4)
     );
-    --background-image: url("../../images/game-screenshots/12.png");
+    --background-image: url("/images/game-screenshots/12.png");
 }
 
 @media screen and (max-width: 1400px) {
