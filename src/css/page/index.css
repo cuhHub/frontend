@@ -165,13 +165,16 @@ Full terms governed by the laws of England and Wales.
     border-radius: 15px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .how-to-join {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .how-to-join-step {
         width: 70%;
+        align-self: auto;
     }
 }
 
