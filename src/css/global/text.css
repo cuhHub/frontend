@@ -126,10 +126,6 @@ details {
     border: 1px solid transparent; /* prevent default border appearance appearing for a split second during open animation */
 }
 
-details > * {
-    will-change: transform, opacity;
-}
-
 details p {
     padding: 8px;
     opacity: 0;
@@ -170,7 +166,7 @@ details a {
 }
 
 details summary {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-dark);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 15px;
@@ -183,7 +179,7 @@ details summary {
 
 details summary:hover {
     cursor: pointer;
-    background-color: color-mix(in srgb, var(--bg-color) 90%, var(--accent-color-lightest) 10%);
+    background-color: var(--bg-color-light);
     transform: translateX(3px);
     border: 1px solid var(--accent-border-color);
 }
@@ -204,7 +200,6 @@ details[open] {
 }
 
 details[open] summary {
-    background-color: var(--bg-color-dark);
     border: none;
     margin-bottom: 15px;
     border-radius: 8px;
