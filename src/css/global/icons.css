@@ -20,6 +20,8 @@ Full terms governed by the laws of England and Wales.
 
 .icon, .icon-button {
     aspect-ratio: 1;
+    height: 32px;
+    width: 32px;
 }
 
 .icon-button {
@@ -40,7 +42,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 iconify-icon {
-    font-size: 30px;
+    font-size: 32px;
     color: var(--icon-color);
     transition: var(--transition-duration);
     display: inline-block;
