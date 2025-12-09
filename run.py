@@ -27,22 +27,16 @@ import subprocess
 
 # // Main
 SITE_PATH = "src"
-BUILD_PATH = "dist"
 
 app = flask.Flask(__name__)
+app.debug = True
 hot_reload_server = Server(app.wsgi_app)
 
 logging.basicConfig(level = logging.DEBUG)
 hot_reload_server.watch(SITE_PATH)
 
-def build():
-    subprocess.run(["py", "build.py"])
-    
 def serve_file(path: str):
-    if path.endswith(".html"):
-        build()
-    
-    return flask.send_from_directory(BUILD_PATH, path)
+    return flask.send_from_directory(SITE_PATH, path)
 
 @app.route("/", defaults = {"path" : ""})
 @app.route("/<path:path>")
@@ -53,7 +47,7 @@ def serve(path: str):
     if not os.path.splitext(path)[1]:
         path += ".html"
         
-    if not os.path.exists(os.path.join(BUILD_PATH, path)):
+    if not os.path.exists(os.path.join(SITE_PATH, path)):
         return serve_file("404.html")
     
     return serve_file(path)
