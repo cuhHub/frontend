@@ -44,7 +44,7 @@ Full terms governed by the laws of England and Wales.
     background-repeat: no-repeat;
     background-position: 70% 80%;
     filter: blur(8px) brightness(130%) contrast(110%);
-    scale: 2 /* to hide border coming from the blur */
+    scale: 2; /* to hide border coming from the blur */
 }
 
 .background-shadow {
