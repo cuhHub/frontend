@@ -22,3 +22,4 @@ Full terms governed by the laws of England and Wales.
 
 export * from "./player-count.js";
 export * from "./smooth-scroll.js";
+export * from "./header.js";
