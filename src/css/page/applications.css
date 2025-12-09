@@ -31,7 +31,7 @@ Full terms governed by the laws of England and Wales.
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     flex-wrap: wrap;
     gap: 100px;
 }
@@ -55,7 +55,17 @@ Full terms governed by the laws of England and Wales.
     border: 1px solid var(--accent-border-color);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+    .application-cards {
+        gap: 15px;
+    }
+
+    .application-card {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .application-card {
         width: 100%;
     }
