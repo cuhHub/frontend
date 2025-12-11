@@ -49,6 +49,7 @@ Full terms governed by the laws of England and Wales.
     text-align: center;
     transition: var(--transition-duration);
     background-color: var(--bg-color-dark);
+    align-self: stretch;
 }
 
 .application-card:hover {
