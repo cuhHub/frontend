@@ -82,7 +82,6 @@ Full terms governed by the laws of England and Wales.
 
 .feature {
     width: 30%;
-    align-self: stretch;
 }
 
 @media screen and (max-width: 900px) {

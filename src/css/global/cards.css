@@ -22,6 +22,7 @@ Full terms governed by the laws of England and Wales.
     position: relative;
     overflow: hidden;
     display: flex;
+    align-self: stretch;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
