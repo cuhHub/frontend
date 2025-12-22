@@ -35,6 +35,15 @@ CSS.getCSSVariable = function(name) {
 }
 
 /**
+    Sets a root CSS variable to the provided value.
+    @param {string} name The name of the CSS variable.
+    @param {string} value The value to set the CSS variable to.
+*/
+CSS.setCSSVariable = function(name, value) {
+    document.documentElement.style.setProperty("--" + name, value);
+}
+
+/**
     Returns the value of the root CSS variable (the variable must be a pixel value).
     @param {string} name The name of the CSS variable.
     @returns {number}
