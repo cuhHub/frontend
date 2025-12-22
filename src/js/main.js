@@ -21,18 +21,25 @@ Full terms governed by the laws of England and Wales.
 // Not familiar with JavaScript. Still learning, so expect bad practices.
 // Will be improved with time! - Cuh4
 
-/**
-    Imports
-*/
+/* -------------- Imports */
+
 import { CONSTS } from "./consts.js";
 
 import * as behaviours from "./behaviours/index.js";
 import { Behaviour } from "./behaviours/behaviour.js";
 
+/* -------------- Main */
+
+/**
+    An array containing all behaviours.
+    @type {Array<Behaviour>} 
+*/
+const loadedBehaviours = [];
+
 /**
     Starts all behaviours.
 */
-function startBehaviours() {
+window.startBehaviours = function() {
     Object.values(behaviours).forEach(behaviour => {
         if (!behaviour instanceof Behaviour) {
             return;
@@ -41,16 +48,39 @@ function startBehaviours() {
         var instance = new behaviour();
         instance.init();
 
+        loadedBehaviours.push(instance);
+
         console.log("Initialized behaviour: " + instance.behaviourName)
     })
 }
 
 /**
-    Main site code.
+    Gets a behaviour by name.
+    @param {string} name The name of the behaviour.
+    @returns {Behaviour} The behaviour object.
 */
-async function init() {
-    console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
-    startBehaviours();
+window.getBehaviour = function(name) {
+    for (const behaviour of loadedBehaviours) {
+        if (behaviour.behaviourName == name) {
+            return behaviour;
+        }
+    }
 }
 
-init();
+/**
+    Sets the URL of the page.
+    @param {string} URL
+*/
+window.openPage = function(URL) {
+    window.location.href = URL;
+}
+
+/**
+    Initializes everything.
+*/
+window.init = function() {
+    console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
+    window.startBehaviours();
+}
+
+window.init();

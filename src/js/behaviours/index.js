@@ -18,5 +18,8 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+/* -------------- Main */
+
 export * from "./player-count.js";
 export * from "./smooth-scroll.js";
+export * from "./header.js";

@@ -34,7 +34,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 .gap1 {
-    gap: 10px;
+    gap: 5px;
 }
 
 .gap2 {
@@ -72,4 +72,9 @@ Full terms governed by the laws of England and Wales.
 
 .border-bottom {
     border-bottom: 1px solid var(--border-color);
+}
+
+.full-viewport {
+    width: 100vw;
+    height: var(--full-viewport-height);
 }

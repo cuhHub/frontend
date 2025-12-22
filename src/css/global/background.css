@@ -22,8 +22,10 @@ Full terms governed by the laws of England and Wales.
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* fallback */
+    width: 100lvw;
+    height: 100%; /* fallback */
+    height: 100lvh;
     z-index: -1;
     pointer-events: none;
 }
@@ -37,19 +39,14 @@ Full terms governed by the laws of England and Wales.
 }
 
 .background-image {
-    background-image: url("../../images/game-screenshots/12.png");
+    background-image: var(--background-image);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    filter: blur(5px);
-    scale: 1.2; /* to hide border coming from the blur */
+    background-position: 70% 80%;
+    filter: blur(8px) brightness(130%) contrast(110%);
+    scale: 2; /* to hide border coming from the blur */
 }
 
 .background-shadow {
-    background: linear-gradient(
-        135deg,
-        var(--bg-color-opaque),
-        hsla(0, 0%, 0%, 0.6)
-    );
-    width: 100%;
+    background: var(--background-shadow);
 }

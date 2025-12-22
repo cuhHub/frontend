@@ -18,6 +18,8 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+/* -------------- Main */
+
 /**
     CSS helper functions.
 */
@@ -30,6 +32,15 @@ export const CSS = {}
 */
 CSS.getCSSVariable = function(name) {
     return getComputedStyle(document.documentElement).getPropertyValue("--" + name).trim();
+}
+
+/**
+    Sets a root CSS variable to the provided value.
+    @param {string} name The name of the CSS variable.
+    @param {string} value The value to set the CSS variable to.
+*/
+CSS.setCSSVariable = function(name, value) {
+    document.documentElement.style.setProperty("--" + name, value);
 }
 
 /**

@@ -35,6 +35,14 @@ Full terms governed by the laws of England and Wales.
     margin: 25px;
 }
 
+.main-attention-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
 @media screen and (max-width: 900px) {
     .ingame-images {
         display: none;
@@ -44,20 +52,39 @@ Full terms governed by the laws of England and Wales.
         text-align: center;
         justify-content: center;
     }
+
+    .main-attention-links {
+        justify-content: center;
+    }
 }
 
-.ingame-images img {
+.ingame-image {
     width: 40%;
     height: 150px;
-    object-fit: cover;
-    object-position: center;
-    transition: 0.5s;
-    transition-behavior: allow-discrete;
+    overflow: hidden;
     border-radius: 10px;
     filter: none;
     margin: 5px;
     z-index: inherit;
     border: 1px solid var(--border-color);
+    transition: var(--transition-duration);
+}
+
+.ingame-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.2);
+    transition: inherit;
+}
+
+.ingame-image:hover {
+    border: 2px solid var(--accent-border-color);
+}
+
+.ingame-image:hover img {
+    transform: scale(1);
 }
 
 /* Offerings */
@@ -77,17 +104,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 .offer-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
     width: 30%;
-    background-color: var(--bg-color);
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    transition: 0.3s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -102,22 +119,34 @@ Full terms governed by the laws of England and Wales.
     }
 }
 
-.offer-card:hover {
-    border: 1px solid var(--accent-border-color);
+/* Servers */
+.servers-section {
+    text-align: center;
 }
 
-.offer-card h3 {
-    font-weight: 700;
+.servers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 50px;
+    width: 100%;
 }
 
-.offer-card iconify-icon {
-    font-size: 50px;
-    transition: 0.3s;
+.server-card {
+    width: 40%;
 }
 
-.offer-card:hover iconify-icon {
-    color: var(--accent-icon-color);
-    transform: scale(1.1);
+@media screen and (max-width: 900px) {
+    .server-card {
+        width: 100%;
+    }
+}
+
+.server-card-disabled {
+    background-color: var(--bg-color-muted);
 }
 
 /* How to join */
@@ -146,7 +175,7 @@ Full terms governed by the laws of England and Wales.
     border-radius: 25px;
     border: 1px solid var(--border-color);
     text-align: center;
-    transition: 0.3s;
+    transition: var(--transition-duration);
     justify-content: space-between;
     align-self: stretch;
 }
@@ -166,13 +195,16 @@ Full terms governed by the laws of England and Wales.
     border-radius: 15px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .how-to-join {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .how-to-join-step {
-        width: 70%;
+        width: 60%;
+        align-self: auto;
     }
 }
 

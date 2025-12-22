@@ -21,4 +21,5 @@ Full terms governed by the laws of England and Wales.
 .privacy-section {
     text-align: left;
     align-items: start;
+    background-color: var(--bg-color-dark);
 }

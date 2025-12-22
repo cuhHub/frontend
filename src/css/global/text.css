@@ -82,7 +82,10 @@ th {
 }
 
 .special-text {
-    color: var(--special-text-color);
+    background: var(--special-text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .centered-text {
@@ -97,7 +100,7 @@ strong {
 a {
     color: var(--clickable-text-color);
     text-decoration: underline;
-    transition: 0.3s;
+    transition: var(--transition-duration);
     text-underline-offset: 4px;
 }
 
@@ -119,13 +122,8 @@ p a {
 
 details {
     text-align: left;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 8px;
+    transition: all var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid transparent; /* prevent default border appearance appearing for a split second during open animation */
-}
-
-details > * {
-    will-change: transform, opacity;
 }
 
 details p {
@@ -168,26 +166,26 @@ details a {
 }
 
 details summary {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-dark);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 15px;
     margin: 5px 0;
     list-style: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
 }
 
 details summary:hover {
     cursor: pointer;
-    background-color: color-mix(in srgb, var(--bg-color) 90%, var(--accent-color-lightest) 10%);
+    background-color: var(--bg-color-light);
     transform: translateX(3px);
     border: 1px solid var(--accent-border-color);
 }
 
 details .arrow-icon {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0 8px;
     transform: rotate(0);
 }
@@ -197,12 +195,11 @@ details[open] {
     border: 1px solid var(--accent-border-color);
     border-radius: 10px;
     padding: 15px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 details[open] summary {
-    background-color: var(--bg-color-dark);
     border: none;
     margin-bottom: 15px;
     border-radius: 8px;

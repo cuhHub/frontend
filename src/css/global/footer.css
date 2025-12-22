@@ -47,7 +47,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid var(--border-color);
-    padding: 10px 0;
+    padding: 25px 0;
     flex-wrap: wrap;
     gap: 25px;
 }
