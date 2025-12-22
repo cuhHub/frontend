@@ -119,6 +119,36 @@ Full terms governed by the laws of England and Wales.
     }
 }
 
+/* Servers */
+.servers-section {
+    text-align: center;
+}
+
+.servers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 50px;
+    width: 100%;
+}
+
+.server-card {
+    width: 40%;
+}
+
+@media screen and (max-width: 900px) {
+    .server-card {
+        width: 100%;
+    }
+}
+
+.server-card-disabled {
+    background-color: var(--bg-color-muted);
+}
+
 /* How to join */
 .how-to-join-section {
     text-align: center;
