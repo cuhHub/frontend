@@ -101,26 +101,27 @@ Full terms governed by the laws of England and Wales.
 
         <!-- Page Content -->
         <main>
-            <section class="main-attention-section">
+            <section class="main-attention-section full-viewport">
                 <div class="main-attention-background-container">
-                    <div class="main-attention-background"></div>
+                    <video autoplay muted loop class="main-attention-background">
+                        <source src="/videos/sandbox.mp4">
+                    </video>
                 </div>
 
-                <div class="column gap2">
+                <div class="main-attention-content column gap2">
                     <div class="column gap1">
-                        <div class="main-attention-title row gap1">
-                            <img class="icon sandbox-icon" src="/images/icons/sandbox.png">
+                        <div class="main-attention-title">
                             <h1>cuhHub <span class="special-text">Sandbox</span></h1>
                         </div>
 
-                        <h3>The most popular server hosted by cuhHub.</h3>
+                        <h3>Minimal limits, unlimited fun.</h3>
 
                         <p>
                             Fight other players, locate landmarks, and much more! You create your own fun in Sandbox.
                         </p>
                     </div>
 
-                    <div class="row gap3">
+                    <div class="main-attention-links">
                         <a href="/#how-to-join">Join Now</a>
                         <a href="https://dsc.gg/cuhhubsw" target="_blank" class="external-link">Suggest A Feature</a>
                     </div>
@@ -143,7 +144,6 @@ Full terms governed by the laws of England and Wales.
                             Unlike any other Stormworks server, we have zones where dangers, like disasters, are present
                             and frequently spawn. You can use these areas to test your vehicles against things like tsunamis!
                         </p>
-                        <img class="card-img" src="/images/game-screenshots/4.png" alt="In-Game Screenshot">
                     </div>
 
                     <div class="feature card">
@@ -153,7 +153,6 @@ Full terms governed by the laws of England and Wales.
                             Sandbox, unlike other servers where a <strong>?pvp</strong> command exists, uses a safe zone system.<br>
                             Vehicles and players within safe zones are fully protected from damage, allowing you to be safe from other players. 
                         </p>
-                        <img class="card-img" src="/images/game-screenshots/16.png" alt="In-Game Screenshot">
                     </div>
 
                     <div class="feature card">
@@ -163,7 +162,6 @@ Full terms governed by the laws of England and Wales.
                             Need a crew to populate your vehicle? This is where our companion system comes into play!<br>
                             Sandbox allows you to spawn companions (NPCs) via the <strong>?companion</strong> command.
                         </p>
-                        <img class="card-img" src="/images/game-screenshots/26.png" alt="In-Game Screenshot">
                     </div>
 
                     <div class="feature card">
@@ -173,7 +171,6 @@ Full terms governed by the laws of England and Wales.
                             Our Sandbox server comes with landmarks - special areas marked around the map.<br>
                             Teleport to them with <strong>?tp</strong> or navigate to them manually - go explore!
                         </p>
-                        <img class="card-img" src="/images/game-screenshots/32.png" alt="In-Game Screenshot">
                     </div>
 
                     <div class="feature card">
@@ -183,7 +180,6 @@ Full terms governed by the laws of England and Wales.
                             Our servers are designed to be as fun and convenient as possible, and Sandbox is no exception.<br>
                             With plenty of commands to manage your experience, you can easily do what you want.
                         </p>
-                        <img class="card-img" src="/images/game-screenshots/9.png" alt="In-Game Screenshot">
                     </div>
 
                     <div class="feature card">
@@ -193,7 +189,6 @@ Full terms governed by the laws of England and Wales.
                             Sandbox comes with a custom anti-lag system to ensure laggy vehicles do not stick around.<br>
                             This allows for the server to remain at high performance, keeping your experience smooth.
                         </p>
-                        <img class="card-img" src="/images/game-screenshots/3.png" alt="In-Game Screenshot">
                     </div>
                 </div>
             </section>
@@ -202,6 +197,36 @@ Full terms governed by the laws of England and Wales.
                 <h1>Frequently Asked Questions</h1>
 
                 <div class="faq">
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            Where are the rules?
+                        </summary>
+
+                        <p>
+                            You can find the rules for Sandbox, as well as cuhHub in general, in our
+                            <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server</a>.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            How do I join Sandbox?
+                        </summary>
+
+                        <p>
+                            Joining is simple, simply follow these steps:
+
+                            <ol>
+                                <li>Open Stormworks.</li>
+                                <li>Go to the multiplayer server browser.</li>
+                                <li>Search for "cuhHub Sandbox".</li>
+                                <li>Join the server from there.</li>
+                            </ol>
+                        </p>
+                    </details>
+
                     <details>
                         <summary>
                             <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
@@ -248,6 +273,60 @@ Full terms governed by the laws of England and Wales.
                             If you have too many vehicles, use the <strong>?despawn</strong> command.<br>
                             If the anti-lag system is the reason your vehicle was despawned, it will tell you exactly what happened in chat
                             and via notifications.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            How do I repair my vehicle?
+                        </summary>
+
+                        <p>
+                            You can repair a vehicle using the <strong>?repair (vehicle ID)</strong> command.<br>
+                            This will respawn the vehicle in place and remove all damage.<br>
+                            Note that this does <strong>not</strong> reattach sub-bodies such as missiles.<br><br>
+                            If you only want to refuel and recharge your vehicle, use <strong>?replenish</strong> instead.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            My vehicle flipped over, do I have to respawn it?
+                        </summary>
+
+                        <p>
+                            No. You can use the <strong>?flip (vehicle ID)</strong> command to flip your vehicle upright.<br>
+                            This allows you to continue without respawning.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            How do I get the IDs of my vehicles?
+                        </summary>
+
+                        <p>
+                            You can find your vehicle IDs in two ways:<br>
+                            <ul>
+                                <li>Look at the UI in the top-left of your screen - your spawned vehicles and their IDs are shown there.</li>
+                                <li>Use the <strong>?vehicles</strong> command to list all your spawned vehicles and their IDs.</li>
+                            </ul>
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
+                            What are companions?
+                        </summary>
+
+                        <p>
+                            Companions are simply spawnable NPCs. They allow you to, for example, simulate having a crew without relying on other players.<br><br>
+                            Spawn companions using <strong>?com</strong> or <strong>?com (amount)</strong>.<br>
+                            To remove all companions, use <strong>?rcom</strong>.
                         </p>
                     </details>
                 </div>
