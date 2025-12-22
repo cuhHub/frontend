@@ -21,6 +21,7 @@ Full terms governed by the laws of England and Wales.
 /* -------------- Imports */
 
 import { Behaviour } from "./behaviour.js"
+import { CSS } from "../libs/css.js";
 
 /* -------------- Main */
 
@@ -35,17 +36,62 @@ export class HeaderBehaviour extends Behaviour {
     }
 
     /**
+        Returns the height of the header element.
+        @returns {number} 
+    */
+    getHeaderHeight() {
+        return this.headerElement.getBoundingClientRect().height;
+    }
+
+    /**
+        Returns the true viewport height accounting for header.
+        @returns {number}
+    */
+    getViewportHeight() {
+        return window.innerHeight - this.getHeaderHeight();
+    }
+
+    /**
+        Updates the main element to account for the header's size.
+    */
+    updateMain() {
+        const headerHeight = this.getHeaderHeight();
+        this.mainElement.style.marginTop = `${headerHeight}px`;
+        this.mainElement.style.minHeight = `${this.getViewportHeight()}px`;
+    }
+
+    /**
+        Updates CSS.
+    */
+    updateCSS() {
+        const headerHeight = this.getHeaderHeight();
+        CSS.setCSSVariable("header-height", `${headerHeight}px`);
+        CSS.setCSSVariable("full-viewport-height", `${this.getViewportHeight()}px`);
+    }
+
+    /**
+        Updates everything.
+    */
+    update() {
+        this.updateMain();
+        this.updateCSS();
+    }
+
+    /**
         Observes the header element for size changes, updating the main element's properties
         to match.
+        Also observes window resize events.
     */
     observe() {
         const observer = new ResizeObserver(_ => {
-            const headerHeight = this.headerElement.getBoundingClientRect().height;
-            this.mainElement.style.marginTop = `${headerHeight}px`;
-            this.mainElement.style.minHeight = `calc(100vh - ${headerHeight}px)`;
+            this.update();
         });
 
         observer.observe(this.headerElement);
+
+        window.addEventListener("resize", _ => {
+            this.update();
+        })
     }
 
     /**
