@@ -25,6 +25,7 @@ Full terms governed by the laws of England and Wales.
     --bg-color: hsla(220, 36%, 13%, 0.6);
     --bg-color-light: hsla(220, 36%, 22%, 0.6);
     --bg-color-opaque: hsl(220, 36%, 17%);
+    --bg-color-muted: hsla(218, 13%, 17%, 0.4);
 
     --accent-color-lightest: hsl(217, 58%, 75%);
     --accent-color-light: hsl(217, 58%, 60%);
@@ -57,7 +58,7 @@ Full terms governed by the laws of England and Wales.
         hsl(200, 100%, 71%),
         hsl(245, 100%, 76%)
     );
-    --text-color-muted: hsl(0, 0%, 82%);
+    --text-color-muted: hsl(0, 0%, 66%);
     --clickable-text-color: hsl(209, 94%, 70%);
     --clickable-text-color-hover: hsl(209, 94%, 75%);
 
