@@ -164,24 +164,9 @@ Full terms governed by the laws of England and Wales.
 }
 
 .how-to-join-step {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
     width: 300px;
     min-height: 450px;
-    background-color: var(--bg-color-dark);
-    padding: 20px;
-    border-radius: 25px;
-    border: 1px solid var(--border-color);
-    text-align: center;
-    transition: var(--transition-duration);
-    justify-content: space-between;
-    align-self: stretch;
-}
-
-.how-to-join-step:hover {
-    border: 1px solid var(--accent-border-color);
 }
 
 .how-to-join-step iconify-icon {
