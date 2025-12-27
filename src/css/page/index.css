@@ -165,6 +165,7 @@ Full terms governed by the laws of England and Wales.
 
 .how-to-join-step {
     align-items: center;
+    justify-content: space-between;
     width: 300px;
     min-height: 450px;
 }
