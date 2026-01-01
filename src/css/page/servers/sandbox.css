@@ -112,6 +112,7 @@ Full terms governed by the laws of England and Wales.
 /* FAQ Section */
 .faq-section {
     background-color: var(--bg-color-light);
+    gap: 30px;
 }
 
 .faq {
