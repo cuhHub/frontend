@@ -20,6 +20,6 @@ Full terms governed by the laws of England and Wales.
 
 /* -------------- Main */
 
-export * from "./player-count.js";
-export * from "./smooth-scroll.js";
+export * from "./playerCount.js";
+export * from "./smoothScroll.js";
 export * from "./header.js";
