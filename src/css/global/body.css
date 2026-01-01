@@ -22,6 +22,10 @@ Full terms governed by the laws of England and Wales.
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--primary-font);
     letter-spacing: var(--letter-spacing);

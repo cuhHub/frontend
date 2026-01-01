@@ -37,23 +37,10 @@ Full terms governed by the laws of England and Wales.
 }
 
 .application-card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     width: 400px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    padding: 15px;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
-    transition: var(--transition-duration);
-    background-color: var(--bg-color-dark);
-    align-self: stretch;
-}
-
-.application-card:hover {
-    border: 1px solid var(--accent-border-color);
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 1000px) {
