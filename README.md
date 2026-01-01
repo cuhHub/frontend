@@ -16,7 +16,7 @@ If developing, use `run.bat` (runs `py run.py`. Use `pip install -r requirements
 ## ©️ | License
 ```
 Source-Available No-Redistribution License
-Copyright (c) 2025 cuhHub. All rights reserved.
+Copyright (c) 2026 cuhHub. All rights reserved.
 
 IMPORTANT: This source code is NOT Open Source.
 
