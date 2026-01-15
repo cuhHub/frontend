@@ -29,10 +29,11 @@ Full terms governed by the laws of England and Wales.
         <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="__COOKIEBOT_ID__" type="text/javascript" async></script>
         <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.5.1/SmoothScroll.min.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
+        <script src="/js/jquery.js" defer></script>
         <script type="module" src="/js/main.js" defer></script>
 
         <link rel="stylesheet" href="/css/style.css"/>
-        <link rel="stylesheet" href="css/page/index.css"/>
+        <link rel="stylesheet" href="/css/page/index.css"/>
 
         <link rel="icon" href="/images/icons/logo_transparent.png"/>
 
@@ -63,424 +64,131 @@ Full terms governed by the laws of England and Wales.
     </head>
 
     <body>
-        <!-- Background -->
-        <div class="background">
-            <div class="background-image"></div>
-            <div class="background-shadow"></div>
-        </div>
-
         <!-- Header -->
-        <header class="border-bottom">
-            <!-- Branding -->
-            <div class="header-branding">
-                <a href="/" class="icon-button">
-                    <img src="/images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=40px>
+        <header>
+            <div class="header-left">
+                <a class="header-title no-link" href="/">
+                    <img src="/images/icons/logo_transparent.png" alt="cuhHub Logo">
+                    <p>cuhHub</p>
                 </a>
 
-                <h1>cuhHub</h1>
+                <nav>
+                    <a class="nav-link nav-link-active no-link" href="/">Home</a>
+                    <a class="nav-link no-link" href="/live">Live</a>
+                    <a class="nav-link no-link" href="/applications">Applications</a>
+                    <a class="nav-link no-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
+                </nav>
             </div>
 
-            <!-- Navigation Bar -->
-            <nav>
-                <a class="navbar-link navbar-current" href="/">Home</a>
-                <a class="navbar-link" href="/about-us">About Us</a>
-                <a class="navbar-link" href="/applications">Applications</a>
-                <a class="navbar-link navbar-support-us external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
-
-                <div class="navbar-icons">
-                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
-                        <iconify-icon icon="ion:logo-discord"></iconify-icon>
+            <div class="header-right">
+                <div class="header-icons">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
                     </a>
 
-                    <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
-                        <iconify-icon icon="ion:logo-github"></iconify-icon>
+                    <a href="https://github.com/cuhHub" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
                     </a>
                 </div>
-            </nav>
+
+                <a class="button primary-button" href="/404.html">
+                    <iconify-icon icon="ion:log-in-outline"></iconify-icon>
+                    Sign Up
+                </a>
+            </div>
         </header>
 
         <!-- Page Content -->
         <main>
-            <section class="main-attention-section">
-                <div class="column gap2">
-                    <div class="column gap1">
-                        <h1>Welcome to <span class="special-text">cuhHub</span>!</h1>
-
-                        <h3 class="text-color">
-                            The <strong>go-to</strong> servers for experiencing unique gamemodes
-                            in Stormworks.
-                        </h3>
-
-                        <h4 class="text-color">
-                            Join our <span class="registered-player-count">(fetching)</span> unique players across our servers!
-                        </h4>
-                    </div>
-
-                    <div class="main-attention-links">
-                        <a href="#how-to-join-checkpoint">Join Now</a>
-                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="external-link">Chat with the community</a>
-                        <a href="https://github.com/cuhHub" target="_blank" class="external-link">See our open-source projects</a>
+            <section class="hero-section">
+                <div class="section-background">
+                    <div class="section-background-stack">
+                        <div class="section-background-grid"></div>
+                        <div class="section-background-shadow"></div>
+                        <div class="section-background-image"></div>
                     </div>
                 </div>
 
-                <div class="ingame-images">
-                    <div class="ingame-image">
-                        <img src="/images/game-screenshots/3.png" alt="Game Screenshot">
-                    </div>
+                <div class="hero-section-text">
+                    <h1>Welcome to cuhHub!</h1>
 
-                    <div class="ingame-image">
-                        <img src="/images/game-screenshots/32.png" alt="Game Screenshot">
-                    </div>
-
-                    <div class="ingame-image">
-                        <img src="/images/game-screenshots/21.png" alt="Game Screenshot">
-                    </div>
-
-                    <div class="ingame-image">
-                        <img src="/images/game-screenshots/16.png" alt="Game Screenshot">
-                    </div>
-
-                    <div class="ingame-image">
-                        <img src="/images/game-screenshots/17.png" alt="Game Screenshot">
-                    </div>
-
-                    <div class="ingame-image">
-                        <img src="/images/game-screenshots/7.png" alt="Game Screenshot">
-                    </div>
-                </div>
-            </section>
-
-            <section class="offering-section">
-                <div class="offering-section-text">
-                    <h1>
-                        What do we offer?
-                    </h1>
-
+                    <div class="vertical-separator"></div>
                     <p>
-                        cuhHub stands out from other servers thanks to our unique features, some of which are below.
+                        We are the go-to servers for experiencing unique gamemodes in Stormworks.
                     </p>
-                </div>
 
-                <div class="offerings">
-                    <div class="offer-card card">
-                        <iconify-icon class="card-icon" icon="ion:game-controller-outline"></iconify-icon>
-                        <h3 class="card-title special-text">Unique Gamemodes</h3>
-                        <p>
-                            We offer addictive gamemodes that you won't find anywhere else on Stormworks. From
-                            custom missions to zombie survival, we have it all.
-                        </p>
-                    </div>
+                    <div class="hero-section-buttons">
+                        <button class="button primary-button no-link">
+                            <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                            Launch Stormworks
+                        </button>
 
-                    <div class="offer-card card">
-                        <iconify-icon class="card-icon" icon="ion:people-outline"></iconify-icon>
-                        <h3 class="card-title special-text">Friendly Community</h3>
-                        <p>
-                            Our servers are full of active, friendly players. You can find a friend in every corner.
-                        </p>
-                    </div>
+                        <a class="button secondary-button no-link" href="https://dsc.gg/cuhhubsw" target="_blank">
+                            <iconify-icon icon="mdi:discord"></iconify-icon>
+                            Join The Discord
+                        </a>
 
-                    <div class="offer-card card">
-                        <iconify-icon class="card-icon" icon="ion:hammer-outline"></iconify-icon>
-                        <h3 class="card-title special-text">Quality Moderation</h3>
-                        <p>
-                            Our servers are well-moderated thanks to autonomous and manual volunteer work.
-                        </p>
-                    </div>
-
-                    <div class="offer-card card">
-                        <iconify-icon class="card-icon" icon="ion:flash-outline"></iconify-icon>
-                        <h3 class="card-title special-text">High Performance</h3>
-                        <p>
-                            We take care to make sure our servers have the best performance possible.<br>
-                            Our servers also come with anti-lag features to prevent laggy vehicles staying around.
-                        </p>
-                    </div>
-
-                    <div class="offer-card card">
-                        <iconify-icon class="card-icon" icon="ion:hand-left-outline"></iconify-icon>
-                        <h3 class="card-title special-text">Amazing Support</h3>
-                        <p>
-                            Alongside our servers, we have an active support team that is always ready to help you.<br>
-                            You can find us in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>
-                        </p>
+                        <a class="button secondary-button no-link" href="https://github.com/cuhHub" target="_blank">
+                            <iconify-icon icon="mdi:github"></iconify-icon>
+                            Open-Source Projects
+                        </a>
                     </div>
                 </div>
-            </section>
 
-            <section class="servers-section">
-                <h1>
-                    Our Servers
-                </h1>
+                <div class="hero-section-servers">
+                    <h2 class="with-header-icon">Our Servers</h2>
 
-                <div class="servers">
-                    <div class="server-card card">
-                        <iconify-icon class="card-icon" icon="tabler:swords"></iconify-icon>
-                        <h3 class="card-title special-text">Sandbox</h3>
-                        <p>
-                            Our flagship server which comes with our own custom features such as companions, safe zones,
-                            danger zones, landmarks and more!<br>
-                            Join and see what the hype is about!
-                        </p>
-                        <a href="/servers/sandbox">Learn More</a>
-                    </div>
+                    <div class="hero-section-server-list">
+                        <div class="server">
+                            <img class="server-banner" src="https://images-ext-1.discordapp.net/external/Mko4eNLqA7yZRXuGULX99ORcLxqf8RPCqS25w-7qgQE/https/i.ibb.co/Y7xPThGM/41.png?format=webp&quality=lossless&width=480&height=228">
 
-                    <div class="server-card server-card-disabled card">
-                        <iconify-icon class="card-icon" icon="game-icons:raise-zombie"></iconify-icon>
-                        <h3 class="card-title">Outbreak</h3>
-                        <p>
-                            An economy-based server where you must survive against zombies and other players.<br>
-                            Manage your hunger, loot airdrops, fight zombies and earn money!
-                        </p>
-                        <p class="muted-text">
-                            Coming soon, stay tuned!
-                        </p>    
-                    </div>
+                            <div class="server-content">
+                                <div class="server-left">
+                                    <p class="server-name">Sandbox</p>
+                                    <div class="server-status">
+                                        <div class="server-status-icon"></div>
+                                        <p class="server-status-text">Online</p>
+                                    </div>
+                                </div>
 
-                    <div class="server-card server-card-disabled card">
-                        <iconify-icon class="card-icon" icon="material-symbols:directions-boat-outline-rounded"></iconify-icon>
-                        <h3 class="card-title">Missions</h3>
-                        <p>
-                            A server that offers a custom, mission-based gamemode that knocks Stormworks' vanilla career out of the park.<br>
-                            Work for companies or as a freelancer and complete missions to earn money and reputation!
-                        </p>
-                        <p class="muted-text">
-                            Coming soon, stay tuned!
-                        </p>    
-                    </div>
-                </div>
-            </section>
-
-            <section id="how-to-join-checkpoint" class="how-to-join-section">
-                <h1>
-                    How do I join?
-                </h1>
-
-                <p>Joining our servers is easy - simply follow the steps below.</p>
-
-                <div class="how-to-join">
-                    <div class="how-to-join-step card">
-                        <div class="row gap1">
-                            <iconify-icon icon="ion:play-outline"></iconify-icon>
-                            <h2 class="card-title">Step 1</h2>
+                                <div class="server-right">
+                                    <p class="server-players">12</p>
+                                    <p class="server-max-players">/ 14 players</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <p>
-                            Start up <a class="external-link" href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank">Stormworks</a>
-                            via your Steam library or <a onclick="window.openPage('steam://rungameid/573090')">click here</a>.
-                        </p>
+                        <div class="server">
+                            <img class="server-banner" src="https://images-ext-1.discordapp.net/external/Mko4eNLqA7yZRXuGULX99ORcLxqf8RPCqS25w-7qgQE/https/i.ibb.co/Y7xPThGM/41.png?format=webp&quality=lossless&width=480&height=228">
 
-                        <img src="/images/join-steps/1.png" alt="Step 1 Screenshot">
-                    </div>
+                            <div class="server-content">
+                                <div class="server-left">
+                                    <p class="server-name">Sandbox</p>
+                                    <div class="server-status">
+                                        <div class="server-status-icon"></div>
+                                        <p class="server-status-text">Online</p>
+                                    </div>
+                                </div>
 
-                    <div class="how-to-join-step card">
-                        <div class="row gap1">
-                            <iconify-icon icon="ion:people-outline"></iconify-icon>
-                            <h2 class="card-title">Step 2</h2>
+                                <div class="server-right">
+                                    <p class="server-players">12</p>
+                                    <p class="server-max-players">/ 14 players</p>
+                                </div>
+                            </div>
                         </div>
-
-                        <p>
-                            Click the "Multiplayer" button on the main menu.
-                        </p>
-
-                        <img src="/images/join-steps/2.png" alt="Step 2 Screenshot">
-                    </div>
-
-                    <div class="how-to-join-step card">
-                        <div class="row gap1">
-                            <iconify-icon icon="ion:wifi-outline"></iconify-icon>
-                            <h2 class="card-title">Step 3</h2>
-                        </div>
-
-                        <p>
-                            Enter the "Internet" tab, search "cuhHub" and choose a server, then click the join button.
-                        </p>
-
-                        <img src="/images/join-steps/3.png" alt="Step 3 Screenshot">
                     </div>
                 </div>
 
-                <p><strong>New to Stormworks or cuhHub?</strong> Check out our <a href="/getting-started">Getting Started Guide</a>.</p>
-            </section>
-
-            <section class="cuhhub-experience-section">
-                <h1 class="cuhhub-experience-section-title">
-                    The cuhHub Experience
-                </h1>
-
-                <video class="cuhhub-experience-video" autoplay loop muted>
-                    <source src="videos/cuhhub-experience.mp4" type="video/mp4">
-                    <p class="warning-text">Video unavailable. Your browser does not support the video tag.</p>
-                </video>
-            </section>
-
-            <section class="faq-section">
-                <h1>
-                    FAQ
-                </h1>
-
-                <p>
-                    Answers to common questions are below.<br>
-                    If your question is not answered here, you can ask in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>
-                </p>
-
-                <div class="faq">
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            How do I apply for staff or a tester position?
-                        </summary>
-
-                        <p>
-                            Head over to <a href="/applications">the applications page</a> to apply.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            How long has cuhHub been around for?
-                        </summary>
-
-                        <p>
-                            cuhHub has been around since 2022. We started with a niche minigames server and evolved
-                            from there.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            Is there a Discord server for cuhHub?
-                        </summary>
-
-                        <p>
-                            Yup! You can join our Discord through <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">this link</a>.
-                            You can get support from our staff and community there.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            Is cuhHub's code open-source?
-                        </summary>
-
-                        <p>
-                            Most of our code is closed-source to prevent other servers copying us, but we do have open-source code for people
-                            to check out <a href="https://github.com/cuhHub" class="external-link" target="_blank">here</a>.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            Where are the servers located?
-                        </summary>
-
-                        <div class="row gap1">
-                            <iconify-icon icon="flagpack:fi"></iconify-icon>
-                            <p>
-                                Our servers are hosted in Finland to provide low latency to players across Europe.<br>
-                                We may expand to other regions in the future!
-                            </p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            I got moderated (banned, etc), what do I do?
-                        </summary>
-
-                        <p>
-                            If you were moderated, it was likely for breaking the server rules.
-                            Please read over the rules available in the <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.<br>
-                            If you believe it was a mistake, you can also appeal it through the Discord server via the support channel.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            How do I report a player?
-                        </summary>
-
-                        <p>
-                            You can report a player via our support channel in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            Where can I suggest features or report bugs?
-                        </summary>
-
-                        <p>
-                            You can provide feedback via our feedback channel in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            Where can I ask questions?
-                        </summary>
-
-                        <p>
-                            You can ask questions in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>. The community
-                            and staff will be happy to assist! If your question requires privacy, you can DM a staff member or make a ticket in our support channel.
-                        </p>
-                    </details>
-                </div>
+                <a class="hero-section-down button secondary-button no-link" href="#info-section">
+                    <iconify-icon icon="ion:arrow-down-circle-outline"></iconify-icon>
+                    Scroll Down
+                </a>
             </section>
         </main>
 
         <!-- Footer -->
-        <footer class="border-top">
-            <div class="footer-links">
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Contact</p>
-                    <a href="mailto:cuhhub@proton.me" class="external-link" target="_blank">cuhhub@proton.me</a>
-                    <p>Discord: <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">dsc.gg/cuhhubsw</a></p>
-                </div>
-
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Legal</p>
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms-of-service">Terms of Service</a>
-                </div>
-
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Pages</p>
-                    <a href="/">Home</a>
-                    <a href="/about-us">About Us</a>
-                    <a href="/applications">Applications</a>
-                    <a href="/getting-started">Getting Started</a>
-                </div>
-
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Links</p>
-                    <a class="external-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
-                    <a class="external-link" href="https://github.com/cuhHub" target="_blank">Open-Source</a>
-                    <a class="external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
-
-                    <div class="footer-socials">
-                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
-                            <iconify-icon icon="ion:logo-discord"></iconify-icon>
-                        </a>
-
-                        <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
-                            <iconify-icon icon="ion:logo-github"></iconify-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© __COPYRIGHT_YEAR__ cuhHub. All rights reserved.</p>
-                <p class="muted-text">Version: __VERSION__</p>
-            </div>
+        <footer>
+            
         </footer>
     </body>
 </html>

@@ -18,4 +18,16 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* -------------- Main */
+
+export const SmoothScroll = createService("SmoothScroll");
+
+/**
+    Initializes this service.
+*/
+SmoothScroll.init = function() {
+    SmoothScroll({
+        animationTime: 500,
+        stepSize: 45
+    });
+}

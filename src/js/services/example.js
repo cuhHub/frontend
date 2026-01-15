@@ -18,24 +18,16 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+/* -------------- Imports */
+import { createService } from "."
+
 /* -------------- Main */
 
-/**
-    The base behaviour class.
-*/
-export class Behaviour {
-    /**
-        @param {string} name The name of the behaviour.
-    */
-    constructor(name) {
-        this.behaviourName = name;
-    }
+export const Example = createService("Example");
 
-    /**
-        Initializes the behaviour.
-        @abstract
-    */
-    init() {
-        throw new Error("init() must be implemented by subclass");
-    }
+/**
+    Initializes this service.
+*/
+Example.init = async function() {
+    
 }

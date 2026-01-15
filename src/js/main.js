@@ -25,46 +25,26 @@ Full terms governed by the laws of England and Wales.
 
 import { CONSTS } from "./consts.js";
 
-import * as behaviours from "./behaviours/index.js";
-import { Behaviour } from "./behaviours/behaviour.js";
+import * as services from "./services/index.js";
 
 /* -------------- Main */
 
 /**
-    An array containing all behaviours.
-    @type {Array<Behaviour>} 
+    Returns all services.
+    @returns {Service[]}
 */
-const loadedBehaviours = [];
-
-/**
-    Starts all behaviours.
-*/
-window.startBehaviours = function() {
-    Object.values(behaviours).forEach(behaviour => {
-        if (!behaviour instanceof Behaviour) {
-            return;
-        }
-
-        var instance = new behaviour();
-        instance.init();
-
-        loadedBehaviours.push(instance);
-
-        console.log("Initialized behaviour: " + instance.behaviourName)
-    })
+window.getServices = function() {
+    return Object.values(services);
 }
 
 /**
-    Gets a behaviour by name.
-    @param {string} name The name of the behaviour.
-    @returns {Behaviour} The behaviour object.
+    Starts all services.
 */
-window.getBehaviour = function(name) {
-    for (const behaviour of loadedBehaviours) {
-        if (behaviour.behaviourName == name) {
-            return behaviour;
-        }
-    }
+window.startServices = function() {
+    window.getServices().forEach(service => {
+        service.init();
+        console.log("Initialized service: " + instance.behaviourName)
+    })
 }
 
 /**
@@ -80,7 +60,7 @@ window.openPage = function(URL) {
 */
 window.init = function() {
     console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
-    window.startBehaviours();
+    window.startServices();
 }
 
 window.init();

@@ -18,35 +18,55 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* fallback */
-    width: 100lvw;
-    height: 100%; /* fallback */
-    height: 100lvh;
-    z-index: -1;
+.section-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
 }
 
-.background > * {
-    position: absolute;
-    top: 0;
-    left: 0;
+.section-background-stack {
+    position: relative;
     width: 100%;
     height: 100%;
 }
 
-.background-image {
-    background-image: var(--background-image);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 70% 80%;
-    filter: blur(8px) brightness(130%) contrast(110%);
-    scale: 2; /* to hide border coming from the blur */
+.section-background-stack * {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
 }
 
-.background-shadow {
-    background: var(--background-shadow);
+.section-background-image {
+    filter: brightness(0.3) blur(5px);
+    background-image: url("/images/game-screenshots/37.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 100%;
+    scale: 1.2;
+    z-index: -2;
+}
+
+.section-background-shadow {
+    background: linear-gradient(
+        0deg,
+        var(--background-shadow-color),
+        transparent,
+        var(--background-shadow-color)
+    );
+    z-index: -1;
+}
+
+.section-background-grid {
+    background-image: url("/images/backgrounds/grid.png");
+    background-size: var(--background-grid-size);
+    background-repeat: repeat;
+    scale: 1.2;
+    z-index: 0;
+    opacity: 0.05;
 }

@@ -18,8 +18,9 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-.privacy-section {
-    text-align: left;
-    align-items: start;
-    background-color: var(--bg-color-dark);
+.vertical-separator {
+    background-color: var(--accent-color-darker);
+    filter: drop-shadow(0 0 6px var(--shadow-color));
+    width: 75px;
+    height: 2px;
 }

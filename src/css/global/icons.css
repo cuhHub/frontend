@@ -18,33 +18,18 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-.icon, .icon-button {
-    aspect-ratio: 1;
-    height: 32px;
-    width: 32px;
-}
-
-.icon-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition-duration);
-}
-
-.icon-button:hover {
-    transform: scale(1.1);
-}
-
-.profile-icon {
-    border-radius: 100%;
-    outline: 1px solid var(--border-color);
-}
-
 iconify-icon {
-    font-size: 32px;
     color: var(--icon-color);
+    font-size: var(--icon-size);
+}
+
+.clickable-icon,
+a iconify-icon {
     transition: var(--transition-duration);
-    display: inline-block;
-    stroke-width: 5;
+}
+
+.clickable-icon:hover,
+a iconify-icon:hover {
+    color: var(--icon-color-hover);
+    scale: 1.05;
 }
