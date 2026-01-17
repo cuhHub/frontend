@@ -56,15 +56,15 @@ window.launchStormworks = function() {
     Returns all services.
     @returns {Service[]}
 */
-function getServices() {
-    return Object.values(services);
+window.getServices = function() {
+    return services;
 }
 
 /**
     Starts all services.
 */
 function startServices() {
-    getServices().forEach(service => {
+    Object.values(getServices()).forEach(service => {
         service.init();
         console.log("Initialized a service");
     })

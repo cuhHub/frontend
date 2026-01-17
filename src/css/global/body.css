@@ -31,3 +31,18 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+    transition: var(--transition-duration);
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.back-to-top-hidden {
+    transform: translateX(100px);
+    opacity: 0;
+}

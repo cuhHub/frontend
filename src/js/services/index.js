@@ -22,3 +22,4 @@ Full terms governed by the laws of England and Wales.
 export * from "./servers.js";
 export * from "./smoothScroll.js";
 export * from "./players.js";
+export * from "./backToTop.js";
