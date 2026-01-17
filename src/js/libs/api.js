@@ -63,7 +63,8 @@ API.sendRequest = async function(url, method, body) {
     @returns {number}
 */
 API.getRegisteredPlayerCount = async function() {
-    return await this.sendRequest("/players/count", "GET").count ?? 0;
+    const response = await this.sendRequest("/players/count", "GET");
+    return response.count ?? 0;
 }
 
 /**
@@ -79,6 +80,6 @@ API.getServers = async function() {
     @param {object} serverId The ID of the server.
     @returns {object[]}
 */
-API.getPlayers = async function(serverId) {
+API.getPlayersInServer = async function(serverId) {
     return await this.sendRequest(`/servers/${serverId}/players`, "GET") ?? [];
 }
