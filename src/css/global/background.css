@@ -18,7 +18,7 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-.section-background {
+.background {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -28,31 +28,51 @@ Full terms governed by the laws of England and Wales.
     overflow: hidden;
 }
 
-.section-background-stack {
+.background-stack {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.section-background-stack * {
+.background-stack * {
     position: absolute;
     inset: 0;
     pointer-events: none;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    background-size: cover;
 }
 
-.section-background-image {
+.background-video {
+    z-index: -2;
+    filter: brightness(35%);
+}
+
+.background-image {
     filter: brightness(0.3) blur(5px);
-    background-image: url("/images/game-screenshots/37.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: 0 100%;
     scale: 1.2;
     z-index: -2;
 }
 
-.section-background-shadow {
+.bg-image-1 {
+    background-image: url("/images/game-screenshots/37.png");
+}
+
+.bg-image-2 {
+    background-image: url("/images/game-screenshots/41.png");
+}
+
+.bg-image-3 {
+    background-image: url("/images/game-screenshots/35.png");
+}
+
+.bg-image-4 {
+    background-image: url("/images/game-screenshots/34.png");
+}
+
+.background-shadow {
     background: linear-gradient(
         0deg,
         var(--background-shadow-color),
@@ -62,11 +82,16 @@ Full terms governed by the laws of England and Wales.
     z-index: -1;
 }
 
-.section-background-grid {
+.background-grid {
     background-image: url("/images/backgrounds/grid.png");
     background-size: var(--background-grid-size);
     background-repeat: repeat;
     scale: 1.2;
     z-index: 0;
-    opacity: 0.05;
+    opacity: 0.08;
+    mask-image: radial-gradient(
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.2) 45%,
+        rgba(0, 0, 0, 0) 95%
+    )
 }
