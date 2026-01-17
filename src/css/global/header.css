@@ -70,7 +70,12 @@ nav {
     padding: 5px 0;
 }
 
+.special-nav-link {
+    color: var(--special-text-color) !important;
+}
+
 .nav-link:not(.nav-link-active):hover {
+    scale: 1.01;
     color: var(--text-color);
     border-bottom: solid 1px var(--link-text-hover-color);
 }
@@ -79,6 +84,10 @@ nav {
     font-weight: 600;
     position: relative;
     color: var(--text-color);
+}
+
+.nav-link-active:hover {
+    scale: 1.1;
 }
 
 .nav-link-active::after {
