@@ -56,6 +56,7 @@ Full terms governed by the laws of England and Wales.
 .server-left {
     gap: var(--gap-1);
     align-items: flex-start;
+    width: 70%;
 }
 
 .server-right {
@@ -65,6 +66,10 @@ Full terms governed by the laws of England and Wales.
 .server-name {
     font-weight: 800;
     font-style: italic;
+}
+
+.server-description {
+    font-size: calc(var(--base-font-size) / 1.5 );
 }
 
 .server-status {
@@ -78,7 +83,14 @@ Full terms governed by the laws of England and Wales.
     border-radius: 100%;
     width: 5px;
     height: 5px;
+}
+
+.server-status-icon-online {
     background-color: hsl(110, 100%, 71%);
+}
+
+.server-status-icon-offline {
+    background-color: hsl(0, 100%, 75%);
 }
 
 .server-status-text {
@@ -96,4 +108,29 @@ Full terms governed by the laws of England and Wales.
     color: var(--inactive-text-color);
     font-size: calc(var(--base-font-size) / 1.7);
     font-weight: 800;
+}
+
+.hero-section-servers-more-soon {
+    text-align: right;
+}
+
+.server-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-1);
+}
+
+.server-tag {
+    background-color: var(--bg-color-lighter);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 3px 15px;
+    font-size: calc(var(--base-font-size) / 2);
+    border: solid 1px var(--border-color-on-dark);
+}
+
+.server-tag::before {
+    content: "\2022";
+    padding-right: 5px;
+    color: var(--accent-color);
 }
