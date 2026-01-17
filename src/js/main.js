@@ -30,37 +30,45 @@ import * as services from "./services/index.js";
 /* -------------- Main */
 
 /**
+    Scrolls to an element.
+    @param {string} query The element to scroll to.
+*/
+window.scrollToElement = function(query) {
+    const element = document.querySelector(query);
+    element.scrollIntoView();
+}
+
+/**
+    Launches Stormworks.
+*/
+window.launchStormworks = function() {
+    window.location.href = "steam://rungameid/573090";
+}
+
+/**
     Returns all services.
     @returns {Service[]}
 */
-window.getServices = function() {
+function getServices() {
     return Object.values(services);
 }
 
 /**
     Starts all services.
 */
-window.startServices = function() {
-    window.getServices().forEach(service => {
+function startServices() {
+    getServices().forEach(service => {
         service.init();
-        console.log("Initialized service: " + instance.behaviourName)
+        console.log("Initialized a service");
     })
-}
-
-/**
-    Sets the URL of the page.
-    @param {string} URL
-*/
-window.openPage = function(URL) {
-    window.location.href = URL;
 }
 
 /**
     Initializes everything.
 */
-window.init = function() {
+function init() {
     console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
-    window.startServices();
+    startServices();
 }
 
-window.init();
+init();
