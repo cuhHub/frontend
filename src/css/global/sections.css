@@ -22,8 +22,10 @@ section {
     padding: var(--section-vertical-padding) var(--content-horizontal-padding);
     display: flex;
     flex-direction: column;
-    gap: var(--gap-1);
+    gap: var(--gap-4);
     position: relative;
+    min-height: var(--section-min-height);
+    width: 100%;
 }
 
 .hero-section {
