@@ -18,3 +18,42 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+.hide {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.gap1 {
+    gap: var(--gap-1);
+}
+
+.gap2 {
+    gap: var(--gap-2);
+}
+
+.gap3 {
+    gap: var(--gap-3);
+}
+
+.gap4 {
+    gap: var(--gap-4);
+}
+
+.gap5 {
+    gap: var(--gap-5);
+}
+
+.gap6 {
+    gap: var(--gap-6);
+}
