@@ -34,6 +34,14 @@ Full terms governed by the laws of England and Wales.
     flex-direction: row;
 }
 
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
 .gap1 {
     gap: var(--gap-1);
 }
