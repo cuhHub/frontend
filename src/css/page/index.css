@@ -44,16 +44,59 @@ Full terms governed by the laws of England and Wales.
 
 .hero-section-servers {
     width: 25%;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .hero-section-server-list {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     gap: var(--gap-2);
 }
 
 .hero-section-down {
     position: absolute;
     left: var(--content-horizontal-padding);
-    bottom: 15px;
+    bottom: calc(var(--section-vertical-padding) / 2);
+}
+
+.features-section-features,
+.servers-section-servers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap-2);
+}
+
+.features-section-features .card,
+.servers-section-servers .card {
+    width: 25%;
+}
+
+.faq-section {
+    align-items: center;
+}
+
+.faq-section > h1,
+.faq-section > p {
+    text-align: center;
+}
+
+.faq-section-questions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    width: 50%;
+    height: 40vh;
+    overflow-y: scroll;
+    padding: 100px 25px;
+    mask: linear-gradient(
+        180deg,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    )
 }
