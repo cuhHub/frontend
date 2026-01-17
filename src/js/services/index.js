@@ -19,21 +19,5 @@ Full terms governed by the laws of England and Wales.
 */
 
 /* -------------- Main */
-
-/**
-    Represents a service.
-    @typedef {Object} Service
-    @property {string} name The name of the service.
-*/
-
-/**
-    Creates a service.
-    @param {string} name The name of the service.
-    @return {Service}
-*/
-export const createService = function(name) {
-    return {name: name};
-}
-
-export * from "./example.js";
+export * from "./servers.js";
 export * from "./smoothScroll.js";

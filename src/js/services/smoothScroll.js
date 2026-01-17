@@ -20,13 +20,13 @@ Full terms governed by the laws of England and Wales.
 
 /* -------------- Main */
 
-export const SmoothScroll = createService("SmoothScroll");
+export const SmoothScroll = {};
 
 /**
     Initializes this service.
 */
 SmoothScroll.init = function() {
-    SmoothScroll({
+    window.SmoothScroll({
         animationTime: 500,
         stepSize: 45
     });
