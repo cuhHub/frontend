@@ -110,6 +110,22 @@ h4 {
     font-size: calc(var(--base-font-size) * 1);
 }
 
+.bold {
+    font-weight: 700;
+}
+
+.special-text {
+    background: linear-gradient(
+        90deg,
+        var(--special-text-color),
+        var(--special-text-color-to)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    font-weight: 900;
+}
+
 .faded-text {
     color: var(--faded-text-color);
 }
@@ -126,15 +142,15 @@ h4 {
     font-size: calc(var(--base-font-size) / 1.5);
 }
 
-.left {
+.text-left {
     text-align: left;
 }
 
-.center {
+.text-center {
     text-align: center;
 }
 
-.right {
+.text-right {
     text-align: right;
 }
 
