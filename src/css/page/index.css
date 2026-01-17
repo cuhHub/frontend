@@ -79,11 +79,6 @@ Full terms governed by the laws of England and Wales.
     align-items: center;
 }
 
-.faq-section > h1,
-.faq-section > p {
-    text-align: center;
-}
-
 .faq-section-questions {
     display: flex;
     flex-direction: column;
