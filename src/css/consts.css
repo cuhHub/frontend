@@ -26,21 +26,23 @@ Full terms governed by the laws of England and Wales.
     --faded-text-color: hsl(0, 0%, 82%);
     --inactive-text-color: hsla(0, 0%, 100%, 0.7);
     --special-text-color: hsl(216, 100%, 74%);
+    --special-text-color-to: hsl(216, 100%, 64%);
     --link-text-color: hsl(208, 100%, 75%);
     --link-text-hover-color: hsl(208, 100%, 82%);
     --base-font-size: 18px;
 
     /* Background */
     --background-grid-size: 110px;
+    --background-glow-color: hsla(211, 85%, 37%, 0.3);
     --background-shadow-color: hsla(211, 87%, 21%, 0.5);
 
-    --bg-color: hsl(208, 40%, 6%);
-    --bg-color-lighter: hsl(208, 40%, 12%);
-    --bg-color-darker: hsl(208, 40%, 3%);
+    --bg-color: hsl(218, 22%, 7%);
+    --bg-color-lighter: hsl(218, 22%, 12%);
+    --bg-color-darker: hsl(218, 22%, 3%);
 
-    --bg-color-translucent: hsla(208, 40%, 8%, 0.5);
-    --bg-color-lighter-translucent: hsla(208, 40%, 12%, 0.5);
-    --bg-color-darker-translucent: hsla(208, 40%, 6%, 0.5);
+    --bg-color-translucent: hsla(218, 22%, 7%, 0.5);
+    --bg-color-lighter-translucent: hsla(218, 22%, 12%, 0.5);
+    --bg-color-darker-translucent: hsla(218, 22%, 3%, 0.5);
 
     /* Cards */
     --card-content-horizontal-padding: 25px;
@@ -88,7 +90,7 @@ Full terms governed by the laws of England and Wales.
     --border-triggered-color: hsl(214, 79%, 54%);
 
     /* Padding */
-    --section-vertical-padding: 200px;
+    --section-vertical-padding: 150px;
     --content-horizontal-padding: 200px;
 
     /* Animation */
