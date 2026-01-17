@@ -18,3 +18,52 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    min-height: 250px;
+    background-color: var(--bg-color);
+    border-top: solid 1px var(--border-color-on-dark);
+    gap: var(--gap-2);
+}
+
+footer > *:not(.background) {
+    width: 100%;
+    padding: 15px var(--content-horizontal-padding);
+}
+
+.footer-links-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--gap-3);
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+    width: 15vw;
+}
+
+.footer-links-title {
+    font-weight: 600;
+    padding: 5px 0;
+    border-bottom: solid 1px var(--border-triggered-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color-darker);
+    border-top: solid 1px var(--border-color-on-dark);
+}
+
+.footer-bottom p {
+    color: var(--faded-text-color);
+}
