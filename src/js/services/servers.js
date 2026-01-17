@@ -25,8 +25,6 @@ import { API } from "../libs/api.js";
 /* -------------- Main */
 
 export const Servers = {};
-Servers.UPDATE_INTERVAL = 2000;
-
 Servers.serverTemplate = $("#server-template");
 Servers.serverTagTemplate = $("#server-tag-template");
 Servers.serverLists = $(".hero-section-server-list");
@@ -50,7 +48,7 @@ Servers.updateServerLists = async function() {
             return;
         }
 
-        const players = await API.getPlayers(server.id)
+        const players = await API.getPlayersInServer(server.id)
 
         Template.add(this.serverTemplate, this.serverLists, this.serverTemplate, (element) => {
             element.find(".server-name").text(server.name);
