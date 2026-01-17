@@ -18,7 +18,24 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+/* -------------- Imports */
+import { API } from "../libs/api.js";
+
 /* -------------- Main */
-export * from "./servers.js";
-export * from "./smoothScroll.js";
-export * from "./players.js";
+
+export const Players = {};
+
+/**
+    Updates player count elements.
+*/
+Players.updatePlayerCounts = async function() {
+    const playerCount = await API.getRegisteredPlayerCount();
+    $(".player-count").text(playerCount.toLocaleString());
+}
+
+/**
+    Initializes this service.
+*/
+Players.init = async function() {
+    await this.updatePlayerCounts();
+}
