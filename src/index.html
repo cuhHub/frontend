@@ -64,6 +64,13 @@ Full terms governed by the laws of England and Wales.
     </head>
 
     <body>
+        <!-- Back To Top -->
+        <div class="back-to-top">
+            <button class="button primary-button" onclick="getServices().BackToTop.scrollToTop();">
+                <iconify-icon icon="ion:arrow-up-circle-outline"></iconify-icon>
+            </button>
+        </div>
+
         <!-- Header -->
         <header>
             <div class="header-left">
@@ -91,7 +98,7 @@ Full terms governed by the laws of England and Wales.
                     </a>
                 </div>
 
-                <button class="button primary-button no-link" onclick="launchStormworks();">
+                <button class="button primary-button" onclick="launchStormworks();">
                     <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
                     Launch Stormworks
                 </button>
@@ -116,12 +123,16 @@ Full terms governed by the laws of England and Wales.
 
                     <div class="vertical-separator"></div>
 
-                    <p>
-                        We are the go-to servers for experiencing unique gamemodes in Stormworks.
-                    </p>
+                    <div class="flex column gap1">
+                        <p>We are the go-to servers for experiencing unique gamemodes in Stormworks.</p>
+                        <div class="flex row align-center gap1">
+                            <iconify-icon icon="ion:people-outline"></iconify-icon>
+                            <p class="bold">Join our <span class="special-text player-count">0</span> players today.</p>
+                        </div>
+                    </div>
 
                     <div class="hero-section-buttons">
-                        <button class="button primary-button no-link" onclick="launchStormworks();">
+                        <button class="button primary-button" onclick="launchStormworks();">
                             <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
                             Launch Stormworks
                         </button>
@@ -169,7 +180,7 @@ Full terms governed by the laws of England and Wales.
                     </div>
                 </div>
 
-                <button class="hero-section-down button secondary-button no-link" onclick="scrollToElement('.features-section');">
+                <button class="hero-section-down button secondary-button" onclick="scrollToElement('.features-section');">
                     <iconify-icon icon="ion:arrow-down-circle-outline"></iconify-icon>
                     See More
                 </a>
@@ -178,8 +189,9 @@ Full terms governed by the laws of England and Wales.
             <section id="featsect" class="features-section">
                 <div class="background">
                     <div class="background-stack">
-                        <div class="background-shadow"></div>
-                        <div class="background-image bg-image-2"></div>
+                        <div class="background-glow background-glow-right"></div>
+                        <div class="background-grid"></div>
+                        <div class="background-flat background-flat-lighter"></div>
                     </div>
                 </div>
 
@@ -265,9 +277,9 @@ Full terms governed by the laws of England and Wales.
             <section class="servers-section">
                 <div class="background">
                     <div class="background-stack">
+                        <div class="background-glow background-glow-left"></div>
                         <div class="background-grid"></div>
-                        <div class="background-shadow"></div>
-                        <div class="background-image bg-image-3"></div>
+                        <div class="background-flat background-flat-lighter"></div>
                     </div>
                 </div>
 
@@ -315,7 +327,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
 
                         <div class="card-footer">
-                            <button class="button primary-button no-link" disabled>
+                            <button class="button primary-button" disabled>
                                 <iconify-icon icon="ion:construct-outline"></iconify-icon>
                                 In Development
                             </button>
@@ -336,7 +348,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
 
                         <div class="card-footer">
-                            <button class="button primary-button no-link" disabled>
+                            <button class="button primary-button" disabled>
                                 <iconify-icon icon="ion:construct-outline"></iconify-icon>
                                 In Development
                             </button>
@@ -344,24 +356,26 @@ Full terms governed by the laws of England and Wales.
                     </div>
                 </div>
 
-                <p class="faded-text center small">New? Learn how to <a class="small" href="/getting-started">get started</a>.</p>
+                <p class="faded-text text-center small">New? Learn how to <a class="small" href="/getting-started">get started</a>.</p>
             </section>
 
             <section class="faq-section">
                 <div class="background">
                     <div class="background-stack">
-                        <div class="background-shadow"></div>
+                        <div class="background-glow background-glow-right"></div>
                         <div class="background-grid"></div>
-                        <div class="background-image bg-image-4"></div>
+                        <div class="background-flat background-flat-lighter"></div>
                     </div>
                 </div>
 
-                <h1>Frequently Asked Questions</h1>
-                <div class="vertical-separator"></div>
-                <p>
-                    Here are some frequently asked questions about cuhHub.<br>
-                    You may find an answer to your question here.
-                </p>
+                <div class="column flex gap2 align-center text-center">
+                    <h1>Frequently Asked Questions</h1>
+                    <div class="vertical-separator"></div>
+                    <p>
+                        Here are some frequently asked questions about cuhHub.<br>
+                        You may find an answer to your question here.
+                    </p>
+                </div>
 
                 <div class="faq-section-questions">
                     <details>
@@ -515,7 +529,7 @@ Full terms governed by the laws of England and Wales.
             </div>
 
             <div class="footer-bottom">
-                <p class="smaller">&copy; cuhHub - All Rights Reserved - 2026</p>
+                <p class="smaller">&copy; cuhHub - All Rights Reserved - __COPYRIGHT_YEAR__</p>
                 <p class="smaller">Version: __VERSION__</p>
             </div>
         </footer>
