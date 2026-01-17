@@ -68,6 +68,8 @@ a:not(.no-link, .button)[target="_blank"]::after {
 }
 
 h1, h2, h3, h4 {
+    font-family: "Outfit" sans-serif;
+    font-style: italic;
     color: var(--header-color);
 }
 
