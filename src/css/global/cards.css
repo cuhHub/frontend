@@ -41,6 +41,7 @@ Full terms governed by the laws of England and Wales.
     background-color: var(--bg-color-darker-translucent);
     align-items: center;
     padding: 15px var(--card-content-horizontal-padding);
+    border-bottom: solid 1px var(--border-color-on-dark);
 }
 
 .card-icon {
