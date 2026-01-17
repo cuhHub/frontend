@@ -24,6 +24,7 @@ Full terms governed by the laws of England and Wales.
 /* -------------- Imports */
 
 import { CONSTS } from "./consts.js";
+import { Template } from "./libs/template.js";
 
 import * as services from "./services/index.js";
 
@@ -75,6 +76,7 @@ function startServices() {
 */
 function init() {
     console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
+    Template.handleAll();
     startServices();
 }
 

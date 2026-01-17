@@ -26,6 +26,13 @@ Full terms governed by the laws of England and Wales.
 export const Template = {}
 
 /**
+    Handles all templates.
+*/
+Template.handleAll = function() {
+    $(".template").each((index, template) => this._handleTemplate($(template)));
+}
+
+/**
     Ensures a template remains hidden.
     @param {JQuery} template The template to handle.
 */
@@ -55,5 +62,4 @@ Template.add = function(template, parent, after, callback) {
     }
 
     callback(clone);
-
 }
