@@ -18,3 +18,54 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: solid 1px var(--border-color-on-dark);
+    transition: var(--transition-duration);
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background-color: var(--bg-color-translucent);
+    gap: var(--gap-1);
+}
+
+.card:hover {
+    border: solid 1px var(--border-triggered-color);
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-1);
+    background-color: var(--bg-color-darker-translucent);
+    align-items: center;
+    padding: 15px var(--card-content-horizontal-padding);
+}
+
+.card-icon {
+    font-size: calc(var(--base-font-size) * 1.5);
+    color: var(--accent-color);
+}
+
+.card-title {
+    font-weight: 800;
+    font-style: italic;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-1);
+    min-height: 100px;
+    flex: 1;
+    padding: 5px var(--card-content-horizontal-padding);
+    padding-bottom: 35px;
+}
+
+.card-footer {
+    background-color: var(--bg-color-lighter-translucent);
+    border-top: solid 1px var(--border-color-on-dark);
+    padding: 15px var(--card-content-horizontal-padding);
+}
