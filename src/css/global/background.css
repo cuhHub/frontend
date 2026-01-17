@@ -122,6 +122,11 @@ Full terms governed by the laws of England and Wales.
     right: -20%;
 }
 
+.background-glow-center {
+    inset: 0;
+    margin: auto;
+}
+
 .background-flat {
     z-index: -2;
 }
