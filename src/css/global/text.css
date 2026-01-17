@@ -26,10 +26,11 @@ h3,
 h4,
 p,
 a,
-button {
+button,
+summary p {
     font-family: "Mulish", sans-serif;
     color: var(--text-color);
-    font-size: var(--base-font-size);
+    font-size: calc(var(--base-font-size) / 1.1);
     font-weight: 500;
     filter: drop-shadow(0 0 5px var(--shadow-color));
     margin: 0;
@@ -66,25 +67,30 @@ a:not(.no-link, .button)[target="_blank"]::after {
     padding-left: 2px;
 }
 
+h1, h2, h3, h4 {
+    color: var(--header-color);
+}
+
 h1 {
     position: relative;
     font-weight: 700;
-    font-size: calc(var(--base-font-size) * 2.25);
+    font-size: calc(var(--base-font-size) * 2.5);
 }
 
 .with-header-icon::after,
 h1::after {
     content: "";
-    background-image: url("/images/icons/pre-header.png");
-    background-position: center;
-    background-size: cover;
     position: absolute;
-    height: 100%;
-    aspect-ratio: 1;
-    left: -7%;
-    bottom: 25%;
+    left: calc(var(--header-icon-size) / 3 * -1);
+    top: calc(var(--header-icon-size) / 3 * -1);
+    object-position: center;
+    background-image: url("/images/icons/pre-header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: var(--header-icon-size);
+    width: var(--header-icon-size);
     z-index: -1;
-    filter: blur(1px);
+    filter: blur(3px);
 }
 
 h2 {
@@ -99,5 +105,97 @@ h3 {
 
 h4 {
     font-weight: 600;
-    font-size: calc(var(--base-font-size) * 1.25);
+    font-size: calc(var(--base-font-size) * 1);
+}
+
+.faded-text {
+    color: var(--faded-text-color);
+}
+
+.inactive-text {
+    color: var(--inactive-text-color);
+}
+
+.small {
+    font-size: calc(var(--base-font-size) / 1.2);
+}
+
+.smaller {
+    font-size: calc(var(--base-font-size) / 1.5);
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+details {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    padding: 20px 35px;
+    border: solid 1px var(--border-color-on-dark);
+    transition: var(--transition-duration);
+}
+
+details[open],
+details:has(summary:hover) {
+    border: solid 1px var(--border-triggered-color);
+}
+
+summary {
+    display: flex;
+    gap: var(--gap-1);
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+}
+
+summary > iconify-icon {
+    color: var(--accent-color);
+}
+
+summary > h4 {
+    font-weight: 600;
+}
+
+summary::after {
+    content: ">";
+    color: var(--accent-color);
+    font-size: var(--base-font-size);
+    font-weight: 900;
+    transition: var(--transition-duration);
+    margin-left: auto;
+    transform: rotate(0);
+}
+
+details[open] > summary {
+    border-bottom: solid 1px var(--border-color-on-dark);
+    padding: 15px 0;
+}
+
+details[open] > summary::after {
+    transform: rotate(90deg);
+}
+
+details > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+    padding: 15px 0;
+    transition: var(--transition-duration);
+}
+
+details[open] > div {
+
 }
