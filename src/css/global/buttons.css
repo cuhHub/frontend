@@ -26,8 +26,8 @@ button {
     filter: drop-shadow(0 5px 4px var(--shadow-color));
     border: solid 1px transparent;
     font-weight: 700;
-    font-size: calc(var(--base-font-size) / 1.2);
     text-align: center;
+    overflow: hidden;
 }
 
 .button:hover,
@@ -35,8 +35,22 @@ button:hover {
     scale: 1.02;
 }
 
+.button:disabled,
+.disabled-button {
+    background: linear-gradient(
+        90deg,
+        var(--disabled-color-from),
+        var(--disabled-color-to)
+    ) !important;
+}
+
+.button:disabled:hover,
+.disabled-button:hover {
+    border: solid 1px var(--disabled-button-hover-border);
+}
+
 .primary-button {
-    padding: 10px 15px;
+    padding: 10px;
     color: var(--primary-button-text-color);
     background: linear-gradient(
         90deg,
