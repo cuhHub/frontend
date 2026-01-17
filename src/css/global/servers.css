@@ -56,7 +56,7 @@ Full terms governed by the laws of England and Wales.
 .server-left {
     gap: var(--gap-1);
     align-items: flex-start;
-    width: 70%;
+    width: 60%;
 }
 
 .server-right {
