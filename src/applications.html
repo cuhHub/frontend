@@ -1,0 +1,251 @@
+<!--
+Source-Available No-Redistribution License
+Copyright (c) 2026 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Applications</title>
+        <meta name="description" content="Apply for volunteer positions in cuhHub.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8"/>
+
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="__COOKIEBOT_ID__" type="text/javascript" async></script>
+        <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.5.1/SmoothScroll.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
+        <script src="/js/jquery.js" defer></script>
+        <script type="module" src="/js/main.js" defer></script>
+
+        <link rel="stylesheet" href="/css/style.css"/>
+        <link rel="stylesheet" href="/css/page/applications.css"/>
+
+        <link rel="icon" href="/images/icons/logo_transparent.png"/>
+
+        <link rel="canonical" href="https://cuhhub.com/applications">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="cuhHub - Applications">
+        <meta property="og:description" content="Apply for volunteer positions in cuhHub.">
+        <meta property="og:url" content="https://cuhhub.com/applications">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://cuhhub.com/images/banners/cuhhub.png">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="cuhHub - Applications">
+        <meta name="twitter:description" content="Apply for volunteer positions in cuhHub.">
+        <meta name="twitter:image" content="https://cuhhub.com/images/banners/cuhhub.png">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=__GOOGLE_ANALYTICS_ID__"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '__GOOGLE_ANALYTICS_ID__');
+        </script>
+    </head>
+
+    <body>
+        <!-- Back To Top -->
+        <div class="back-to-top">
+            <button class="button primary-button" onclick="getServices().BackToTop.scrollToTop();">
+                <iconify-icon icon="ion:arrow-up-circle-outline"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <a class="header-title no-link" href="/">
+                    <img src="/images/icons/logo_transparent.png" alt="cuhHub Logo">
+                    <p>cuhHub</p>
+                </a>
+
+                <nav>
+                    <a class="nav-link no-link" href="/">Home</a>
+                    <a class="nav-link no-link" href="/live">Live</a>
+                    <a class="nav-link nav-link-active no-link" href="/applications">Applications</a>
+                    <a class="nav-link special-nav-link no-link" href="https://patreon.com/cuhhubsw" target="_blank">Become A Supporter</a>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <div class="header-icons">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
+                    </a>
+
+                    <a href="https://github.com/cuhHub" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
+                    </a>
+                </div>
+
+                <button class="button primary-button" onclick="launchStormworks();">
+                    <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                    Launch Stormworks
+                </button>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <main>
+            <section class="hero-section">
+                <div class="background">
+                    <div class="background-stack">
+                        <div class="background-glow background-glow-center"></div>
+                        <div class="background-grid"></div>
+                        <div class="background-flat background-flat-lighter"></div>
+                    </div>
+                </div>
+
+                <div class="flex column gap2 text-center">
+                    <h1>Apply For Volunteer Positions</h1>
+                    <p>Join the cuhHub team and help us bring fresh experiences to Stormworks!</p>
+                </div>
+
+                <div class="application-cards">
+                    <div class="application-card card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:hammer-outline"></iconify-icon>
+                            <h4 class="card-title">Staff</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Help moderate our servers, assist players with issues and ensure a safe and fun environment
+                                for everyone.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <a class="button primary-button no-link" href="https://forms.gle/jq6P6DoiswB2L7Z56" target="_blank">
+                                <iconify-icon icon="mdi:external-link"></iconify-icon>
+                                Apply
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="application-card card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="mdi:forest-outline"></iconify-icon>
+                            <h4 class="card-title">Tester</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Help test new features, servers and general updates before they are released to the public.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <a class="button primary-button no-link" href="https://forms.gle/7ow95VrC7QCs2DD68" target="_blank">
+                                <iconify-icon icon="mdi:external-link"></iconify-icon>
+                                Apply
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="application-card card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="mdi:forest-outline"></iconify-icon>
+                            <h4 class="card-title inactive-text">Developer</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p class="inactive-text">
+                                Help develop and maintain cuhHub's servers, tools and services to ensure a smooth experience
+                                for all players.
+                            </p>
+
+                            <p class="smaller faded-text">
+                                &bullet; Knowledge of Lua and/or Python is required.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <a class="button primary-button no-link disabled-button">
+                                <iconify-icon icon="mdi:external-link"></iconify-icon>
+                                Apply
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="background">
+                <div class="background-stack">
+                    <div class="background-grid"></div>
+                    <div class="background-shadow"></div>
+                </div>
+            </div>
+
+            <div class="footer-links-row">
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Pages</h4>
+                    <a class="footer-link" href="/">Home</a>
+                    <a class="footer-link" href="/live">Live</a>
+                    <a class="footer-link" href="/applications">Applications</a>
+                    <a class="footer-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Legal</h4>
+                    <a class="footer-link" href="/tos">Terms of Service</a>
+                    <a class="footer-link" href="/privacy">Privacy Policy</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Player</h4>
+                    <a class="footer-link" href="/getting-started">Getting Started</a>
+                    <a class="footer-link" href="https://patreon.com/cuhhubsw" target="_blank">Become A Supporter</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Social</h4>
+
+                    <a class="footer-link" href="https://dsc.gg/cuhhubsw" target="_blank">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
+                        Discord
+                    </a>
+
+                    <a class="footer-link" href="https://github.com/cuhHub" target="_blank">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Contact</h4>
+                    <p class="footer-link"><strong>Email:</strong> <a class="footer-link" href="mailto:cuhhub@proton.me" target="_blank">cuhhub@proton.me</a></p>
+                    <p class="footer-link"><strong>Discord:</strong> <a class="footer-link" href="dsc.gg/cuhhubsw" target="_blank">dsc.gg/cuhhubsw</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="smaller">&copy; cuhHub - All Rights Reserved - __COPYRIGHT_YEAR__</p>
+                <p class="smaller">Version: __VERSION__</p>
+            </div>
+        </footer>
+    </body>
+</html>
