@@ -83,15 +83,5 @@ Full terms governed by the laws of England and Wales.
     display: flex;
     flex-direction: column;
     gap: var(--gap-2);
-    width: 50%;
-    height: 40vh;
-    overflow-y: scroll;
-    padding: 100px 25px;
-    mask: linear-gradient(
-        180deg,
-        transparent 0%,
-        black 15%,
-        black 85%,
-        transparent 100%
-    )
+    width: 75%;
 }
