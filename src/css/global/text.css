@@ -27,6 +27,8 @@ h4,
 p,
 a,
 button,
+li,
+th, td,
 summary p {
     font-family: "Mulish", sans-serif;
     color: var(--text-color);
@@ -35,6 +37,14 @@ summary p {
     filter: drop-shadow(0 0 5px var(--shadow-color));
     margin: 0;
     padding: 0;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    font-weight: 700;
 }
 
 a,
@@ -210,10 +220,25 @@ details > div {
     display: flex;
     flex-direction: column;
     gap: var(--gap-1);
-    padding: 15px 0;
-    transition: var(--transition-duration);
+    opacity: 0;
 }
 
 details[open] > div {
+    animation: details-open var(--transition-duration) forwards;
+}
 
+@keyframes details-open {
+    from {
+        max-height: 0;
+        padding: 0 0;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    to {
+        max-height: 1000px;
+        padding: 15px 0;
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
