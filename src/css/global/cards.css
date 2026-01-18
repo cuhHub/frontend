@@ -57,7 +57,6 @@ Full terms governed by the laws of England and Wales.
 .card-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: var(--gap-1);
     min-height: 100px;
     flex: 1;
