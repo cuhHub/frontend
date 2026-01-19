@@ -20,6 +20,7 @@ Full terms governed by the laws of England and Wales.
 
 .hero-section {
     justify-content: start;
+    gap: var(--gap-2);
 }
 
 .servers-row {
