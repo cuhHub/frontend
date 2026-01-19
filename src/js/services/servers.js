@@ -27,6 +27,17 @@ export const Servers = {};
 Servers.UPDATE_INTERVAL = 5 * 1000;
 Servers.serverLists = $(".server-list");
 
+/** 
+    Adds loading icons to server lists. Call before updates.
+*/
+Servers.addLoadingIcons = function() {
+    this.serverLists.each((index, element) => {
+        element.innerHTML = `
+            <iconify-icon icon="eos-icons:loading" class="loading-icon"></iconify-icon>
+        `;
+    });
+}
+
 /**
     Updates server lists.
 */
@@ -87,6 +98,7 @@ Servers.updateServerLists = async function() {
     Initializes this service.
 */
 Servers.init = async function() {
+    this.addLoadingIcons();
     await this.updateServerLists();
 
     setInterval(async () => {
