@@ -112,7 +112,7 @@ Full terms governed by the laws of England and Wales.
                     <div class="background-stack">
                         <!-- <div class="background-grid"></div> -->
                         <div class="background-shadow"></div>
-                        <video class="background-video" style="scale: 1.1;" autoplay loop muted>
+                        <video id="hero-video" class="background-video" style="scale: 1.1;" autoplay loop>
                             <source src="/videos/sandbox.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -141,6 +141,11 @@ Full terms governed by the laws of England and Wales.
                             <iconify-icon icon="mdi:discord"></iconify-icon>
                             Suggest A Feature
                         </a>
+
+                        <button class="button secondary-button" onclick="document.getElementById('hero-video').muted = !document.getElementById('hero-video').muted;">
+                            <iconify-icon icon="ion:musical-notes-outline"></iconify-icon>
+                            Toggle Sound
+                        </button>
                     </div>
                 </div>
 
@@ -269,7 +274,7 @@ Full terms governed by the laws of England and Wales.
                     <h1>Frequently Asked Questions</h1>
                     <div class="vertical-separator"></div>
                     <p>
-                        Here are some frequently asked questions about cuhHub.<br>
+                        Here are some frequently asked questions about our Sandbox server.<br>
                         You may find an answer to your question here.
                     </p>
                 </div>
