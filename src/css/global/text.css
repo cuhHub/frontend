@@ -37,10 +37,7 @@ summary p {
     filter: drop-shadow(0 0 5px var(--shadow-color));
     margin: 0;
     padding: 0;
-}
-
-th, td {
-    padding: 5px;
+    width: fit-content;
 }
 
 th {
@@ -60,6 +57,7 @@ a:not(.no-link, .button) {
     text-decoration: none;
     transition: var(--transition-duration);
     text-underline-offset: 1px;
+    position: relative;
 }
 
 a:not(.no-link, .button):active,
@@ -69,16 +67,26 @@ a:not(.no-link, .button):hover {
     text-decoration: underline;
 }
 
+a:not(.no-link, .button)[target="_blank"] {
+    padding-right: 20px;
+}
+
 a:not(.no-link, .button)[target="_blank"]::after {
-    content: "↗";
-    color: var(--link-text-color);
-    text-decoration: underline;
-    font-size: calc(var(--base-font-size) / 1.4);
-    padding-left: 2px;
+    position: absolute;
+    content: "";
+    filter: invert(1);
+    background-image: url("/images/icons/external-link.svg");
+    width: 12px;
+    height: 12px;
+    opacity: 0.6;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 h1, h2, h3, h4 {
-    font-family: "Outfit" sans-serif;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: -0.2px;
     font-style: italic;
     color: var(--header-color);
 }
@@ -171,7 +179,7 @@ details {
     justify-content: center;
     background-color: var(--bg-color);
     border-radius: 10px;
-    padding: 20px 35px;
+    padding: 15px 20px;
     border: solid 1px var(--border-color-on-dark);
     transition: var(--transition-duration);
 }
@@ -191,10 +199,6 @@ summary {
 
 summary > iconify-icon {
     color: var(--accent-color);
-}
-
-summary > h4 {
-    font-weight: 600;
 }
 
 summary::after {
@@ -227,6 +231,10 @@ details[open] > div {
     animation: details-open var(--transition-duration) forwards;
 }
 
+details:not([open]) > div {
+    animation: details-close var(--transition-duration) forwards;
+}
+
 @keyframes details-open {
     from {
         max-height: 0;
@@ -240,5 +248,20 @@ details[open] > div {
         padding: 15px 0;
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes details-close {
+    from {
+        max-height: 1000px;
+        padding: 15px 0;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        max-height: 0;
+        padding: 0 0;
+        transform: translateY(-50%);
+        opacity: 0;
     }
 }
