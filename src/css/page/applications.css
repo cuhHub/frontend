@@ -18,53 +18,31 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-.applications-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.hero-section {
     align-items: center;
-    gap: 50px;
 }
 
 .application-cards {
-    padding: 25px;
     display: flex;
     flex-direction: row;
+    gap: var(--gap-3);
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 100px;
+    align-items: stretch;
 }
 
 .application-card {
-    width: 400px;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
+    width: 30%;
 }
 
-@media screen and (max-width: 1000px) {
-    .application-cards {
-        gap: 15px;
-    }
-
+@media (max-width: 900px) {
     .application-card {
-        width: 75%;
+        width: 45%;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .application-card {
         width: 100%;
     }
-}
-
-.application-card-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    border-bottom: 1px solid var(--border-color);
 }

@@ -1,0 +1,132 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2026 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+.server {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: solid 1px var(--border-color-on-dark);
+    transition: var(--transition-duration);
+    border-radius: 5px;
+    backdrop-filter: blur(25px);
+    background-color: var(--bg-color-translucent);
+}
+
+.server:hover {
+    border: solid 1px var(--border-triggered-color);
+}
+
+.server-banner {
+    height: 65px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.server-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.server-left,
+.server-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.server-left {
+    gap: var(--gap-1);
+    align-items: flex-start;
+    width: 60%;
+}
+
+.server-right {
+    align-items: flex-end;
+}
+
+.server-name {
+    font-weight: 800;
+    font-style: italic;
+}
+
+.server-description {
+    font-size: calc(var(--base-font-size) / 1.5 );
+}
+
+.server-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-1);
+}
+
+.server-status-icon {
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+}
+
+.server-status-icon-online {
+    background-color: hsl(110, 100%, 71%);
+}
+
+.server-status-icon-offline {
+    background-color: hsl(0, 100%, 75%);
+}
+
+.server-status-text {
+    color: var(--inactive-text-color);
+    font-size: calc(var(--base-font-size) / 1.5);
+    font-weight: 700;
+}
+
+.server-players {
+    font-size: calc(var(--base-font-size) * 1.2);
+    font-weight: 800;
+}
+
+.server-max-players {
+    color: var(--inactive-text-color);
+    font-size: calc(var(--base-font-size) / 1.7);
+    font-weight: 800;
+}
+
+.server-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-1);
+}
+
+.server-tag {
+    background-color: var(--bg-color-lighter);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 3px 15px;
+    font-size: calc(var(--base-font-size) / 2);
+    border: solid 1px var(--border-color-on-dark);
+}
+
+.server-tag::before {
+    content: "\2022";
+    padding-right: 5px;
+    color: var(--accent-color);
+}

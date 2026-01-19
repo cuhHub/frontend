@@ -22,21 +22,24 @@ Full terms governed by the laws of England and Wales.
 <html lang="en">
     <head>
         <title>Not Found</title>
-        <meta name="description" content="Page not found.">
+        <meta name="description" content="The website for the gameserver-hosting community cuhHub.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta charset="UTF-8"/>
+        <meta name="color-scheme" content="dark">
+        <meta name="theme-color" content="#0e1116"/>
 
         <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="__COOKIEBOT_ID__" type="text/javascript" async></script>
         <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.5.1/SmoothScroll.min.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
+        <script src="/js/jquery.js" defer></script>
         <script type="module" src="/js/main.js" defer></script>
 
         <link rel="stylesheet" href="/css/style.css"/>
-        <link rel="stylesheet" href="css/page/404.css"/>
 
         <link rel="icon" href="/images/icons/logo_transparent.png"/>
 
-        <meta name="robots" content="noindex">
+        <link rel="canonical" href="https://cuhhub.com/404">
+        <meta name="robots" content="noindex, nofollow">
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=__GOOGLE_ANALYTICS_ID__"></script>
@@ -51,102 +54,128 @@ Full terms governed by the laws of England and Wales.
     </head>
 
     <body>
-        <!-- Background -->
-        <div class="background">
-            <div class="background-image"></div>
-            <div class="background-shadow"></div>
+        <!-- Back To Top -->
+        <div class="back-to-top">
+            <button class="button primary-button" onclick="getServices().BackToTop.scrollToTop();">
+                <iconify-icon icon="ion:arrow-up-circle-outline"></iconify-icon>
+            </button>
         </div>
 
         <!-- Header -->
-        <header class="border-bottom">
-            <!-- Branding -->
-            <div class="header-branding">
-                <a href="/" class="icon-button">
-                    <img src="/images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=40px>
+        <header>
+            <div class="header-left">
+                <a class="header-title no-link" href="/">
+                    <img src="/images/icons/logo_transparent.png" alt="cuhHub Logo">
+                    <p>cuhHub</p>
                 </a>
 
-                <h1>cuhHub</h1>
+                <nav>
+                    <a class="nav-link no-link" href="/">Home</a>
+                    <a class="nav-link no-link" href="/live">Live</a>
+                    <a class="nav-link no-link" href="/applications">Applications</a>
+                    <a class="nav-link special-nav-link no-link" href="https://patreon.com/cuhhubsw" target="_blank">Become A Supporter</a>
+                </nav>
             </div>
 
-            <!-- Navigation Bar -->
-            <nav>
-                <a class="navbar-link" href="/">Home</a>
-                <a class="navbar-link" href="/about-us">About Us</a>
-                <a class="navbar-link" href="/applications">Applications</a>
-                <a class="navbar-link navbar-support-us external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
-
-                <div class="navbar-icons">
-                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
-                        <iconify-icon icon="ion:logo-discord"></iconify-icon>
+            <div class="header-right">
+                <div class="header-icons">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
                     </a>
 
-                    <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
-                        <iconify-icon icon="ion:logo-github"></iconify-icon>
+                    <a href="https://github.com/cuhHub" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
                     </a>
                 </div>
-            </nav>
+
+                <button class="button primary-button" onclick="launchStormworks();">
+                    <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                    Launch Stormworks
+                </button>
+            </div>
         </header>
 
         <!-- Page Content -->
-        <main class="main-center">
-            <div class="column gap1">
-                <div class="column">
-                    <div class="row gap2 center">
-                        <iconify-icon icon="ion:warning-outline" height=60px></iconify-icon>
-                        <h1>Awkward...</h1>
+        <main>
+            <section class="hero-section align-center justify-center text-center gap3">
+                <div class="background">
+                    <div class="background-stack">
+                        <div class="background-glow background-glow-center"></div>
+                        <div class="background-grid"></div>
+                        <div class="background-flat background-flat-lighter"></div>
                     </div>
-
-                    <p>The page you attempted to access does not exist. (404)</p>
                 </div>
 
-                <a href="/">Head back</a>
-            </div>
+                <h1>Page Not Found</h1>
+
+                <div class="vertical-separator"></div>
+
+                <p>
+                    The page you are looking for does not exist.<br>
+                    If you believe this is an error, please contact us via <a class="no-link" href="https://dsc.gg/cuhhubsw" target="_blank">Discord</a>
+                </p>
+
+                <a class="button primary-button no-link" href="/">
+                    <iconify-icon icon="ion:home-outline"></iconify-icon>
+                    Back To Home
+                </a>
+            </section>
         </main>
 
         <!-- Footer -->
-        <footer class="border-top">
-            <div class="footer-links">
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Contact</p>
-                    <a href="mailto:cuhhub@proton.me" class="external-link" target="_blank">cuhhub@proton.me</a>
-                    <p>Discord: <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">dsc.gg/cuhhubsw</a></p>
+        <footer>
+            <div class="background">
+                <div class="background-stack">
+                    <div class="background-grid"></div>
+                    <div class="background-shadow"></div>
+                </div>
+            </div>
+
+            <div class="footer-links-row">
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Pages</h4>
+                    <a class="footer-link" href="/">Home</a>
+                    <a class="footer-link" href="/live">Live</a>
+                    <a class="footer-link" href="/applications">Applications</a>
+                    <a class="footer-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
                 </div>
 
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Legal</p>
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms-of-service">Terms of Service</a>
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Legal</h4>
+                    <a class="footer-link" href="/tos">Terms of Service</a>
+                    <a class="footer-link" href="/privacy">Privacy Policy</a>
                 </div>
 
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Pages</p>
-                    <a href="/">Home</a>
-                    <a href="/about-us">About Us</a>
-                    <a href="/applications">Applications</a>
-                    <a href="/getting-started">Getting Started</a>
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Player</h4>
+                    <a class="footer-link" href="/getting-started">Getting Started</a>
+                    <a class="footer-link" href="https://patreon.com/cuhhubsw" target="_blank">Become A Supporter</a>
                 </div>
 
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Links</p>
-                    <a class="external-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
-                    <a class="external-link" href="https://github.com/cuhHub" target="_blank">Open-Source</a>
-                    <a class="external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Social</h4>
 
-                    <div class="footer-socials">
-                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
-                            <iconify-icon icon="ion:logo-discord"></iconify-icon>
-                        </a>
+                    <a class="footer-link" href="https://dsc.gg/cuhhubsw" target="_blank">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
+                        Discord
+                    </a>
 
-                        <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
-                            <iconify-icon icon="ion:logo-github"></iconify-icon>
-                        </a>
-                    </div>
+                    <a class="footer-link" href="https://github.com/cuhHub" target="_blank">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Contact</h4>
+                    <p class="footer-link"><strong>Email:</strong> <a class="footer-link" href="mailto:cuhhub@proton.me" target="_blank">cuhhub@proton.me</a></p>
+                    <p class="footer-link"><strong>Discord:</strong> <a class="footer-link" href="dsc.gg/cuhhubsw" target="_blank">dsc.gg/cuhhubsw</a></p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© __COPYRIGHT_YEAR__ cuhHub. All rights reserved.</p>
-                <p class="muted-text">Version: __VERSION__</p>
+                <p class="smaller">&copy; cuhHub - All Rights Reserved - __COPYRIGHT_YEAR__</p>
+                <p class="smaller">Version: __VERSION__</p>
             </div>
         </footer>
     </body>

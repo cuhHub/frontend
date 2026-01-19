@@ -24,63 +24,60 @@ Full terms governed by the laws of England and Wales.
 /* -------------- Imports */
 
 import { CONSTS } from "./consts.js";
+import { Template } from "./libs/template.js";
 
-import * as behaviours from "./behaviours/index.js";
-import { Behaviour } from "./behaviours/behaviour.js";
+import * as services from "./services/index.js";
 
 /* -------------- Main */
 
 /**
-    An array containing all behaviours.
-    @type {Array<Behaviour>} 
+    Scrolls to an element.
+    @param {string} query The element to scroll to.
 */
-const loadedBehaviours = [];
+window.scrollToElement = function(query) {
+    const element = document.querySelector(query);
+    element.scrollIntoView();
+}
 
 /**
-    Starts all behaviours.
+    Scrolls to the top.
 */
-window.startBehaviours = function() {
-    Object.values(behaviours).forEach(behaviour => {
-        if (!behaviour instanceof Behaviour) {
-            return;
-        }
+window.scrollToTop = function() {
+    window.scrollTo(0, 0);
+}
 
-        var instance = new behaviour();
-        instance.init();
+/**
+    Launches Stormworks.
+*/
+window.launchStormworks = function() {
+    window.location.href = "steam://rungameid/573090";
+}
 
-        loadedBehaviours.push(instance);
+/**
+    Returns all services.
+    @returns {Service[]}
+*/
+window.getServices = function() {
+    return services;
+}
 
-        console.log("Initialized behaviour: " + instance.behaviourName)
+/**
+    Starts all services.
+*/
+function startServices() {
+    Object.values(getServices()).forEach(service => {
+        service.init();
+        console.log("Initialized a service");
     })
-}
-
-/**
-    Gets a behaviour by name.
-    @param {string} name The name of the behaviour.
-    @returns {Behaviour} The behaviour object.
-*/
-window.getBehaviour = function(name) {
-    for (const behaviour of loadedBehaviours) {
-        if (behaviour.behaviourName == name) {
-            return behaviour;
-        }
-    }
-}
-
-/**
-    Sets the URL of the page.
-    @param {string} URL
-*/
-window.openPage = function(URL) {
-    window.location.href = URL;
 }
 
 /**
     Initializes everything.
 */
-window.init = function() {
+function init() {
     console.log(`cuhHub Site v${CONSTS.SITE_VERSION}`);
-    window.startBehaviours();
+    Template.handleAll();
+    startServices();
 }
 
-window.init();
+init();

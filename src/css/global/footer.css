@@ -19,51 +19,50 @@ Full terms governed by the laws of England and Wales.
 */
 
 footer {
-    background-color: var(--bg-color-dark);
-    width: 100%;
-    padding: 15px var(--body-horizontal-padding);
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    filter: drop-shadow(0 0 3px);
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    min-height: 250px;
+    background-color: var(--bg-color);
+    border-top: solid 1px var(--border-color-on-dark);
+    gap: var(--gap-2);
 }
 
-.footer-bottom {
+footer > *:not(.background) {
+    width: 100%;
+    padding: 15px var(--content-horizontal-padding);
+}
+
+.footer-links-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    gap: var(--gap-3);
     flex-wrap: wrap;
-    gap: 5px;
-}
-
-.footer-bottom p {
-    font-size: 15px;
 }
 
 .footer-links {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--border-color);
-    padding: 25px 0;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-.footer-links-column {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--gap-1);
 }
 
-.footer-socials {
+.footer-links-title {
+    font-weight: 700;
+    padding: 5px 0;
+    border-bottom: solid 1px var(--border-triggered-color);
+}
+
+.footer-bottom {
     display: flex;
-    flex-direction: row;
-    gap: 5px;
+    justify-content: space-between;
+    background-color: var(--bg-color-darker);
+    border-top: solid 1px var(--border-color-on-dark);
 }
 
-.footer-link-header {
-    border-bottom: 1px solid var(--accent-border-color);
+.footer-bottom p {
+    color: var(--faded-text-color);
 }

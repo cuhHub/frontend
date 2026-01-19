@@ -31,21 +31,55 @@ export const API = {}
 const API_URL = "https://api.cuhhub.com";
 
 /**
+    Sends a request to the API.
+    @param {string} url The URL to send the request to.
+    @param {string} [method="GET"] The method to use.
+    @param {object} [body] The body of the request.
+    @returns {Promise}
+*/
+API.sendRequest = async function(url, method, body) {
+    const options = {
+        method: method ?? "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    };
+
+    if (method !== "GET" && body != null) {
+        options.body = JSON.stringify(body);
+    }
+
+    const response = await fetch(API_URL + url, options);
+
+    if (!response.ok) {
+        return null;
+    }
+
+    return await response.json();
+}
+
+/**
     Returns the amount of registered players.
     @returns {number}
 */
 API.getRegisteredPlayerCount = async function() {
-    try {
-        const response = await fetch(API_URL + "/players/count");
+    const response = await this.sendRequest("/players/count", "GET");
+    return response.count ?? 0;
+}
 
-        if (!response.ok) {
-            return 0;
-        }
+/**
+    Returns all servers.
+    @returns {object[]}
+*/
+API.getServers = async function() {
+    return await this.sendRequest("/servers", "GET") ?? [];
+}
 
-        const data = await response.json();
-        return data.count;
-    } catch (error) {
-        console.error(`getRegisteredPlayerCount(): ${error}`);
-        return 0;
-    }
+/**
+    Returns all players in a server.
+    @param {object} serverId The ID of the server.
+    @returns {object[]}
+*/
+API.getPlayersInServer = async function(serverId) {
+    return await this.sendRequest(`/servers/${serverId}/players`, "GET") ?? [];
 }

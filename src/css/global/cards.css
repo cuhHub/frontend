@@ -19,59 +19,54 @@ Full terms governed by the laws of England and Wales.
 */
 
 .card {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-self: stretch;
+    display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: left;
-    width: 30%;
-    background: url("/images/other/grid.png");
-    background-position: center;
-    background-repeat: repeat;
-    background-color: var(--bg-color);
-    padding: 25px;
-    border-radius: 25px;
-    border: 1px solid var(--border-color);
+    overflow: hidden;
+    border: solid 1px var(--border-color-on-dark);
     transition: var(--transition-duration);
-    gap: 5px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background-color: var(--bg-color-translucent);
+    gap: var(--gap-1);
 }
 
 .card:hover {
-    border: 1px solid var(--accent-border-color);
+    border: solid 1px var(--border-triggered-color);
 }
 
-.card-title {
-    font-weight: 700;
+.card-header {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-1);
+    background-color: var(--bg-color-darker-translucent);
+    align-items: center;
+    padding: 15px var(--card-content-horizontal-padding);
+    border-bottom: solid 1px var(--border-color-on-dark);
 }
 
 .card-icon {
-    font-size: 50px;
-    transition: var(--transition-duration);
+    font-size: calc(var(--base-font-size) * 1.5);
+    color: var(--accent-color);
 }
 
-.card:hover .card-icon {
-    color: var(--accent-icon-color);
-    transform: scale(1.1);
+.card-title {
+    font-weight: 800;
+    font-style: italic;
+    font-size: calc(var(--base-font-size) * 1.1);
 }
 
-.card-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    filter: blur(5px) brightness(40%);
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+    min-height: 100px;
+    flex: 1;
+    padding: 5px var(--card-content-horizontal-padding);
+    padding-bottom: 35px;
 }
 
-.card > *:not(.card-img) {
-    z-index: 1;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-
-.card-img-top .card-img {
-    top: -70%;
+.card-footer {
+    background-color: var(--bg-color-lighter-translucent);
+    border-top: solid 1px var(--border-color-on-dark);
+    padding: 15px var(--card-content-horizontal-padding);
 }

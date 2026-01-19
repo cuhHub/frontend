@@ -21,14 +21,17 @@ Full terms governed by the laws of England and Wales.
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Sandbox</title>
-        <meta name="description" content="Explore cuhHub's popular Sandbox server.">
+        <title>cuhHub - Sandbox</title>
+        <meta name="description" content="Welcome to Sandbox - our flagship server.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta charset="UTF-8"/>
+        <meta name="color-scheme" content="dark">
+        <meta name="theme-color" content="#0e1116"/>
 
         <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="__COOKIEBOT_ID__" type="text/javascript" async></script>
         <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.5.1/SmoothScroll.min.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
+        <script src="/js/jquery.js" defer></script>
         <script type="module" src="/js/main.js" defer></script>
 
         <link rel="stylesheet" href="/css/style.css"/>
@@ -36,18 +39,18 @@ Full terms governed by the laws of England and Wales.
 
         <link rel="icon" href="/images/icons/logo_transparent.png"/>
 
-        <link rel="canonical" href="https://cuhhub.com/servers/sandbox">
+        <link rel="canonical" href="https://cuhhub.com/sandbox">
         <meta name="robots" content="index, follow">
 
         <meta property="og:title" content="cuhHub - Sandbox">
-        <meta property="og:description" content="Explore cuhHub's popular Sandbox server.">
-        <meta property="og:url" content="https://cuhhub.com/servers/sandbox">
+        <meta property="og:description" content="Welcome to Sandbox - our flagship server.">
+        <meta property="og:url" content="https://cuhhub.com/sandbox">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://cuhhub.com/images/banners/cuhhub.png">
 
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="cuhHub - Sandbox">
-        <meta name="twitter:description" content="Explore cuhHub's popular Sandbox server.">
+        <meta name="twitter:description" content="Welcome to Sandbox - our flagship server.">
         <meta name="twitter:image" content="https://cuhhub.com/images/banners/cuhhub.png">
 
         <!-- Google tag (gtag.js) -->
@@ -63,323 +66,428 @@ Full terms governed by the laws of England and Wales.
     </head>
 
     <body>
-        <!-- Background -->
-        <div class="background">
-            <div class="background-image"></div>
-            <div class="background-shadow"></div>
+        <!-- Back To Top -->
+        <div class="back-to-top">
+            <button class="button primary-button" onclick="getServices().BackToTop.scrollToTop();">
+                <iconify-icon icon="ion:arrow-up-circle-outline"></iconify-icon>
+            </button>
         </div>
 
         <!-- Header -->
-        <header class="border-bottom">
-            <!-- Branding -->
-            <div class="header-branding">
-                <a href="/" class="icon-button">
-                    <img src="/images/icons/logo_transparent.png" alt="cuhHub Logo - Home Page" height=40px>
+        <header>
+            <div class="header-left">
+                <a class="header-title no-link" href="/">
+                    <img src="/images/icons/logo_transparent.png" alt="cuhHub Logo">
+                    <p>cuhHub</p>
                 </a>
 
-                <h1>cuhHub</h1>
+                <nav>
+                    <a class="nav-link no-link" href="/">Home</a>
+                    <a class="nav-link no-link" href="/live">Live</a>
+                    <a class="nav-link no-link" href="/applications">Applications</a>
+                    <a class="nav-link special-nav-link no-link" href="https://patreon.com/cuhhubsw" target="_blank">Become A Supporter</a>
+                </nav>
             </div>
 
-            <!-- Navigation Bar -->
-            <nav>
-                <a class="navbar-link" href="/">Home</a>
-                <a class="navbar-link" href="/about-us">About Us</a>
-                <a class="navbar-link" href="/applications">Applications</a>
-                <a class="navbar-link navbar-support-us external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
-
-                <div class="navbar-icons">
-                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
-                        <iconify-icon icon="ion:logo-discord"></iconify-icon>
+            <div class="header-right">
+                <div class="header-icons">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
                     </a>
 
-                    <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
-                        <iconify-icon icon="ion:logo-github"></iconify-icon>
+                    <a href="https://github.com/cuhHub" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
                     </a>
                 </div>
-            </nav>
+
+                <button class="button primary-button" onclick="launchStormworks();">
+                    <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                    Launch Stormworks
+                </button>
+            </div>
         </header>
 
         <!-- Page Content -->
         <main>
-            <section class="main-attention-section full-viewport">
-                <div class="main-attention-background-container">
-                    <video autoplay muted loop class="main-attention-background">
-                        <source src="/videos/sandbox.mp4">
-                    </video>
+            <section class="hero-section">
+                <div class="background">
+                    <div class="background-stack">
+                        <div class="background-grid"></div>
+                        <div class="background-shadow"></div>
+                        <video id="hero-video" class="background-video" autoplay loop>
+                            <source src="/videos/sandbox.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
 
-                <div class="main-attention-content column gap2">
-                    <div class="column gap1">
-                        <div class="main-attention-title">
-                            <h1>cuhHub <span class="special-text">Sandbox</span></h1>
-                        </div>
+                <div class="hero-section-text">
+                    <h1 class="special-text">cuhHub Sandbox</h1>
 
-                        <h3>Minimal limits, unlimited fun.</h3>
+                    <div class="vertical-separator"></div>
 
+                    <div class="hero-section-inner-text">
+                        <h4>Minimal limits, maximum fun.</h4>
                         <p>
-                            Fight other players, locate landmarks, and much more! You create your own fun in Sandbox.
+                            Fight other players, locate landmarks, explore danger zones, and more!<br>
+                            You create your own fun in Sandbox.
                         </p>
                     </div>
 
-                    <div class="main-attention-links">
-                        <a href="/#how-to-join-checkpoint">Join Now</a>
-                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="external-link">Suggest A Feature</a>
+                    <div class="hero-section-buttons">
+                        <button class="button primary-button" onclick="launchStormworks();">
+                            <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                            Launch Stormworks
+                        </button>
+
+                        <a class="button secondary-button no-link" href="https://dsc.gg/cuhhubsw" target="_blank">
+                            <iconify-icon icon="mdi:discord"></iconify-icon>
+                            Suggest A Feature
+                        </a>
+
+                        <button class="button secondary-button" onclick="document.getElementById('hero-video').muted = !document.getElementById('hero-video').muted;">
+                            <iconify-icon icon="ion:musical-notes-outline"></iconify-icon>
+                            Toggle Sound
+                        </button>
                     </div>
                 </div>
+
+                <button class="hero-section-down button secondary-button" onclick="scrollToElement('#whatsect');">
+                    <iconify-icon icon="ion:arrow-down-circle-outline"></iconify-icon>
+                    See More
+                </a>
             </section>
 
-            <section class="info-section">
-                <h1>What is Sandbox?</h1>
+            <section id="whatsect" class="what-section">
+                <div class="background">
+                    <div class="background-stack">
+                        <div class="background-glow background-glow-right"></div>
+                        <div class="background-grid"></div>
+                        <div class="background-flat background-flat-lighter"></div>
+                    </div>
+                </div>
 
-                <p>
-                    Sandbox is our most popular server where you are bounded by no limits.<br>
-                    Spawn vehicles, fight with other players, survive disasters, and much more!
-                </p>
+                <div class="column flex gap2">
+                    <h1>What Is Sandbox?</h1>
+                    <div class="vertical-separator"></div>
+                    <p>
+                        Sandbox is our most popular server where you are bounded by no limits.<br>
+                        Spawn vehicles, fight with other players, survive disasters, and much more!
+                    </p>
+                </div>
 
-                <div class="features">
-                    <div class="feature card">
-                        <iconify-icon class="card-icon" icon="ion:game-controller-outline"></iconify-icon>
-                        <h3 class="card-title">Danger Zones</h3>
-                        <p>
-                            Unlike any other Stormworks server, we have zones where dangers, like disasters, are present
-                            and frequently spawn. You can use these areas to test your vehicles against things like tsunamis!
-                        </p>
+                <div class="what-section-cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="game-icons:corner-explosion"></iconify-icon>
+                            <h4 class="card-title">Danger Zones</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Unlike any other Stormworks server, we have zones where dangers, like disasters, are present and frequently spawn.
+                                You can use these areas to test your vehicles against things like tsunamis!
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="feature card">
-                        <iconify-icon class="card-icon" icon="ion:shield-outline"></iconify-icon>
-                        <h3 class="card-title">Safe Zones</h3>
-                        <p>
-                            Sandbox, unlike other servers where a <strong>?pvp</strong> command exists, uses a safe zone system.<br>
-                            Vehicles and players within safe zones are fully protected from damage, allowing you to be safe from other players. 
-                        </p>
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:shield-outline"></iconify-icon>
+                            <h4 class="card-title">Safe Zones</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Sandbox, unlike other servers where a PvP toggle command exists, uses a safe zone system.
+                                Vehicles and players within safe zones are fully protected from damage, allowing you to be safe from other players.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="feature card">
-                        <iconify-icon class="card-icon" icon="ion:person-outline"></iconify-icon>
-                        <h3 class="card-title">Companions</h3>
-                        <p>
-                            Need a crew to populate your vehicle? This is where our companion system comes into play!<br>
-                            Sandbox allows you to spawn companions (NPCs) via the <strong>?companion</strong> command.
-                        </p>
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:person-outline"></iconify-icon>
+                            <h4 class="card-title">Companions</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Need a crew to populate your vehicle? This is where our companion system comes into play!
+                                Sandbox allows you to spawn companions (NPCs) via the <span class="highlight">?companion</span> command.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="feature card">
-                        <iconify-icon class="card-icon" icon="ion:flag-outline"></iconify-icon>
-                        <h3 class="card-title">Landmarks</h3>
-                        <p>
-                            Our Sandbox server comes with landmarks - special areas marked around the map.<br>
-                            Teleport to them with <strong>?tp</strong> or navigate to them manually - go explore!
-                        </p>
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:flag-outline"></iconify-icon>
+                            <h4 class="card-title">Landmarks</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Our Sandbox server comes with landmarks - special areas marked around the map.
+                                Teleport to them with <span class="highlight">?tp</span> or navigate to them manually - go explore!
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="feature card">
-                        <iconify-icon class="card-icon" icon="ion:code-outline"></iconify-icon>
-                        <h3 class="card-title">User-Friendly</h3>
-                        <p>
-                            Our servers are designed to be as fun and convenient as possible, and Sandbox is no exception.<br>
-                            With plenty of commands to manage your experience, you can easily do what you want.
-                        </p>
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:code-outline"></iconify-icon>
+                            <h4 class="card-title">User-Friendly</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Our servers are designed to be as fun and convenient as possible, and Sandbox is no exception.
+                                With plenty of commands to manage your experience, and features like vehicle button actions,
+                                you can easily do what you want.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="feature card">
-                        <iconify-icon class="card-icon" icon="ion:hammer-outline"></iconify-icon>
-                        <h3 class="card-title">Anti-Lag</h3>
-                        <p>
-                            Sandbox comes with a custom anti-lag system to ensure laggy vehicles do not stick around.<br>
-                            This allows for the server to remain at high performance, keeping your experience smooth.
-                        </p>
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:flash-outline"></iconify-icon>
+                            <h4 class="card-title">Anti-Lag</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Sandbox comes with a custom anti-lag system to ensure laggy vehicles do not stick around.
+                                This allows for the server to remain at high performance, keeping your experience smooth.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="faq-section">
-                <div class="column gap1">
-                    <h1>Frequently Asked Questions</h1>
-                    <p>If you can't find an answer to your question here, feel free to ask in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a></p>
+                <div class="background">
+                    <div class="background-stack">
+                        <div class="background-glow background-glow-right"></div>
+                        <div class="background-grid"></div>
+                        <div class="background-flat background-flat-lighter"></div>
+                    </div>
                 </div>
 
-                <div class="faq">
+                <div class="column flex gap2 align-center text-center">
+                    <h1>Frequently Asked Questions</h1>
+                    <div class="vertical-separator"></div>
+                    <p>
+                        Here are some frequently asked questions about our Sandbox server.<br>
+                        You may find an answer to your question here.
+                    </p>
+                </div>
+
+                <div class="faq-section-questions">
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            Where are the rules?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Where are the rules?</p>
                         </summary>
 
-                        <p>
-                            You can find the rules for Sandbox, as well as cuhHub in general, in our
-                            <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server</a>.
-                        </p>
+                        <div>
+                            <p>
+                                You can find the rules in our <a href="https://dsc.gg/cuhhubsw" target="_blank">Discord server</a>.<br>
+                                If you see a player breaking the rules, please report them in our Discord.
+                            </p>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            How do I join Sandbox?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I join?</p>
                         </summary>
 
-                        <p>
-                            Joining is simple, simply follow these steps:
+                        <div>
+                            <p>
+                                Joining is simple. Simply launch Stormworks, open the in-game server browser, and search for "cuhHub".<br>
+                                From there, click the join button next to our Sandbox server.
+                            </p>
 
-                            <ol>
-                                <li>Open Stormworks.</li>
-                                <li>Go to the multiplayer server browser.</li>
-                                <li>Search for "cuhHub".</li>
-                                <li>Select and join our Sandbox server from there.</li>
-                            </ol>
-                        </p>
+                            <button class="button primary-button" onclick="launchStormworks();">
+                                <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                                Launch Stormworks
+                            </button>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            How do I see all available commands?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Where can I find the in-game commands?</p>
                         </summary>
 
-                        <p>
-                            Type <strong>?help</strong> in chat to see all commands and their descriptions.
-                        </p>
+                        <div>
+                            <p>
+                                Use <span class="highlight">?help</span> in-game to see a list of available commands.<br>
+                                Additionally, see our <a href="/getting-started">Getting Started</a> page for more information.
+                            </p>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            Is PvP allowed in safe zones?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Is PvP allowed?</p>
                         </summary>
 
-                        <p>
-                            PvP is not allowed in safe zones and is intentionally prevented. However, please report
-                            people who attempt to PvP within safe zones through our support channel in our <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">Discord server.</a>
-                        </p>
+                        <div>
+                            <p>
+                                Yes! PvP is allowed outside of safe zones.<br>
+                                If someone attacks you in a safe zone, please report them in our <a href="https://dsc.gg/cuhhubsw" target="_blank">Discord server</a>.
+                            </p>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            Can I use the Sandbox code in my own server?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Why did my vehicle get despawned?</p>
                         </summary>
 
-                        <p>
-                            Unfortunately, Sandbox's code is not open-source and can only be used on cuhHub's servers.
-                        </p>
+                        <div>
+                            <p>
+                                Our addon may despawn your vehicle if it is deemed too laggy on spawn, or you reached a limit.<br>
+                                You will be notified of the exact reason your vehicle despawned in chat and on the right-side of your screen
+                                via notifications.<br>
+                                If you reached the vehicle limit, use <span class="highlight">?c</span> to despawn your vehicles.
+                            </p>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            My vehicle got despawned, why?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>My vehicle flipped, do I have to respawn it?</p>
                         </summary>
 
-                        <p>
-                            Sandbox has a custom anti-lag system to ensure laggy vehicles do not stick around.<br>
-                            If your vehicle was despawned, it is usually due to the anti-lag system being triggered or you have too many vehicles.<br>
-                            If you have too many vehicles, use the <strong>?despawn</strong> command.<br>
-                            If the anti-lag system is the reason your vehicle was despawned, it will tell you exactly what happened in chat
-                            and via notifications.
-                        </p>
+                        <div>
+                            <p>
+                                For situations like this, we provide useful commands to get your vehicle back on track.<br>
+                                Use <span class="highlight">?flip (vehicle ID)</span> to flip your vehicle upright.
+                            </p>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            How do I repair my vehicle?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I suggest a feature?</p>
                         </summary>
 
-                        <p>
-                            You can repair a vehicle using the <strong>?repair (vehicle ID)</strong> command.<br>
-                            This will respawn the vehicle in place and remove all damage.<br>
-                            Note that this does <strong>not</strong> reattach sub-bodies such as missiles.<br><br>
-                            If you only want to refuel and recharge your vehicle, use <strong>?replenish</strong> instead.
-                        </p>
+                        <div>
+                            <p>
+                                We love hearing suggestions from our community!<br>
+                                Join our <a href="https://dsc.gg/cuhhubsw" target="_blank">Discord server</a> and head to the suggestions channel to share your ideas.
+                            </p>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            My vehicle flipped over, do I have to respawn it?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I get the IDs of my vehicles?</p>
                         </summary>
 
-                        <p>
-                            No. You can use the <strong>?flip (vehicle ID)</strong> command to flip your vehicle upright.<br>
-                            This allows you to continue without respawning.
-                        </p>
+                        <div>
+                            <p>
+                                Use <span class="highlight">?vehicles</span> in-game to see a list of your vehicles and their IDs.<br>
+                                You can also see the ID of a vehicle by getting close and looking at it.<br>
+                                Alternatively, you can refer to the vehicle list UI on your screen.
+                            </p>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            How do I get the IDs of my vehicles?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I repair, recharge, refuel and rearm my vehicle?</p>
                         </summary>
 
-                        <p>
-                            You can find your vehicle IDs in two ways:<br>
-                            <ul>
-                                <li>Look at the UI in the top-left of your screen - your spawned vehicles and their IDs are shown there.</li>
-                                <li>Use the <strong>?vehicles</strong> command to list all your spawned vehicles and their IDs.</li>
-                            </ul>
-                        </p>
+                        <div>
+                            <p>
+                                Use <span class="highlight">?repair (vehicle ID)</span> and <span class="highlight">?replenish (vehicle ID)</span>
+                                to repair or recharge/refuel/rearm your vehicle respectively.
+                            </p>
+                        </div>
                     </details>
 
                     <details>
                         <summary>
-                            <iconify-icon icon="ion:arrow-forward-outline" class="arrow-icon"></iconify-icon>
-                            What are companions?
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>What are vehicle button actions?</p>
                         </summary>
 
-                        <p>
-                            Companions are simply spawnable NPCs. They allow you to, for example, simulate having a crew without relying on other players.<br><br>
-                            Spawn companions using <strong>?com</strong> or <strong>?com (amount)</strong>.<br>
-                            To remove all companions, use <strong>?rcom</strong>.
-                        </p>
+                        <div>
+                            <p>
+                                Vehicle button actions allow you to operate on your vehicle using buttons rather than commands.<br>
+                                For example, you can have a button named <span class="highlight">ch_repair</span>, and pressing it will repair your vehicle just like using <span class="highlight">?repair</span>.<br>
+                                You can see a list of available button actions by getting close to your vehicle and looking at it.
+                            </p>
+                        </div>
                     </details>
                 </div>
             </section>
         </main>
 
         <!-- Footer -->
-        <footer class="border-top">
-            <div class="footer-links">
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Contact</p>
-                    <a href="mailto:cuhhub@proton.me" class="external-link" target="_blank">cuhhub@proton.me</a>
-                    <p>Discord: <a href="https://dsc.gg/cuhhubsw" class="external-link" target="_blank">dsc.gg/cuhhubsw</a></p>
+        <footer>
+            <div class="background">
+                <div class="background-stack">
+                    <div class="background-grid"></div>
+                    <div class="background-shadow"></div>
+                </div>
+            </div>
+
+            <div class="footer-links-row">
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Pages</h4>
+                    <a class="footer-link" href="/">Home</a>
+                    <a class="footer-link" href="/live">Live</a>
+                    <a class="footer-link" href="/applications">Applications</a>
+                    <a class="footer-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
                 </div>
 
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Legal</p>
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms-of-service">Terms of Service</a>
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Legal</h4>
+                    <a class="footer-link" href="/tos">Terms of Service</a>
+                    <a class="footer-link" href="/privacy">Privacy Policy</a>
                 </div>
 
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Pages</p>
-                    <a href="/">Home</a>
-                    <a href="/about-us">About Us</a>
-                    <a href="/applications">Applications</a>
-                    <a href="/getting-started">Getting Started</a>
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Player</h4>
+                    <a class="footer-link" href="/getting-started">Getting Started</a>
+                    <a class="footer-link" href="https://patreon.com/cuhhubsw" target="_blank">Become A Supporter</a>
                 </div>
 
-                <div class="footer-links-column">
-                    <p class="footer-link-header">Links</p>
-                    <a class="external-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
-                    <a class="external-link" href="https://github.com/cuhHub" target="_blank">Open-Source</a>
-                    <a class="external-link" href="https://patreon.com/cuhhubsw" target="_blank">Support Us</a>
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Social</h4>
 
-                    <div class="footer-socials">
-                        <a href="https://dsc.gg/cuhhubsw" target="_blank" class="icon-button">
-                            <iconify-icon icon="ion:logo-discord"></iconify-icon>
-                        </a>
+                    <a class="footer-link" href="https://dsc.gg/cuhhubsw" target="_blank">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
+                        Discord
+                    </a>
 
-                        <a href="https://github.com/cuhHub" target="_blank" class="icon-button">
-                            <iconify-icon icon="ion:logo-github"></iconify-icon>
-                        </a>
-                    </div>
+                    <a class="footer-link" href="https://github.com/cuhHub" target="_blank">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Contact</h4>
+                    <p class="footer-link"><strong>Email:</strong> <a class="footer-link" href="mailto:cuhhub@proton.me" target="_blank">cuhhub@proton.me</a></p>
+                    <p class="footer-link"><strong>Discord:</strong> <a class="footer-link" href="dsc.gg/cuhhubsw" target="_blank">dsc.gg/cuhhubsw</a></p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© __COPYRIGHT_YEAR__ cuhHub. All rights reserved.</p>
-                <p class="muted-text">Version: __VERSION__</p>
+                <p class="smaller">&copy; cuhHub - All Rights Reserved - __COPYRIGHT_YEAR__</p>
+                <p class="smaller">Version: __VERSION__</p>
             </div>
         </footer>
     </body>

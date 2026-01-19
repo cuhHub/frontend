@@ -1,0 +1,83 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2026 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+.hide {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.gap1 {
+    gap: var(--gap-1);
+}
+
+.gap2 {
+    gap: var(--gap-2);
+}
+
+.gap3 {
+    gap: var(--gap-3);
+}
+
+.gap4 {
+    gap: var(--gap-4);
+}
+
+.gap5 {
+    gap: var(--gap-5);
+}
+
+.gap6 {
+    gap: var(--gap-6);
+}
+
+.w25 {
+    width: 25%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w75 {
+    width: 75%;
+}
+
+.w100 {
+    width: 100%;
+}

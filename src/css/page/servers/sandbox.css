@@ -18,107 +18,102 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-:root {
-    --background-image: url("/images/game-screenshots/36.png");
-    --body-vertical-padding: 0;
-}
-
-/* Main Attention */
-.main-attention-section {
-    position: relative;
-    text-align: left;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
-}
-
-.main-attention-background-container {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-.main-attention-background-container > * {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-
-.main-attention-background {
-    object-fit: cover;
-    filter: brightness(0.3);
-}
-
-.main-attention-title {
-    filter: drop-shadow(
-        0 0 15px
-        color-mix(in hsl, var(--accent-color-lightest), transparent 60%)
-    );
-}
-
-.main-attention-links {
+.hero-section {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
 }
 
-@media screen and (max-width: 900px) {
-    .main-attention-section {
-        text-align: center;
-        justify-content: center;
-    }
-
-    .main-attention-links {
-        justify-content: center;
-    }
+.hero-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
 }
 
-.sandbox-icon {
-    height: 50px;
-    width: 50px;
+.hero-section-inner-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
 }
 
-/* Info Section */
-.info-section {
-    background-color: var(--bg-color-dark);
+.hero-section-text {
+    width: 55%;
 }
 
-.features {
+.hero-section-buttons {
     display: flex;
     flex-direction: row;
+    gap: var(--gap-2);
     flex-wrap: wrap;
-    align-items: center;
+}
+
+.hero-section-down {
+    position: absolute;
+    left: var(--content-horizontal-padding);
+    bottom: calc(var(--section-vertical-padding) / 2);
+}
+
+@media (max-width: 1200px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-section-buttons {
+        justify-content: center;
+    }
+
+    .hero-section-inner-text {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-section-down {
+        display: none;
+    }
+}
+
+.what-section-cards {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    padding: 20px;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: var(--gap-2);
 }
 
-.feature {
-    width: 30%;
+.what-section .card {
+    width: 25%;
 }
 
-@media screen and (max-width: 900px) {
-    .feature {
+@media (max-width: 900px) {
+    .what-section .card {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .what-section .card {
         width: 100%;
     }
 }
 
-/* FAQ Section */
 .faq-section {
-    background-color: var(--bg-color-light);
-    gap: 30px;
+    align-items: center;
 }
 
-.faq {
+.faq-section-questions {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    width: 80%;
+    gap: var(--gap-2);
+    width: 75%;
 }

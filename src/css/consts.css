@@ -1,0 +1,121 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2026 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+:root {
+    /* Text */
+    --header-icon-size: 75px;
+    --header-color: hsl(0, 0%, 90%);
+    --text-color: hsl(0, 0%, 87%);
+    --faded-text-color: hsl(0, 0%, 82%);
+    --inactive-text-color: hsla(0, 0%, 100%, 0.7);
+    --special-text-color: hsl(216, 100%, 74%);
+    --special-text-color-to: hsl(257, 100%, 77%);
+    --link-text-color: hsl(208, 100%, 75%);
+    --link-text-hover-color: hsl(208, 100%, 82%);
+    --base-font-size: 20px;
+
+    /* Background */
+    --background-grid-size: 110px;
+    --background-glow-color: hsla(211, 85%, 37%, 0.3);
+    --background-shadow-color: hsla(211, 87%, 21%, 0.5);
+
+    --bg-color: hsl(218, 22%, 7%);
+    --bg-color-lighter: hsl(218, 22%, 12%);
+    --bg-color-darker: hsl(218, 22%, 3%);
+
+    --bg-color-translucent: hsla(218, 22%, 7%, 0.5);
+    --bg-color-lighter-translucent: hsla(218, 22%, 12%, 0.5);
+    --bg-color-darker-translucent: hsla(218, 22%, 3%, 0.5);
+
+    /* Cards */
+    --card-content-horizontal-padding: 25px;
+
+    /* Shadow */
+    --shadow-color: hsla(0, 0%, 0%, 0.3);
+
+    /* Icons */
+    --icon-size: 24px;
+    --icon-color: hsl(0, 0%, 90%);
+    --icon-color-hover: hsl(0, 0%, 95%);
+
+    /* Sections */
+    --section-min-height: 90vh;
+
+    /* Accents */
+    --accent-color: hsl(211, 100%, 75%);
+    --accent-color-lighter: hsl(211, 100%, 80%);
+    --accent-color-darker: hsl(211, 100%, 65%);
+
+    /* Buttons */
+    --disabled-color-from: hsla(0, 0%, 100%, 0.2);
+    --disabled-color-to: hsla(0, 0%, 100%, 0.1);
+    --disabled-button-hover-border: hsl(0, 0%, 26%);
+
+    --primary-button-color: hsl(214, 79%, 54%);
+    --primary-button-color-from: hsl(214, 79%, 59%);
+    --primary-button-color-to: hsl(214, 79%, 49%);
+    --primary-button-text-color: hsl(0, 0%, 94%);
+    --primary-button-hover-border-color: hsla(207, 100%, 82%, 0.3);
+
+    --secondary-button-text-color: hsl(0, 0%, 94%);
+    --secondary-button-border-color: hsl(214, 100%, 85%);
+    --secondary-button-hover-color: hsl(224, 100%, 64%);
+    --secondary-button-hover-border-color: hsl(214, 100%, 75%);
+
+    /* Header */
+    --header-title-font-size: 35px;
+    --header-height: 100px;
+    --header-vertical-padding: 25px;
+
+    /* Border */
+    --border-color-on-light: hsla(0, 0%, 10%, 0.8);
+    --border-color-on-dark: hsla(0, 0%, 62%, 0.417);
+    --border-triggered-color: hsl(214, 79%, 54%);
+
+    /* Padding */
+    --section-vertical-padding: 150px;
+    --content-horizontal-padding: 200px;
+
+    /* Animation */
+    --transition-duration: 0.3s;
+
+    /* Layout */
+    --gap-1: 10px;
+    --gap-2: 25px;
+    --gap-3: 45px;
+    --gap-4: 75px;
+    --gap-5: 125px;
+    --gap-6: 175px;
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --content-horizontal-padding: 100px;
+        --base-font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --content-horizontal-padding: 40px;
+        --base-font-size: 16px;
+        --section-vertical-padding: 100px;
+    }
+}

@@ -18,11 +18,23 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-table, th, td {
-    border: solid 1px var(--border-color);
+table {
     border-collapse: collapse;
 }
 
-th {
-    border: solid 2px var(--accent-border-color);
+thead {
+    background-color: var(--bg-color-darker);
+    color: var(--table-header-text);
+}
+
+tbody {
+    background-color: var(--bg-color);
+}
+
+tbody > tr {
+    border-bottom: solid 1px var(--border-color-on-dark);
+}
+
+th, td {
+    padding: 15px;
 }

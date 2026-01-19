@@ -18,223 +18,136 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-/* Main Attention */
-.main-attention-section {
-    text-align: left;
+.hero-section {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 30px;
-}
-
-.ingame-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    width: 90%;
-    margin: 25px;
 }
 
-.main-attention-links {
+.hero-section-text,
+.hero-section-servers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+}
+
+.hero-section-text {
+    flex: 1;
+}
+
+.hero-section-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: var(--gap-2);
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 900px) {
-    .ingame-images {
+.hero-section-servers {
+    flex: 0.5;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.hero-section-server-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+    justify-content: flex-end;
+}
+
+.hero-section-servers-more-soon {
+    text-align: right;
+}
+
+.hero-section-down {
+    position: absolute;
+    left: var(--content-horizontal-padding);
+    bottom: calc(var(--section-vertical-padding) / 2);
+}
+
+.join-us-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-1);
+}
+
+@media (max-width: 1200px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-section-buttons {
+        justify-content: center;
+    }
+
+    .hero-section-servers {
         display: none;
     }
 
-    .main-attention-section {
-        text-align: center;
-        justify-content: center;
-    }
-
-    .main-attention-links {
+    .join-us-row {
         justify-content: center;
     }
 }
 
-.ingame-image {
-    width: 40%;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 10px;
-    filter: none;
-    margin: 5px;
-    z-index: inherit;
-    border: 1px solid var(--border-color);
-    transition: var(--transition-duration);
+@media (max-width: 500px) {
+    .hero-section-down {
+        display: none;
+    }
 }
 
-.ingame-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transform: scale(1.2);
-    transition: inherit;
-}
-
-.ingame-image:hover {
-    border: 2px solid var(--accent-border-color);
-}
-
-.ingame-image:hover img {
-    transform: scale(1);
-}
-
-/* Offerings */
-.offering-section {
-    text-align: center;
-}
-
-.offerings {
+.features-section-features,
+.servers-section-servers {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
     flex-wrap: wrap;
-    gap: 25px;
-    padding: 50px;
-    width: 100%;
+    gap: var(--gap-2);
 }
 
-.offer-card {
-    width: 30%;
+.features-section-features .card,
+.servers-section-servers .card {
+    width: 25%;
 }
 
-@media screen and (max-width: 1200px) {
-    .offer-card {
-        width: 40%;
+@media (max-width: 1000px) {
+    .features-section-features .card,
+    .servers-section-servers .card {
+        width: 65%;
     }
 }
 
-@media screen and (max-width: 900px) {
-    .offer-card {
+@media (max-width: 600px) {
+    .features-section-features .card,
+    .servers-section-servers .card {
         width: 100%;
     }
 }
 
-/* Servers */
-.servers-section {
-    text-align: center;
-}
-
-.servers {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 50px;
-    width: 100%;
-}
-
-.server-card {
-    width: 40%;
-}
-
-@media screen and (max-width: 900px) {
-    .server-card {
-        width: 100%;
-    }
-}
-
-.server-card-disabled {
-    background-color: var(--bg-color-muted);
-}
-
-/* How to join */
-.how-to-join-section {
-    text-align: center;
-}
-
-.how-to-join {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    padding: 50px;
-}
-
-.how-to-join-step {
-    align-items: center;
-    justify-content: space-between;
-    width: 300px;
-    min-height: 450px;
-}
-
-.how-to-join-step iconify-icon {
-    font-size: 50px;
-}
-
-.how-to-join-step img {
-    width: 100%;
-    object-fit: contain;
-    border: 1px solid var(--border-color);
-    border-radius: 15px;
-}
-
-@media screen and (max-width: 1200px) {
-    .how-to-join {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .how-to-join-step {
-        width: 60%;
-        align-self: auto;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .how-to-join-step {
-        width: 100%;
-    }
-}
-
-/* cuhHub Experience */
-.cuhhub-experience-section {
+.servers-section-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: var(--gap-2);
+    width: 45%;
 }
 
-.cuhhub-experience-section-title {
-    text-align: center;
-}
-
-.cuhhub-experience-video {
-    width: 75%;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    margin: 15px;
-}
-
-/* FAQ */
 .faq-section {
-    
+    align-items: center;
 }
 
-.faq {
-    width: 80%;
-}
-
-/* Misc */
-.registered-player-count {
-    color: var(--accent-color-lightest);
-    font-weight: 600;
-    font-size: 25px;
-    filter: drop-shadow(
-        0 0 5px 
-        color-mix(in hsl, var(--accent-color-lightest), transparent 40%)
-    );
+.faq-section-questions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    width: 75%;
 }
