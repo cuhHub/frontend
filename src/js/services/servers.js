@@ -40,8 +40,13 @@ Servers.addLoadingIcons = function() {
 
 /**
     Updates server lists.
+    @param {boolean} [showReload=false] Whether to show a reload animation.
 */
-Servers.updateServerLists = async function() {
+Servers.updateServerLists = async function(showReload) {
+    if (showReload) {
+        this.addLoadingIcons();
+    }
+
     const servers = await API.getServers();
 
     servers.sort((a, b) => {
