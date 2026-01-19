@@ -52,6 +52,7 @@ Full terms governed by the laws of England and Wales.
 .card-title {
     font-weight: 800;
     font-style: italic;
+    font-size: calc(var(--base-font-size) * 1.1);
 }
 
 .card-content {
