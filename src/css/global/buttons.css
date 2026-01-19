@@ -28,11 +28,17 @@ button {
     font-weight: 700;
     text-align: center;
     overflow: hidden;
+    font-size: calc(var(--base-font-size) / 1.4);
 }
 
 .button:hover,
 button:hover {
     scale: 1.02;
+}
+
+.button:active,
+button:active {
+    scale: 0.98;
 }
 
 .button:disabled,
