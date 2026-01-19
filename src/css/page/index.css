@@ -33,7 +33,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 .hero-section-text {
-    width: 40%;
+    width: 55%;
 }
 
 .hero-section-buttons {
@@ -51,8 +51,12 @@ Full terms governed by the laws of England and Wales.
 .hero-section-server-list {
     display: flex;
     flex-direction: column;
+    gap: var(--gap-1);
     justify-content: flex-end;
-    gap: var(--gap-2);
+}
+
+.hero-section-servers-more-soon {
+    text-align: right;
 }
 
 .hero-section-down {
@@ -73,6 +77,13 @@ Full terms governed by the laws of England and Wales.
 .features-section-features .card,
 .servers-section-servers .card {
     width: 25%;
+}
+
+.servers-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    width: 45%;
 }
 
 .faq-section {
