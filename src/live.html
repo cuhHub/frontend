@@ -113,24 +113,31 @@ Full terms governed by the laws of England and Wales.
                 <div class="background">
                     <div class="background">
                         <div class="background-stack">
-                            <div class="background-glow background-glow-center"></div>
+                            <div class="background-glow background-glow-left"></div>
+                            <div class="background-shadow"></div>
                             <div class="background-grid"></div>
-                            <div class="background-flat background-flat-lighter"></div>
+                            <div class="background-image bg-image-1"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex column gap2">
                     <h1>Live Status</h1>
+                    <div class="vertical-separator"></div>
                     <p>See the live status of our servers.</p>
                 </div>
 
                 <div class="servers-row server-list"></div>
 
-                <div class="flex align-center">
+                <div class="flex row gap2">
                     <button class="button primary-button" onclick="getServices().Servers.updateServerLists(true);">
                         <iconify-icon icon="mdi:refresh"></iconify-icon>
                         Refresh
+                    </button>
+
+                    <button class="button secondary-button" onclick="launchStormworks();">
+                        <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                        Launch Stormworks
                     </button>
                 </div>
             </section>
