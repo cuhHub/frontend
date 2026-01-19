@@ -172,6 +172,15 @@ h4 {
     text-align: right;
 }
 
+.highlight {
+    display: inline-block;
+    margin: 2px 0;
+    border: solid 1px var(--border-color-on-dark);
+    background-color: var(--bg-color);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
 details {
     display: flex;
     flex-direction: column;
@@ -182,6 +191,7 @@ details {
     padding: 15px 20px;
     border: solid 1px var(--border-color-on-dark);
     transition: var(--transition-duration);
+    overflow: hidden;
 }
 
 details[open],
@@ -195,6 +205,7 @@ summary {
     cursor: pointer;
     list-style: none;
     align-items: center;
+    user-select: none;
 }
 
 summary > iconify-icon {
@@ -232,14 +243,17 @@ details[open] > div {
 }
 
 details:not([open]) > div {
-    animation: details-close var(--transition-duration) forwards;
+    max-height: 0;
+    padding: 0 0;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 @keyframes details-open {
     from {
         max-height: 0;
         padding: 0 0;
-        transform: translateY(-50%);
+        transform: translateY(150%);
         opacity: 0;
     }
 
@@ -248,20 +262,5 @@ details:not([open]) > div {
         padding: 15px 0;
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@keyframes details-close {
-    from {
-        max-height: 1000px;
-        padding: 15px 0;
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to {
-        max-height: 0;
-        padding: 0 0;
-        transform: translateY(-50%);
-        opacity: 0;
     }
 }
