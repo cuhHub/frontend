@@ -104,3 +104,18 @@ Full terms governed by the laws of England and Wales.
     --gap-5: 125px;
     --gap-6: 175px;
 }
+
+@media (max-width: 1200px) {
+    :root {
+        --content-horizontal-padding: 100px;
+        --base-font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --content-horizontal-padding: 40px;
+        --base-font-size: 16px;
+        --section-vertical-padding: 100px;
+    }
+}

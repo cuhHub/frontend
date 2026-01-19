@@ -30,5 +30,5 @@ section {
 
 .hero-section {
     padding-top: calc(var(--section-vertical-padding) + var(--header-height));
-    height: 100vh;
+    min-height: 100vh;
 }

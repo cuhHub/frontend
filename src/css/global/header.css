@@ -46,6 +46,31 @@ header {
     gap: var(--gap-3);
 }
 
+@media (max-width: 1500px) {
+    .header-right {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        height: max-content;
+    }
+
+    .header-left {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: var(--gap-1);
+    }
+}
+
+@media (max-width: 520px) {
+    nav .special-nav-link {
+        display: none;
+    }
+}
+
 .header-title img {
     width: var(--header-title-font-size);
     height: var(--header-title-font-size);
@@ -60,7 +85,9 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: var(--gap-3);
+    flex-wrap: wrap;
 }
 
 .nav-link {

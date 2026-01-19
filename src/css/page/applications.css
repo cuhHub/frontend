@@ -28,8 +28,21 @@ Full terms governed by the laws of England and Wales.
     gap: var(--gap-3);
     justify-content: center;
     flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .application-card {
-    width: 25%;
+    width: 30%;
+}
+
+@media (max-width: 900px) {
+    .application-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .application-card {
+        width: 100%;
+    }
 }

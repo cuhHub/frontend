@@ -33,17 +33,19 @@ Full terms governed by the laws of England and Wales.
 }
 
 .hero-section-text {
-    width: 55%;
+    flex: 1;
 }
 
 .hero-section-buttons {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: var(--gap-2);
+    flex-wrap: wrap;
 }
 
 .hero-section-servers {
-    width: 25%;
+    flex: 0.5;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -65,6 +67,45 @@ Full terms governed by the laws of England and Wales.
     bottom: calc(var(--section-vertical-padding) / 2);
 }
 
+.join-us-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-1);
+}
+
+@media (max-width: 1200px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-section-buttons {
+        justify-content: center;
+    }
+
+    .hero-section-servers {
+        display: none;
+    }
+
+    .join-us-row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-section-down {
+        display: none;
+    }
+}
+
 .features-section-features,
 .servers-section-servers {
     display: flex;
@@ -77,6 +118,20 @@ Full terms governed by the laws of England and Wales.
 .features-section-features .card,
 .servers-section-servers .card {
     width: 25%;
+}
+
+@media (max-width: 1000px) {
+    .features-section-features .card,
+    .servers-section-servers .card {
+        width: 65%;
+    }
+}
+
+@media (max-width: 600px) {
+    .features-section-features .card,
+    .servers-section-servers .card {
+        width: 100%;
+    }
 }
 
 .servers-section-text {
