@@ -34,3 +34,7 @@ tbody {
 tbody > tr {
     border-bottom: solid 1px var(--border-color-on-dark);
 }
+
+th, td {
+    padding: 15px;
+}
