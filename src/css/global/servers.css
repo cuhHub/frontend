@@ -110,10 +110,6 @@ Full terms governed by the laws of England and Wales.
     font-weight: 800;
 }
 
-.hero-section-servers-more-soon {
-    text-align: right;
-}
-
 .server-tags {
     display: flex;
     flex-wrap: wrap;
