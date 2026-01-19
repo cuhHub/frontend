@@ -33,3 +33,18 @@ a iconify-icon:hover {
     color: var(--icon-color-hover);
     scale: 1.05;
 }
+
+.loading-icon {
+    animation: spin var(--transition-duration) linear infinite;
+    font-size: 50px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
