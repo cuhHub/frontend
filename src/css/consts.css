@@ -26,10 +26,10 @@ Full terms governed by the laws of England and Wales.
     --faded-text-color: hsl(0, 0%, 82%);
     --inactive-text-color: hsla(0, 0%, 100%, 0.7);
     --special-text-color: hsl(216, 100%, 74%);
-    --special-text-color-to: hsl(216, 100%, 64%);
+    --special-text-color-to: hsl(257, 100%, 77%);
     --link-text-color: hsl(208, 100%, 75%);
     --link-text-hover-color: hsl(208, 100%, 82%);
-    --base-font-size: 18px;
+    --base-font-size: 20px;
 
     /* Background */
     --background-grid-size: 110px;
@@ -66,7 +66,7 @@ Full terms governed by the laws of England and Wales.
     /* Buttons */
     --disabled-color-from: hsla(0, 0%, 100%, 0.2);
     --disabled-color-to: hsla(0, 0%, 100%, 0.1);
-    --disabled-button-hover-border: hsl(41, 100%, 65%);
+    --disabled-button-hover-border: hsl(0, 0%, 26%);
 
     --primary-button-color: hsl(214, 79%, 54%);
     --primary-button-color-from: hsl(214, 79%, 59%);
