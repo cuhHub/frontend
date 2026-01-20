@@ -45,6 +45,9 @@ BackToTop.scrollToTop = async function() {
     window.scrollTo(0, 0);
 }
 
+/**
+    Handles scroll events.
+*/
 BackToTop._scrollHandler = function() {
     if (window.scrollY > BackToTop.SCROLL_THRESHOLD) {
         BackToTop.show();
@@ -57,6 +60,6 @@ BackToTop._scrollHandler = function() {
     Initializes this service.
 */
 BackToTop.init = function() {
-    this.hide();
+    this._scrollHandler();
     document.addEventListener("scroll", this._scrollHandler)
 }
