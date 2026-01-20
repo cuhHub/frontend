@@ -23,3 +23,4 @@ export * from "./servers.js";
 export * from "./smoothScroll.js";
 export * from "./players.js";
 export * from "./backToTop.js";
+export * from "./header.js";

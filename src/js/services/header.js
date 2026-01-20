@@ -20,46 +20,38 @@ Full terms governed by the laws of England and Wales.
 
 /* -------------- Main */
 
-export const BackToTop = {};
-BackToTop.SCROLL_THRESHOLD = 150;
-BackToTop.BUTTON = $(".back-to-top");
+export const Header = {};
+Header.HEADER_ELEMENT = $("header");
 
 /**
-    Shows the back to top button.
+    Detaches the header
 */
-BackToTop.show = async function() {
-    BackToTop.BUTTON.removeClass("back-to-top-hidden");
+Header.detach = async function() {
+    this.HEADER_ELEMENT.addClass("header-detached")
 }
 
 /**
-    Hides the back to top button.
+    Attaches the header
 */
-BackToTop.hide = async function() {
-    BackToTop.BUTTON.addClass("back-to-top-hidden");
-}
-
-/**
-    Scrolls to the top of the page.
-*/
-BackToTop.scrollToTop = async function() {
-    window.scrollTo(0, 0);
+Header.attach = async function() {
+    this.HEADER_ELEMENT.removeClass("header-detached")
 }
 
 /**
     Handles scroll events.
 */
-BackToTop._scrollHandler = function() {
-    if (window.scrollY > BackToTop.SCROLL_THRESHOLD) {
-        BackToTop.show();
+Header._scrollHandler = function() {
+    if (window.scrollY > Header.HEADER_ELEMENT.height()) {
+        Header.detach();
     } else {
-        BackToTop.hide();
+        Header.attach();
     }
 }
 
 /**
     Initializes this service.
 */
-BackToTop.init = function() {
+Header.init = function() {
     this._scrollHandler();
     document.addEventListener("scroll", this._scrollHandler)
 }

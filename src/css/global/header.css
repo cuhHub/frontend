@@ -19,16 +19,23 @@ Full terms governed by the laws of England and Wales.
 */
 
 header {
-    position: absolute;
-    inset: 0;
+    position: fixed;
     width: 100%;
-    height: var(--header-height);
     padding: var(--header-vertical-padding) var(--content-horizontal-padding);
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 1px var(--border-color-on-dark);
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    transition: var(--transition-duration);
+}
+
+.header-detached {
+    background-color: var(--bg-color-darker-translucent);
+    backdrop-filter: blur(25px);
+    filter: drop-shadow(0 0 5px var(--shadow-color));
 }
 
 .header-title {
