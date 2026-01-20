@@ -44,7 +44,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 .background-video {
-    z-index: -2;
+    z-index: -4;
     filter: brightness(35%) blur(5px);
 }
 
@@ -52,11 +52,12 @@ Full terms governed by the laws of England and Wales.
     filter: brightness(0.3) blur(5px);
     background-position: 0 100%;
     scale: 1.2;
-    z-index: -2;
+    z-index: -4;
 }
 
 .bg-image-1 {
-    background-image: url("/images/game-screenshots/37.png");
+    filter: brightness(0.2);
+    background-image: url("/images/backgrounds/1.png");
 }
 
 .bg-image-2 {
@@ -78,7 +79,7 @@ Full terms governed by the laws of England and Wales.
         transparent,
         var(--background-shadow-color)
     );
-    z-index: -1;
+    z-index: -3;
 }
 
 .background-grid {
@@ -86,8 +87,8 @@ Full terms governed by the laws of England and Wales.
     background-size: var(--background-grid-size);
     background-repeat: repeat;
     scale: 1.2;
-    z-index: 0;
-    opacity: 0.08;
+    z-index: -1;
+    opacity: 0.1;
     mask-image: radial-gradient(
         rgba(0, 0, 0, 1),
         rgba(0, 0, 0, 0.2) 65%,
@@ -96,7 +97,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 .background-glow {
-    z-index: -1;
+    z-index: -2;
     background: radial-gradient(
         var(--background-glow-color),
         transparent 70%
@@ -129,7 +130,7 @@ Full terms governed by the laws of England and Wales.
 }
 
 .background-flat {
-    z-index: -2;
+    z-index: -4;
 }
 
 .background-flat-normal {
