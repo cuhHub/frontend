@@ -59,12 +59,31 @@ API.sendRequest = async function(url, method, body) {
 }
 
 /**
+    Returns the amount of messages sent.
+    @returns {number}
+*/
+API.getMessageCount = async function() {
+    const response = await this.sendRequest("/messages/count", "GET");
+
+    if (response == null) {
+        return 0;
+    }
+
+    return response.count;
+}
+
+/**
     Returns the amount of registered players.
     @returns {number}
 */
 API.getRegisteredPlayerCount = async function() {
     const response = await this.sendRequest("/players/count", "GET");
-    return response.count ?? 0;
+
+    if (response == null) {
+        return 0;
+    }
+
+    return response.count;
 }
 
 /**
