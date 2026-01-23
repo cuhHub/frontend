@@ -25,7 +25,10 @@ import { API } from "../libs/api.js";
 
 export const Servers = {};
 Servers.UPDATE_INTERVAL = 5 * 1000;
+Servers.PLAYER_PLACEHOLDER_ICON = "/images/icons/no-pfp.jpg";
 Servers.serverLists = $(".server-list");
+Servers.serverCountElements = $(".server-count");
+Servers.serverCount = 0
 
 /** 
     Adds loading icons to server lists. Call before updates.
@@ -38,15 +41,20 @@ Servers.addLoadingIcons = function() {
     });
 }
 
-/**
-    Updates server lists.
-    @param {boolean} [showReload=false] Whether to show a reload animation.
+/** 
+    Updates server count elements.
 */
-Servers.updateServerLists = async function(showReload) {
-    if (showReload) {
-        this.addLoadingIcons();
-    }
+Servers.updateServerCountElements = function() {
+    this.serverCountElements.each((index, element) => {
+        element.innerHTML = this.serverCount.toLocaleString();
+    });
+}
 
+/**
+    Fetches servers.
+    @returns {Promise<Object[]>} List of servers.
+*/
+Servers.fetchServers = async function() {
     const servers = await API.getServers();
 
     servers.sort((a, b) => {
@@ -56,6 +64,23 @@ Servers.updateServerLists = async function(showReload) {
 
         return a.online ? -1 : 1;
     });
+
+    this.serverCount = servers.length;
+    this.updateServerCountElements();
+
+    return servers;
+}
+
+/**
+    Updates server lists.
+    @param {boolean} [showReload=false] Whether to show a reload animation.
+*/
+Servers.updateServerLists = async function(showReload) {
+    if (showReload) {
+        this.addLoadingIcons();
+    }
+
+    const servers = await this.fetchServers();
 
     /** @type Object[] */
     const html = await Promise.all(servers.map(async server => {
@@ -85,6 +110,17 @@ Servers.updateServerLists = async function(showReload) {
                             <p class="server-max-players">/ ${server.max_players} players</p>
                         </div>
                     </div>
+
+                    ${(server.online && players.length > 0) ? `
+                    <div class="server-player-list">
+                        ${players.map(player => `
+                            <a class="server-player-list-entry no-link" target="_blank" href="https://steamcommunity.com/profiles/${player.steam_id}">
+                                <img class="server-player-list-entry-icon" src="${player.steam_icon_url || this.PLAYER_PLACEHOLDER_ICON}" alt="Player Avatar"/>
+                                <p class="server-player-list-entry-text">${player.steam_username}</p>
+                            </a>
+                        `).join("\n")}
+                    </div>
+                    ` : ""}
                 </div>
             `
         };

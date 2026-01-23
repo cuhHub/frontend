@@ -27,6 +27,7 @@ Full terms governed by the laws of England and Wales.
     border-radius: 5px;
     backdrop-filter: blur(25px);
     background-color: var(--bg-color-translucent);
+    flex-shrink: 0;
 }
 
 .server:hover {
@@ -129,4 +130,46 @@ Full terms governed by the laws of England and Wales.
     content: "\2022";
     padding-right: 5px;
     color: var(--accent-color);
+}
+
+.server-player-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: solid 1px var(--border-color-on-dark);
+    padding: 15px;
+    background-color: var(--bg-color-lighter);
+}
+
+.server-player-list-entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-1);
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 3px 15px;
+    font-size: calc(var(--base-font-size) / 2);
+    border: solid 1px var(--border-color-on-dark);
+    cursor: pointer;
+    transition: var(--transition-duration);
+    margin: 3px;
+}
+
+.server-player-list-entry:hover {
+    border: solid 1px var(--border-triggered-color);
+    scale: 1.05;
+}
+
+.server-player-list-entry-icon {
+    height: 15px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.server-player-list-entry-text {
+    font-size: calc(var(--base-font-size) / 2);
+    font-weight: 700;
 }
