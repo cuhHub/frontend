@@ -24,3 +24,10 @@ Full terms governed by the laws of England and Wales.
     width: 75px;
     height: 2px;
 }
+
+.horizontal-separator {
+    background-color: var(--accent-color-darker);
+    filter: drop-shadow(0 0 6px var(--shadow-color));
+    width: 2px;
+    height: 75px;
+}
