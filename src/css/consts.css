@@ -82,6 +82,7 @@ Full terms governed by the laws of England and Wales.
     /* Header */
     --header-title-font-size: 35px;
     --header-height: 100px;
+    --header-detached-height: 70px;
     --header-vertical-padding: 25px;
 
     /* Border */
@@ -90,6 +91,7 @@ Full terms governed by the laws of England and Wales.
     --border-triggered-color: hsl(214, 79%, 54%);
 
     /* Padding */
+    --first-section-vertical-padding: 50px;
     --section-vertical-padding: 150px;
     --content-horizontal-padding: 200px;
 
