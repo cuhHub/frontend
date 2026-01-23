@@ -152,6 +152,14 @@ h4 {
     color: var(--inactive-text-color);
 }
 
+.larger {
+    font-size: calc(var(--base-font-size) * 1.5);
+}
+
+.large {
+    font-size: calc(var(--base-font-size) * 1.2);
+}
+
 .small {
     font-size: calc(var(--base-font-size) / 1.2);
 }
