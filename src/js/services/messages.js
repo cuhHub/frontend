@@ -18,10 +18,24 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+/* -------------- Imports */
+import { API } from "../libs/api.js";
+
 /* -------------- Main */
-export * from "./servers.js";
-export * from "./smoothScroll.js";
-export * from "./players.js";
-export * from "./backToTop.js";
-export * from "./header.js";
-export * from "./messages.js";
+
+export const Messages = {};
+
+/**
+    Updates message count elements.
+*/
+Messages.updateMessageCounts = async function() {
+    const messageCount = await API.getMessageCount();
+    $(".message-count").text(messageCount.toLocaleString());
+}
+
+/**
+    Initializes this service.
+*/
+Messages.init = async function() {
+    await this.updateMessageCounts();
+}
