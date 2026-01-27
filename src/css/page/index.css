@@ -179,6 +179,42 @@ Full terms governed by the laws of England and Wales.
     filter: brightness(120%) saturate(50%) drop-shadow(0 0 15px var(--shadow-color));
 }
 
+@media (max-width: 1000px) {
+    .about-section-stats > .horizontal-separator {
+        display: none;
+    }
+
+    .about-section-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .about-section {
+        justify-content: center;
+    }
+
+    .about-section-content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-section-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-section-content-right {
+        display: none;
+    }
+
+    .about-section-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 .features-section-features,
 .servers-section-servers {
     display: flex;
