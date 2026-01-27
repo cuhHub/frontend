@@ -35,8 +35,8 @@ import * as services from "./services/index.js";
     @param {string} query The element to scroll to.
 */
 window.scrollToElement = function(query) {
-    const element = document.querySelector(query);
-    element.scrollIntoView();
+    const element = $(query);
+    window.scrollTo(0, element.offset().top);
 }
 
 /**
