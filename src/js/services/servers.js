@@ -96,10 +96,12 @@ Servers.updateServerLists = async function(showReload) {
                         <div class="server-left">
                             <p class="server-name">${server.name}</p>
                             <p class="server-description">${server.description}</p>
+
                             <div class="server-status">
                                 <div class="server-status-icon server-status-icon-${server.online ? "online" : "offline"}"></div>
                                 <p class="server-status-text">${server.online ? `Online - ${server.average_tps.toFixed(1)} TPS` : "Offline"}</p>
                             </div>
+
                             <div class="server-tags">
                                 ${server.tags.map(tag => `<p class="server-tag">${tag}</p>`).join("\n")}
                             </div>
@@ -133,6 +135,21 @@ Servers.updateServerLists = async function(showReload) {
             element.innerHTML = html.map(item => item.html).join("\n");
         }
     });
+}
+
+/**
+    Joins a server.
+    @param {string} serverId The ID of the server.
+*/
+Servers.joinServer = async function(serverId) {
+    const server = await API.getServer(serverId);
+    console.log(server);
+
+    if (server == null) {
+        return;
+    }
+
+    window.location.href = `steam://connect/${server.server_steam_id}`;
 }
 
 /**
