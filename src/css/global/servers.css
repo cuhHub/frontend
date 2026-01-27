@@ -28,6 +28,7 @@ Full terms governed by the laws of England and Wales.
     backdrop-filter: blur(25px);
     background-color: var(--bg-color-translucent);
     flex-shrink: 0;
+    align-self: stretch;
 }
 
 .server:hover {
