@@ -96,9 +96,18 @@ API.getServers = async function() {
 
 /**
     Returns all players in a server.
-    @param {object} serverId The ID of the server.
+    @param {number} serverId The ID of the server.
     @returns {object[]}
 */
 API.getPlayersInServer = async function(serverId) {
     return await this.sendRequest(`/servers/${serverId}/players`, "GET") ?? [];
+}
+
+/**
+    Returns a server.
+    @param {number} serverId The ID of the server.
+    @returns {object}
+*/
+API.getServer = async function(serverId) {
+    return await this.sendRequest(`/servers/${serverId}`, "GET");
 }
