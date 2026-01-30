@@ -24,16 +24,37 @@ export const Details = {};
 Details.DETAILS_ELEMENTS = $("details");
 
 /**
-    Handles the click event on a details element.
-    @param {JQuery.ClickEvent} event
+    Automatically opens/closes a details element depending on state.
+    @param {JQuery} element
 */
-Details._handleDetailsClick = function(event) {
-    const details = $(event.currentTarget);
-
-    if (details.attr("open")) {
-        this._closeDetails(details);
+Details._handleDetails = function(element) {
+    if (this.isOpen(element)) {
+        this._closeDetails(element);
     } else {
-        this._openDetails(details);
+        this._openDetails(element);
+    }
+}
+
+/**
+    Returns if a details element is open.
+    @param {JQuery} element
+    @returns {boolean}
+*/
+Details.isOpen = function(element) {
+    return element.attr("open");
+}
+
+/**
+    Refreshes a details element.
+    @param {JQuery} element
+*/
+Details._refreshDetails = function(element) {
+    if (this.isOpen(element)) {
+        this._closeDetails(element);
+        this._openDetails(element);
+    } else {
+        this._openDetails(element);
+        this._closeDetails(element);
     }
 }
 
@@ -79,13 +100,18 @@ Details._closeDetails = function(element) {
     Initializes this service.
 */
 Details.init = function() {
+    window.addEventListener("resize", () => {
+        this.DETAILS_ELEMENTS.each((_, element) => {
+            this._refreshDetails($(element));
+        })
+    })
+
     this.DETAILS_ELEMENTS.each((_, element) => {
-        this._openDetails($(element));
-        this._closeDetails($(element));
+        this._refreshDetails($(element));
     })
 
     this.DETAILS_ELEMENTS.on("click", (event) => {
         event.preventDefault();
-        this._handleDetailsClick(event);
+        this._handleDetails($(event.currentTarget));
     })
 }
