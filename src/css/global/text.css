@@ -203,7 +203,7 @@ details {
 }
 
 details[open],
-details:has(summary:hover) {
+details:hover {
     border: solid 1px var(--border-triggered-color);
 }
 
@@ -243,32 +243,5 @@ details > div {
     display: flex;
     flex-direction: column;
     gap: var(--gap-1);
-    opacity: 0;
-}
-
-details[open] > div {
-    animation: details-open var(--transition-duration) forwards;
-}
-
-details:not([open]) > div {
-    max-height: 0;
-    padding: 0 0;
-    transform: translateY(0);
-    opacity: 1;
-}
-
-@keyframes details-open {
-    from {
-        max-height: 0;
-        padding: 0 0;
-        transform: translateY(150%);
-        opacity: 0;
-    }
-
-    to {
-        max-height: 1000px;
-        padding: 15px 0;
-        transform: translateY(0);
-        opacity: 1;
-    }
+    padding: 15px 0;
 }
