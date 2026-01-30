@@ -28,7 +28,7 @@ section {
     width: 100%;
 }
 
-.hero-section {
-    padding-top: calc(var(--section-vertical-padding) + var(--header-height));
+section:nth-child(1) {
+    padding-top: calc(var(--first-section-vertical-padding) + var(--header-height));
     min-height: 100vh;
 }

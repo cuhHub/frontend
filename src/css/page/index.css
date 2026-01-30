@@ -47,14 +47,23 @@ Full terms governed by the laws of England and Wales.
 .hero-section-servers {
     flex: 0.5;
     align-items: flex-end;
-    justify-content: flex-end;
 }
 
 .hero-section-server-list {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-1);
-    justify-content: flex-end;
+    gap: var(--gap-3);
+    max-height: 50vh;
+    width: 100%;
+    overflow-y: auto;
+    padding: 25px 5px;
+    mask-image: linear-gradient(
+        to top,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    )
 }
 
 .hero-section-servers-more-soon {
@@ -103,6 +112,106 @@ Full terms governed by the laws of England and Wales.
 @media (max-width: 500px) {
     .hero-section-down {
         display: none;
+    }
+}
+
+.about-section-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-section-content > div {
+    width: 100%;
+}
+
+.about-section-content-left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-3);
+}
+
+.about-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    width: 80%;
+}
+
+.about-section-stats {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-3);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-1);
+    transition: var(--transition-duration);
+}
+
+.stat:hover {
+    scale: 1.05;
+}
+
+.stat-value {
+    font-size: calc(var(--base-font-size) * 2);
+    font-weight: 800;
+    border-bottom: solid 1px var(--accent-color);
+}
+
+.stat-label {
+    font-weight: 700;
+    text-align: center;
+}
+
+.about-section-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.about-section-image {
+    aspect-ratio: 1;
+    width: 75%;
+    filter: brightness(120%) saturate(50%) drop-shadow(0 0 15px var(--shadow-color));
+}
+
+@media (max-width: 1000px) {
+    .about-section-stats > .horizontal-separator {
+        display: none;
+    }
+
+    .about-section-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .about-section {
+        justify-content: center;
+    }
+
+    .about-section-content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-section-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-section-content-right {
+        display: none;
+    }
+
+    .about-section-stats {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 

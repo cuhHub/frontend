@@ -36,16 +36,16 @@ Full terms governed by the laws of England and Wales.
 
 .card-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: var(--gap-1);
     background-color: var(--bg-color-darker-translucent);
-    align-items: center;
+    align-items: flex-start;
     padding: 15px var(--card-content-horizontal-padding);
     border-bottom: solid 1px var(--border-color-on-dark);
 }
 
 .card-icon {
-    font-size: calc(var(--base-font-size) * 1.5);
+    font-size: calc(var(--base-font-size) * 2);
     color: var(--accent-color);
 }
 

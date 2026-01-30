@@ -18,9 +18,10 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-.hero-section {
-    justify-content: start;
-    gap: var(--gap-2);
+.live-section {
+    justify-content: center;
+    padding-top: 200px !important;
+    gap: var(--gap-3);
 }
 
 .servers-row {
@@ -29,6 +30,7 @@ Full terms governed by the laws of England and Wales.
     gap: var(--gap-2);
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .servers-row .server {

@@ -59,12 +59,31 @@ API.sendRequest = async function(url, method, body) {
 }
 
 /**
+    Returns the amount of messages sent.
+    @returns {number}
+*/
+API.getMessageCount = async function() {
+    const response = await this.sendRequest("/messages/count", "GET");
+
+    if (response == null) {
+        return 0;
+    }
+
+    return response.count;
+}
+
+/**
     Returns the amount of registered players.
     @returns {number}
 */
 API.getRegisteredPlayerCount = async function() {
     const response = await this.sendRequest("/players/count", "GET");
-    return response.count ?? 0;
+
+    if (response == null) {
+        return 0;
+    }
+
+    return response.count;
 }
 
 /**
@@ -77,9 +96,18 @@ API.getServers = async function() {
 
 /**
     Returns all players in a server.
-    @param {object} serverId The ID of the server.
+    @param {number} serverId The ID of the server.
     @returns {object[]}
 */
 API.getPlayersInServer = async function(serverId) {
     return await this.sendRequest(`/servers/${serverId}/players`, "GET") ?? [];
+}
+
+/**
+    Returns a server.
+    @param {number} serverId The ID of the server.
+    @returns {object}
+*/
+API.getServer = async function(serverId) {
+    return await this.sendRequest(`/servers/${serverId}`, "GET");
 }

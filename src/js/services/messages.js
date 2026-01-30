@@ -18,31 +18,24 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-.main-section {
-    align-items: center;
+/* -------------- Imports */
+import { API } from "../libs/api.js";
+
+/* -------------- Main */
+
+export const Messages = {};
+
+/**
+    Updates message count elements.
+*/
+Messages.updateMessageCounts = async function() {
+    const messageCount = await API.getMessageCount();
+    $(".message-count").text(messageCount.toLocaleString());
 }
 
-.application-cards {
-    display: flex;
-    flex-direction: row;
-    gap: var(--gap-3);
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
-
-.application-card {
-    width: 30%;
-}
-
-@media (max-width: 900px) {
-    .application-card {
-        width: 45%;
-    }
-}
-
-@media (max-width: 600px) {
-    .application-card {
-        width: 100%;
-    }
+/**
+    Initializes this service.
+*/
+Messages.init = async function() {
+    await this.updateMessageCounts();
 }
