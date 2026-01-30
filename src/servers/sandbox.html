@@ -114,14 +114,14 @@ Full terms governed by the laws of England and Wales.
                     <div class="background-stack">
                         <div class="background-grid"></div>
                         <div class="background-shadow"></div>
-                        <video id="hero-video" class="background-video" autoplay loop>
+                        <video id="hero-video" class="background-video" autoplay muted loop>
                             <source src="/videos/sandbox.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
 
                 <div class="hero-section-text">
-                    <h1 class="special-text">cuhHub Sandbox</h1>
+                    <h1>cuhHub <span class="special-text">Sandbox</span></h1>
 
                     <div class="vertical-separator"></div>
 
@@ -144,7 +144,7 @@ Full terms governed by the laws of England and Wales.
                             Suggest A Feature
                         </a>
 
-                        <button class="button secondary-button" onclick="document.getElementById('hero-video').muted = !document.getElementById('hero-video').muted;">
+                        <button class="button secondary-button" onclick="$('#hero-video').get(0).muted = !$('#hero-video').get(0).muted;">
                             <iconify-icon icon="ion:musical-notes-outline"></iconify-icon>
                             Toggle Sound
                         </button>
