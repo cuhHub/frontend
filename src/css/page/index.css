@@ -115,19 +115,15 @@ Full terms governed by the laws of England and Wales.
     }
 }
 
+.about-section {
+    justify-content: center;
+}
+
 .about-section-content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.about-section-content > div {
-    width: 100%;
-}
-
-.about-section-content-left {
     display: flex;
     flex-direction: column;
     gap: var(--gap-3);
+    width: 60%;
 }
 
 .about-section-text {
@@ -167,35 +163,12 @@ Full terms governed by the laws of England and Wales.
     text-align: center;
 }
 
-.about-section-content-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.about-section-image {
-    aspect-ratio: 1;
-    width: 75%;
-    filter: brightness(120%) saturate(50%) drop-shadow(0 0 15px var(--shadow-color));
-}
-
-@media (max-width: 1000px) {
-    .about-section-stats > .horizontal-separator {
-        display: none;
-    }
-
-    .about-section-image {
-        width: 100%;
-    }
-}
-
 @media (max-width: 750px) {
     .about-section {
-        justify-content: center;
+        align-items: center;
     }
 
     .about-section-content {
-        justify-content: center;
         align-items: center;
     }
 
@@ -203,10 +176,6 @@ Full terms governed by the laws of England and Wales.
         width: 100%;
         align-items: center;
         text-align: center;
-    }
-
-    .about-section-content-right {
-        display: none;
     }
 
     .about-section-stats {

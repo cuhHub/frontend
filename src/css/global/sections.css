@@ -28,7 +28,7 @@ section {
     width: 100%;
 }
 
-section:nth-child(1) {
+section:first-child {
     padding-top: calc(var(--first-section-vertical-padding) + var(--header-height));
     min-height: 100vh;
 }

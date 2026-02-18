@@ -30,14 +30,12 @@ header {
     background-color: transparent;
     backdrop-filter: blur(5px);
     transition: var(--transition-duration);
-    height: var(--header-height);
 }
 
 .header-detached {
     background-color: var(--bg-color-darker-translucent);
     backdrop-filter: blur(25px);
     filter: drop-shadow(0 0 5px var(--shadow-color));
-    height: var(--header-detached-height);
 }
 
 .header-title {
@@ -62,10 +60,6 @@ header {
 }
 
 @media (max-width: 900px) {
-    header, .header-detached {
-        height: max-content;
-    }
-
     .header-left {
         width: 100%;
         justify-content: center;

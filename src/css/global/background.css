@@ -102,9 +102,9 @@ Full terms governed by the laws of England and Wales.
         var(--background-glow-color),
         transparent 70%
     );
-    aspect-ratio: 1;
-    width: 65vw;
-    height: auto;
+    aspect-ratio: 2 / 1;
+    height: 100%;
+    width: auto;
 }
 
 .background-glow-left {
@@ -112,7 +112,7 @@ Full terms governed by the laws of England and Wales.
     bottom: 0;
     margin-top: auto;
     margin-bottom: auto;
-    left: -20%;
+    left: -25%;
 }
 
 .background-glow-right {
@@ -120,7 +120,7 @@ Full terms governed by the laws of England and Wales.
     bottom: 0;
     margin-top: auto;
     margin-bottom: auto;
-    right: -20%;
+    right: -25%;
 }
 
 .background-glow-center {

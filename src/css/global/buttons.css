@@ -29,6 +29,7 @@ button {
     text-align: center;
     overflow: hidden;
     font-size: calc(var(--base-font-size) / 1.4);
+    min-width: fit-content;
 }
 
 .button:hover,
