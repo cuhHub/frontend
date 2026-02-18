@@ -19,11 +19,31 @@ Full terms governed by the laws of England and Wales.
 */
 
 /* -------------- Main */
-export * from "./servers.js";
-export * from "./smoothScroll.js";
-export * from "./players.js";
-export * from "./backToTop.js";
-export * from "./header.js";
-export * from "./messages.js";
-export * from "./details.js";
-export * from "./background.js";
+
+export const Background = {};
+Background.BACKGROUND_VIDEOS = $(".background-video");
+
+/**
+    Autoplays background videos.
+*/
+Background.autoplay = function() {
+    Background.BACKGROUND_VIDEOS.each((_, video) => {
+        video.play();
+    });
+}
+
+/**
+    Toggles background video muted state.
+*/
+Background.toggleMute = function() {
+    Background.BACKGROUND_VIDEOS.each((_, video) => {
+        video.muted = !video.muted;
+    });
+}
+
+/**
+    Initializes this service.
+*/
+Background.init = function() {
+    this.autoplay();
+}
