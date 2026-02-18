@@ -23,7 +23,7 @@ Full terms governed by the laws of England and Wales.
     --header-icon-size: 75px;
     --header-color: hsl(0, 0%, 90%);
     --text-color: hsl(0, 0%, 87%);
-    --faded-text-color: hsl(0, 0%, 82%);
+    --faded-text-color: hsl(0, 0%, 72%);
     --inactive-text-color: hsla(0, 0%, 100%, 0.7);
     --special-text-color: hsl(216, 100%, 74%);
     --special-text-color-to: hsl(257, 100%, 77%);
@@ -46,6 +46,7 @@ Full terms governed by the laws of England and Wales.
 
     /* Cards */
     --card-content-horizontal-padding: 25px;
+    --card-bg-grid-size: 200px;
 
     /* Shadow */
     --shadow-color: hsla(0, 0%, 0%, 0.3);
@@ -81,8 +82,6 @@ Full terms governed by the laws of England and Wales.
 
     /* Header */
     --header-title-font-size: 35px;
-    --header-height: 100px;
-    --header-detached-height: 70px;
     --header-vertical-padding: 25px;
 
     /* Border */
@@ -91,7 +90,7 @@ Full terms governed by the laws of England and Wales.
     --border-triggered-color: hsl(214, 79%, 54%);
 
     /* Padding */
-    --first-section-vertical-padding: 50px;
+    --first-section-vertical-padding: 100px;
     --section-vertical-padding: 150px;
     --content-horizontal-padding: 200px;
 
