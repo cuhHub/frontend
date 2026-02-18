@@ -18,6 +18,9 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
+/* -------------- Imports */
+import { CSS } from "../libs/css.js";
+
 /* -------------- Main */
 
 export const Header = {};
@@ -26,15 +29,22 @@ Header.HEADER_ELEMENT = $("header");
 /**
     Detaches the header
 */
-Header.detach = async function() {
+Header.detach = function() {
     this.HEADER_ELEMENT.addClass("header-detached")
 }
 
 /**
     Attaches the header
 */
-Header.attach = async function() {
+Header.attach = function() {
     this.HEADER_ELEMENT.removeClass("header-detached")
+}
+
+/**
+    Updates header height CSS.
+*/
+Header.updateCSS = function() {
+    CSS.setCSSVariable("header-height", this.HEADER_ELEMENT.outerHeight() + "px");
 }
 
 /**
@@ -49,9 +59,19 @@ Header._scrollHandler = function() {
 }
 
 /**
+    Handles any window resize events.
+*/
+Header._resizeHandler = function() {
+    Header.updateCSS();
+}
+
+/**
     Initializes this service.
 */
 Header.init = function() {
+    this._resizeHandler();
+    window.addEventListener("resize", this._resizeHandler);
+
     this._scrollHandler();
-    document.addEventListener("scroll", this._scrollHandler)
+    document.addEventListener("scroll", this._scrollHandler);
 }
