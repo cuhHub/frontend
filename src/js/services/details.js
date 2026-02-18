@@ -28,32 +28,9 @@ Details.DETAILS_ELEMENTS = $("details");
     @param {JQuery} element
 */
 Details._handleDetails = function(element) {
-    if (this.isOpen(element)) {
-        this._closeDetails(element);
-    } else {
-        this._openDetails(element);
-    }
-}
-
-/**
-    Returns if a details element is open.
-    @param {JQuery} element
-    @returns {boolean}
-*/
-Details.isOpen = function(element) {
-    return element.attr("open");
-}
-
-/**
-    Refreshes a details element.
-    @param {JQuery} element
-*/
-Details._refreshDetails = function(element) {
-    if (this.isOpen(element)) {
-        this._closeDetails(element);
+    if (element.prop("open")) {
         this._openDetails(element);
     } else {
-        this._openDetails(element);
         this._closeDetails(element);
     }
 }
@@ -65,7 +42,12 @@ Details._refreshDetails = function(element) {
 */
 Details._getCollapsedHeight = function(element) {
     const summary = element.find("summary").first();
-    return summary.outerHeight();;
+
+    let height = summary.outerHeight();
+    height += parseFloat(element.css("padding-top").replace("px", "")) || 0;
+    height += parseFloat(element.css("padding-bottom").replace("px", "")) || 0;
+
+    return height;
 }
 
 /**
@@ -73,16 +55,11 @@ Details._getCollapsedHeight = function(element) {
     @param {JQuery} element
 */
 Details._openDetails = function(element) {
-    element.attr("open", true);
-
     let contentHeight = this._getCollapsedHeight(element);
 
     element.children().not("summary").each((_, child) => {
         contentHeight += $(child).outerHeight(true);
     });
-
-    contentHeight += parseFloat(element.css("padding-top").replace("px", ""));
-    contentHeight += parseFloat(element.css("padding-bottom").replace("px", ""));
 
     element.css("height", contentHeight + "px");
 }
@@ -93,7 +70,6 @@ Details._openDetails = function(element) {
 */
 Details._closeDetails = function(element) {
     element.css("height", this._getCollapsedHeight(element));
-    element.removeAttr("open");
 }
 
 /**
@@ -102,16 +78,15 @@ Details._closeDetails = function(element) {
 Details.init = function() {
     window.addEventListener("resize", () => {
         this.DETAILS_ELEMENTS.each((_, element) => {
-            this._refreshDetails($(element));
+            this._handleDetails($(element));
         })
     })
 
     this.DETAILS_ELEMENTS.each((_, element) => {
-        this._refreshDetails($(element));
+        this._handleDetails($(element));
     })
 
-    this.DETAILS_ELEMENTS.on("click", (event) => {
-        event.preventDefault();
+    this.DETAILS_ELEMENTS.on("toggle", (event) => {
         this._handleDetails($(event.currentTarget));
     })
 }

@@ -18,12 +18,8 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-/* -------------- Main */
-export * from "./servers.js";
-export * from "./smoothScroll.js";
-export * from "./players.js";
-export * from "./backToTop.js";
-export * from "./header.js";
-export * from "./messages.js";
-export * from "./details.js";
-export * from "./background.js";
+.yt-video {
+    border-radius: 15px;
+    border: solid 1px var(--border-color-on-dark);
+    box-shadow: 0 5px 10px var(--shadow-color);
+}

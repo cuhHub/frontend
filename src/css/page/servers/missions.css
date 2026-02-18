@@ -139,6 +139,21 @@ Full terms governed by the laws of England and Wales.
     }
 }
 
+.tutorial-section {
+    align-items: center;
+}
+
+.tutorial-video {
+    width: 60%;
+    aspect-ratio: 2 / 1;
+}
+
+@media (max-width: 900px) {
+    .tutorial-video {
+        width: 100%;
+    }
+}
+
 .faq-section {
     align-items: center;
 }
