@@ -1,0 +1,581 @@
+<!--
+Source-Available No-Redistribution License
+Copyright (c) 2026 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>cuhHub - Missions</title>
+        <meta name="description" content="Welcome to Missions - the best career server on Stormworks.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8"/>
+        <meta name="color-scheme" content="dark">
+        <meta name="theme-color" content="#0e1116"/>
+
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="__COOKIEBOT_ID__" type="text/javascript" async></script>
+        <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.5.1/SmoothScroll.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
+        <script src="/js/jquery.js" defer></script>
+        <script type="module" src="/js/main.js" defer></script>
+
+        <link rel="stylesheet" href="/css/style.css"/>
+        <link rel="stylesheet" href="/css/page/servers/missions.css"/>
+
+        <link rel="icon" href="/images/icons/logo_transparent.png"/>
+
+        <link rel="canonical" href="https://cuhhub.com/missions">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="cuhHub - Missions">
+        <meta property="og:description" content="Welcome to Missions - the best career server on Stormworks.">
+        <meta property="og:url" content="https://cuhhub.com/missions">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://cuhhub.com/images/banners/cuhhub.png">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="cuhHub - Missions">
+        <meta name="twitter:description" content="Welcome to Missions - the best career server on Stormworks.">
+        <meta name="twitter:image" content="https://cuhhub.com/images/banners/cuhhub.png">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=__GOOGLE_ANALYTICS_ID__"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '__GOOGLE_ANALYTICS_ID__');
+        </script>
+    </head>
+
+    <body>
+        <!-- Back To Top -->
+        <div class="back-to-top">
+            <button class="button primary-button" onclick="getServices().BackToTop.scrollToTop();">
+                <iconify-icon icon="ion:arrow-up-circle-outline"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <a class="header-title no-link" href="/">
+                    <img src="/images/icons/logo_transparent.png" alt="cuhHub Logo">
+                    <p>cuhHub</p>
+                </a>
+
+                <nav>
+                    <a class="nav-link no-link" href="/">Home</a>
+                    <a class="nav-link no-link" href="/live">Live</a>
+                    <a class="nav-link no-link" href="/applications">Applications</a>
+                    <a class="nav-link special-nav-link no-link" href="https://patreon.com/cuhhubsw" target="_blank">Become A Supporter</a>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <div class="header-icons">
+                    <a href="https://dsc.gg/cuhhubsw" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
+                    </a>
+
+                    <a href="https://github.com/cuhHub" target="_blank" class="no-link">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
+                    </a>
+                </div>
+
+                <button class="button primary-button" onclick="launchStormworks();">
+                    <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                    Launch Stormworks
+                </button>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <main>
+            <section class="hero-section">
+                <div class="background">
+                    <div class="background-stack">
+                        <div class="background-grid"></div>
+                        <div class="background-shadow"></div>
+                        <video id="hero-video" class="background-video" autoplay muted loop>
+                            <source src="/videos/missions.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="hero-section-text">
+                    <h1>cuhHub <span class="special-text">Missions</span></h1>
+
+                    <div class="vertical-separator"></div>
+
+                    <div class="hero-section-inner-text">
+                        <h4>The best career server on Stormworks.</h4>
+                        <p>
+                            Complete missions, earn money, join a specialised company, and rise up to become
+                            the ultimate Stormworker. Welcome to the career mode Stormworks has always needed.
+                        </p>
+                    </div>
+
+                    <div class="hero-section-buttons">
+                        <button class="button primary-button" onclick="launchStormworks();">
+                            <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                            Launch Stormworks
+                        </button>
+
+                        <a class="button secondary-button no-link" href="https://dsc.gg/cuhhubsw" target="_blank">
+                            <iconify-icon icon="mdi:discord"></iconify-icon>
+                            Suggest A Feature
+                        </a>
+
+                        <button class="button secondary-button" onclick="$('#hero-video').get(0).muted = !$('#hero-video').get(0).muted;">
+                            <iconify-icon icon="ion:musical-notes-outline"></iconify-icon>
+                            Toggle Sound
+                        </button>
+                    </div>
+                </div>
+
+                <button class="hero-section-down button secondary-button" onclick="scrollToElement('#whatsect');">
+                    <iconify-icon icon="ion:arrow-down-circle-outline"></iconify-icon>
+                    See More
+                </a>
+            </section>
+
+            <section id="whatsect" class="what-section">
+                <div class="background">
+                    <div class="background-stack">
+                        <div class="background-glow background-glow-right"></div>
+                        <div class="background-grid"></div>
+                        <div class="background-flat background-flat-lighter"></div>
+                    </div>
+                </div>
+
+                <div class="column flex gap2">
+                    <h1>What Is Missions?</h1>
+
+                    <div class="vertical-separator"></div>
+
+                    <h4 class="missions-info-text special-text">
+                        Welcome to the ultimate Stormworks career experience.
+                    </h4>
+
+                    <p class="missions-info-text">
+                        Missions is our career server for Stormworks focused on <span class="special-text">progression, challenge and replayability</span>. Take on ranked, reputation-gated
+                        missions with support for co-operative play. Join companies for exclusive, high-paying missions, and build
+                        your career through passenger and cargo operations across the map.
+                    </p>
+
+                    <p class="missions-info-text">
+                        With a custom <span class="special-text">per-player economy</span>, <span class="special-text">mission chains</span>, <span class="special-text">companies</span>,
+                        <span class="special-text">insightful UI</span> and more, every mission pushes you to be the best
+                        Stormworker.
+                    </p>
+                </div>
+
+                <div class="what-section-cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:flag-outline"></iconify-icon>
+                            <h4 class="card-title">Missions</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Take on missions across the map with support for co-op play. Complete missions to earn money, reputation and climb the ranks.
+                                With a variety of mission types and clear progression, you will never get bored.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:business-outline"></iconify-icon>
+                            <h4 class="card-title">Companies</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Unlike any other career experience in Stormworks, our Missions server features companies which you can join to
+                                access field-specific, high-paying missions. Use <span class="highlight">?companies</span> in-game to see a list of companies and their requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:flash-outline"></iconify-icon>
+                            <h4 class="card-title">XP System</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                With our custom XP system, you can earn XP for completing missions and other activities on the server. Rank up to
+                                unlock even more missions and content.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:globe-outline"></iconify-icon>
+                            <h4 class="card-title">Reputation System</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Our reputation system forces you to focus on completing missions. Failing or cancelling missions will lower
+                                your reputation, restricting your access to missions and companies. Stay reliable!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:cash-outline"></iconify-icon>
+                            <h4 class="card-title">Per-Player Money</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Our custom per-player economy allows you to focus on your own progression and career without worrying about other players occupying your money. Build your own fortune at your own pace.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:cube-outline"></iconify-icon>
+                            <h4 class="card-title">Diverse Cargo</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Our cargo missions feature a wide variety of cargo types, from SIBTaT trailers, to small packages, even to ISO containers. Each cargo type has its own unique handling requirements,
+                                adding an extra layer of logistics and fun to our missions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:code-outline"></iconify-icon>
+                            <h4 class="card-title">User-Friendly</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Our servers aim to guide you and make your experience as smooth as possible, and Missions is no exception.
+                                With a custom UI, helpful occasional tips, and a focus on user-friendliness, you can focus on the fun parts of the server without getting confused.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:flash-outline"></iconify-icon>
+                            <h4 class="card-title">Anti-Lag</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Just like Sandbox, Missions comes with a custom anti-lag system to ensure laggy vehicles do not stick around.
+                                This allows for the server to remain at high performance, keeping your experience smooth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center align-center">
+                    <p class="note-text text-center">...and so much more!</p>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <div class="background">
+                    <div class="background-stack">
+                        <div class="background-glow background-glow-right"></div>
+                        <div class="background-grid"></div>
+                        <div class="background-flat background-flat-lighter"></div>
+                    </div>
+                </div>
+
+                <div class="column flex gap2 align-center text-center">
+                    <h1>Frequently Asked Questions</h1>
+                    <div class="vertical-separator"></div>
+                    <p>
+                        Here are some frequently asked questions about our Missions server.<br>
+                        You may find an answer to your question here.
+                    </p>
+                </div>
+
+                <div class="faq-section-questions">
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Where are the rules?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                You can find the rules in our <a href="https://dsc.gg/cuhhubsw" target="_blank">Discord server</a>.<br>
+                                If you see a player breaking the rules, please report them in our Discord.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I join?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Joining is simple. Simply launch Stormworks, open the in-game server browser, and search for "cuhHub".<br>
+                                From there, click the join button next to our Missions server.
+                            </p>
+
+                            <button class="button primary-button" onclick="launchStormworks();">
+                                <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                                Launch Stormworks
+                            </button>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Where can I find the in-game commands?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Use <span class="highlight">?help</span> in-game to see a list of available commands.<br>
+                                Additionally, see our <a href="/getting-started">Getting Started</a> page for more information.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I start a mission?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Locate the mission you would like to start on the map and head to its starting location.<br>
+                                Upon arriving, type <span class="highlight">?start</span> to start the mission.<br>
+                                You can cancel or leave the mission at any time with <span class="highlight">?cancel</span>.<br>
+                                Please note that if a player has already started the mission, attempting to start it will send an invite to
+                                the player ("host") instead.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>What are companies?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Companies are one of your primary goals in Missions. They are specialised groups you can join to access exclusive, high-paying missions.<br>
+                                Companies are often focused on different fields, so pick the one you want! Note that companies are very expensive to join, so you will need to complete missions and earn money to be able to join one.
+                            </p>
+                            
+                            <p>
+                                Use <span class="highlight">?companies</span> in-game to see a list of companies, their requirements and their benefits.<br>
+                                Additionally, you can use <span class="highlight">?join [company name]</span> to join a company once you meet its requirements.<br>
+                                <p class="note-text">Note: <span class="highlight">[company name]</span> can be partial, like a Google search. "jaKe" would be the same as "Jake Logistics".</p>
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Can I switch companies?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Yes, you can switch companies at any time. Use <span class="highlight">?leave</span> to leave your current company,
+                                then use <span class="highlight">?join [company name]</span> to join another company.<br>
+                                <span class="note-text">Note: <span class="highlight">[company name]</span> can be partial, like a Google search. "jaKe" would be the same as "Jake Logistics".</span>
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Why can't I join a mission?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Missions have various requirements such as rank, reputation, company membership and money (for the entrance fee).<br>
+                                If you do not meet any of a mission's requirements, you will not be able to join it. The gamemode will notify you of this, often through notifications
+                                on the right of your screen.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How can I find missions?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                You can find missions on the map or by using the <span class="highlight">?missions</span> command to see a list of available missions and their information.<br>
+                                Additionally, the mission icons on the map are color-coded!
+                            </p>
+
+                            <ul>
+                                <li><span class="highlight">Red</span> icons are for missions that are not available to you (e.g. you do not meet requirements).</li>
+                                <li><span class="highlight">Grey</span> icons are for missions that are not available in general, or in-progress (but you do meet requirements).</li>
+                                <li>Any other colour icons represent the type of mission and all mean that you are eligible to partake.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>I've lost all my money, what do I do?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Look for a bright green icon on the map. These represent loan missions where an NPC will generously give you just enough money to
+                                reach the money you started with when you first joined. These only work if you have less money than your starting money, so they are a safety net to ensure you can always keep playing and progressing.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Why did my vehicle get despawned?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Our addon may despawn your vehicle if it is deemed too laggy on spawn, or you reached a limit.<br>
+                                You will be notified of the exact reason your vehicle despawned in chat and on the right-side of your screen
+                                via notifications.<br>
+                                If you reached the vehicle limit, use <span class="highlight">?c</span> to despawn your vehicles.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I suggest a feature?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                We love hearing suggestions from our community!<br>
+                                Join our <a href="https://dsc.gg/cuhhubsw" target="_blank">Discord server</a> and head to the suggestions channel to share your ideas.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I get the IDs of my vehicles?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Use <span class="highlight">?vehicles</span> in-game to see a list of your vehicles and their IDs.<br>
+                                You can also see the ID of a vehicle by getting close and looking at it.<br>
+                                Alternatively, you can refer to the vehicle list UI on your screen.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="background">
+                <div class="background-stack">
+                    <div class="background-grid"></div>
+                    <div class="background-shadow"></div>
+                </div>
+            </div>
+
+            <div class="footer-links-row">
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Pages</h4>
+                    <a class="footer-link" href="/">Home</a>
+                    <a class="footer-link" href="/live">Live</a>
+                    <a class="footer-link" href="/applications">Applications</a>
+                    <a class="footer-link" href="https://api.cuhhub.com/docs" target="_blank">API</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Legal</h4>
+                    <a class="footer-link" href="/tos">Terms of Service</a>
+                    <a class="footer-link" href="/privacy">Privacy Policy</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Player</h4>
+                    <a class="footer-link" href="/getting-started">Getting Started</a>
+                    <a class="footer-link" href="https://patreon.com/cuhhubsw" target="_blank">Become A Supporter</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Social</h4>
+
+                    <a class="footer-link" href="https://dsc.gg/cuhhubsw" target="_blank">
+                        <iconify-icon icon="mdi:discord"></iconify-icon>
+                        Discord
+                    </a>
+
+                    <a class="footer-link" href="https://github.com/cuhHub" target="_blank">
+                        <iconify-icon icon="mdi:github"></iconify-icon>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Contact</h4>
+                    <p class="footer-link"><strong>Email:</strong> <a class="footer-link" href="mailto:cuhhub@proton.me" target="_blank">cuhhub@proton.me</a></p>
+                    <p class="footer-link"><strong>Discord:</strong> <a class="footer-link" href="dsc.gg/cuhhubsw" target="_blank">dsc.gg/cuhhubsw</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="smaller">&copy; cuhHub - All Rights Reserved - __COPYRIGHT_YEAR__</p>
+                <p class="smaller">Version: __VERSION__</p>
+            </div>
+        </footer>
+    </body>
+</html>

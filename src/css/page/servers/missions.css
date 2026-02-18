@@ -1,0 +1,151 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2026 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+:root {
+    --background-shadow-color: hsla(37, 100%, 70%, 0.02);
+    --background-glow-color: hsla(37, 100%, 70%, 0.1);
+
+    --special-text-color: hsl(34, 89%, 70%);
+    --special-text-color-to: hsl(34, 84%, 57%);
+
+    --accent-color: hsl(34, 89%, 70%);
+    --accent-color-lighter: hsl(34, 89%, 80%);
+    --accent-color-darker: hsl(34, 89%, 60%);
+
+    --primary-button-color: hsl(34, 47%, 54%);
+    --primary-button-color-from: hsl(34, 41%, 51%);
+    --primary-button-color-to: hsl(34, 46%, 50%);
+
+    --secondary-button-border-color: hsl(34, 89%, 60%);
+    --secondary-button-hover-color: hsl(34, 41%, 51%);
+    --secondary-button-hover-border-color: hsl(34, 89%, 75%);
+
+    --border-triggered-color: hsl(34, 89%, 80%);
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+}
+
+.hero-section-inner-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+}
+
+.hero-section-text {
+    width: 55%;
+}
+
+.hero-section-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-2);
+    flex-wrap: wrap;
+}
+
+.hero-section-down {
+    position: absolute;
+    left: var(--content-horizontal-padding);
+    bottom: calc(var(--section-vertical-padding) / 2);
+}
+
+@media (max-width: 1200px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-section-buttons {
+        justify-content: center;
+    }
+
+    .hero-section-inner-text {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-section-down {
+        display: none;
+    }
+}
+
+.missions-info-text {
+    width: 50%;
+}
+
+@media (max-width: 700px) {
+    .missions-info-text {
+        width: 100%;
+    }
+}
+
+.what-section-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap-2);
+}
+
+.what-section .card {
+    width: 25%;
+}
+
+@media (max-width: 900px) {
+    .what-section .card {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .what-section .card {
+        width: 100%;
+    }
+}
+
+.faq-section {
+    align-items: center;
+}
+
+.faq-section-questions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    width: 75%;
+}
