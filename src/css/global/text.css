@@ -97,16 +97,22 @@ h1 {
     font-size: calc(var(--base-font-size) * 2.5);
 }
 
+.with-header-icon {
+    position: relative;
+}
+
 .with-header-icon::after,
 h1::after {
     content: "";
     position: absolute;
     left: calc(var(--header-icon-size) / 3 * -1);
     top: calc(var(--header-icon-size) / 3 * -1);
-    object-position: center;
-    background-image: url("/images/icons/pre-header.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: var(--accent-color);
+    border-radius: 100%;
+    mask-image: url("/images/icons/header-icon-mask.png");
+    mask-position: center;
+    mask-size: cover;
+    opacity: 0.5;
     height: var(--header-icon-size);
     width: var(--header-icon-size);
     z-index: -1;
@@ -142,6 +148,11 @@ h4 {
     color: transparent;
     background-clip: text;
     font-weight: 900;
+}
+
+.note-text {
+    font-size: calc(var(--base-font-size) / 1.5);
+    color: var(--faded-text-color);
 }
 
 .faded-text {
