@@ -114,7 +114,7 @@ Full terms governed by the laws of England and Wales.
                     <div class="background-stack">
                         <div class="background-grid"></div>
                         <div class="background-shadow"></div>
-                        <video id="hero-video" class="background-video" autoplay muted loop>
+                        <video id="hero-video" class="background-video" playsinline autoplay muted loop>
                             <source src="/videos/missions.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -144,7 +144,7 @@ Full terms governed by the laws of England and Wales.
                             Suggest A Feature
                         </a>
 
-                        <button class="button secondary-button" onclick="$('#hero-video').get(0).muted = !$('#hero-video').get(0).muted;">
+                        <button class="button secondary-button" onclick="getServices().Background.toggleMute();">
                             <iconify-icon icon="ion:musical-notes-outline"></iconify-icon>
                             Toggle Sound
                         </button>
@@ -325,7 +325,7 @@ Full terms governed by the laws of England and Wales.
                 </div>
 
                 <div class="faq-section-questions">
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>Where are the rules?</p>
@@ -339,7 +339,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>How do I join?</p>
@@ -358,7 +358,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>Where can I find the in-game commands?</p>
@@ -372,7 +372,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>How do I start a mission?</p>
@@ -389,7 +389,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>What are companies?</p>
@@ -409,7 +409,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>Can I switch companies?</p>
@@ -424,7 +424,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>Why can't I join a mission?</p>
@@ -439,7 +439,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>How can I find missions?</p>
@@ -459,7 +459,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>I've lost all my money, what do I do?</p>
@@ -473,7 +473,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>Why did my vehicle get despawned?</p>
@@ -489,7 +489,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>How do I suggest a feature?</p>
@@ -503,7 +503,7 @@ Full terms governed by the laws of England and Wales.
                         </div>
                     </details>
 
-                    <details>
+                    <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>How do I get the IDs of my vehicles?</p>
