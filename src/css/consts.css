@@ -57,7 +57,7 @@ Full terms governed by the laws of England and Wales.
     --icon-color-hover: hsl(0, 0%, 95%);
 
     /* Sections */
-    --section-min-height: 90vh;
+    --section-min-height: 50vh;
 
     /* Accents */
     --accent-color: hsl(211, 100%, 75%);
