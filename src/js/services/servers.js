@@ -92,7 +92,7 @@ Servers.updateServerLists = async function(showReload) {
                 <div class="server">
                     <img class="server-banner" src="${server.banner_url}" alt="Server Banner"/>
 
-                    <div class="server-content">
+                    <div class="server-content card-background">
                         <div class="server-left">
                             <p class="server-name">${server.name}</p>
                             <p class="server-description">${server.description}</p>
