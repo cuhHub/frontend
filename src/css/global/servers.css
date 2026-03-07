@@ -41,28 +41,18 @@ Full terms governed by the laws of England and Wales.
     object-fit: cover;
 }
 
-.server-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-}
-
-.server-left,
-.server-right {
+.server-body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
 }
 
-.server-left {
+.server-content {
+    display: flex;
+    flex-direction: column;
     gap: var(--gap-1);
-    align-items: flex-start;
-    width: 60%;
-}
-
-.server-right {
-    align-items: flex-end;
+    padding: 15px;
 }
 
 .server-name {
@@ -70,8 +60,21 @@ Full terms governed by the laws of England and Wales.
     font-style: italic;
 }
 
+.server-primary-info {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-1);
+}
+
+.server-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+    flex: 1;
+}
+
 .server-description {
-    font-size: calc(var(--base-font-size) / 1.5 );
+    font-size: calc(var(--base-font-size) / 1.5);
 }
 
 .server-status {
@@ -102,14 +105,24 @@ Full terms governed by the laws of England and Wales.
 }
 
 .server-players {
-    font-size: calc(var(--base-font-size) * 1.2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 0 0 25%;
+}
+
+.server-players p {
     font-weight: 800;
+    text-align: right;
+}
+
+.server-player-count {
+    font-size: calc(var(--base-font-size) * 1.2);
 }
 
 .server-max-players {
     color: var(--inactive-text-color);
     font-size: calc(var(--base-font-size) / 1.7);
-    font-weight: 800;
 }
 
 .server-tags {
@@ -151,7 +164,6 @@ Full terms governed by the laws of England and Wales.
     border-radius: 15px;
     overflow: hidden;
     padding: 3px 15px;
-    font-size: calc(var(--base-font-size) / 2);
     border: solid 1px var(--border-color-on-dark);
     cursor: pointer;
     transition: var(--transition-duration);
