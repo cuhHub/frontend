@@ -92,14 +92,24 @@ Servers.updateServerLists = async function(showReload) {
                 <div class="server card-background">
                     <img class="server-banner" src="${server.banner_url}" alt="Server Banner"/>
 
-                    <div class="server-content">
-                        <div class="server-left">
+                    <div class="server-body">
+                        <div class="server-content">
                             <p class="server-name">${server.name}</p>
-                            <p class="server-description">${server.description}</p>
 
-                            <div class="server-status">
-                                <div class="server-status-icon server-status-icon-${server.online ? "online" : "offline"}"></div>
-                                <p class="server-status-text">${server.online ? `Online - ${server.average_tps.toFixed(1)} TPS` : "Offline"}</p>
+                            <div class="server-primary-info">
+                                <div class="server-info">
+                                    <p class="server-description">${server.description}</p>
+
+                                    <div class="server-status">
+                                        <div class="server-status-icon server-status-icon-${server.online ? "online" : "offline"}"></div>
+                                        <p class="server-status-text">${server.online ? `Online - ${server.average_tps.toFixed(1)} TPS` : "Offline"}</p>
+                                    </div>
+                                </div>
+        
+                                <div class="server-players">
+                                    <p class="server-player-count">${players.length}</p>
+                                    <p class="server-max-players">/ ${server.max_players} players</p>
+                                </div>
                             </div>
 
                             <div class="server-tags">
@@ -107,22 +117,17 @@ Servers.updateServerLists = async function(showReload) {
                             </div>
                         </div>
 
-                        <div class="server-right">
-                            <p class="server-players">${players.length}</p>
-                            <p class="server-max-players">/ ${server.max_players} players</p>
+                        ${(server.online && players.length > 0) ? `
+                        <div class="server-player-list">
+                            ${players.map(player => `
+                                <a class="server-player-list-entry no-link" target="_blank" href="https://steamcommunity.com/profiles/${player.steam_id}">
+                                    <img class="server-player-list-entry-icon" src="${player.steam_icon_url || this.PLAYER_PLACEHOLDER_ICON}" alt="Player Avatar"/>
+                                    <p class="server-player-list-entry-text">${player.steam_username}</p>
+                                </a>
+                            `).join("\n")}
                         </div>
+                        ` : ""}
                     </div>
-
-                    ${(server.online && players.length > 0) ? `
-                    <div class="server-player-list">
-                        ${players.map(player => `
-                            <a class="server-player-list-entry no-link" target="_blank" href="https://steamcommunity.com/profiles/${player.steam_id}">
-                                <img class="server-player-list-entry-icon" src="${player.steam_icon_url || this.PLAYER_PLACEHOLDER_ICON}" alt="Player Avatar"/>
-                                <p class="server-player-list-entry-text">${player.steam_username}</p>
-                            </a>
-                        `).join("\n")}
-                    </div>
-                    ` : ""}
                 </div>
             `
         };
