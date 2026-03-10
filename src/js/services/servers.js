@@ -100,6 +100,10 @@ Servers.updateServerLists = async function(showReload) {
                                 <div class="server-info">
                                     <p class="server-description">${server.description}</p>
 
+                                    ${(server.website_url !== null) ? `
+                                    <a class="server-link" target="_blank" href="${server.website_url}">Learn More</a>
+                                    ` : ""}
+
                                     <div class="server-status">
                                         <div class="server-status-icon server-status-icon-${server.online ? "online" : "offline"}"></div>
                                         <p class="server-status-text">${server.online ? `Online - ${server.average_tps.toFixed(1)} TPS` : "Offline"}</p>
@@ -134,7 +138,7 @@ Servers.updateServerLists = async function(showReload) {
     }));
 
     this.serverLists.each((index, element) => {
-        if (element.dataset.hideOffline === "true") {
+        if (element.dataset.hideOffline === "g") {
             element.innerHTML = html.filter(item => item.server.online).map(item => item.html).join("\n");
         } else {
             element.innerHTML = html.map(item => item.html).join("\n");
