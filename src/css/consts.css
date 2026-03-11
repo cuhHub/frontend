@@ -96,6 +96,7 @@ Full terms governed by the laws of England and Wales.
 
     /* Animation */
     --transition-duration: 0.3s;
+    --in-view-transition-duration: 0.6s;
 
     /* Layout */
     --gap-1: 10px;
