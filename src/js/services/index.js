@@ -27,3 +27,4 @@ export * from "./header.js";
 export * from "./messages.js";
 export * from "./details.js";
 export * from "./background.js";
+export * from "./inView.js";
