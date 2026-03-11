@@ -18,20 +18,15 @@ Provided "AS IS" without warranty.
 Full terms governed by the laws of England and Wales.
 */
 
-@import url("consts.css");
-@import url("global/utils.css");
-@import url("global/text.css");
-@import url("global/icons.css");
-@import url("global/background.css");
-@import url("global/body.css");
-@import url("global/header.css");
-@import url("global/footer.css");
-@import url("global/cards.css");
-@import url("global/scrollbar.css");
-@import url("global/sections.css");
-@import url("global/buttons.css");
-@import url("global/separators.css");
-@import url("global/servers.css");
-@import url("global/tables.css");
-@import url("global/videos.css");
-@import url("global/view.css");
+.view-anim {
+    transition: 
+        opacity 0.6s cubic-bezier(0,.61,.53,1),
+        transform 0.6s cubic-bezier(0,.61,.53,1);
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
