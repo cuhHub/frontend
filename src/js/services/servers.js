@@ -138,7 +138,7 @@ Servers.updateServerLists = async function(showReload) {
     }));
 
     this.serverLists.each((index, element) => {
-        if (element.dataset.hideOffline === "g") {
+        if (element.dataset.hideOffline === "true") {
             element.innerHTML = html.filter(item => item.server.online).map(item => item.html).join("\n");
         } else {
             element.innerHTML = html.map(item => item.html).join("\n");
