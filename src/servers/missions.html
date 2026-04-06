@@ -239,7 +239,7 @@ Full terms governed by the laws of England and Wales.
 
                         <div class="card-content">
                             <p>
-                                Our reputation system forces you to focus on completing missions. Failing or cancelling missions will lower
+                                Our reputation system forces you to focus on completing missions. Failing missions will lower
                                 your reputation, restricting your access to missions and companies. Stay reliable!
                             </p>
                         </div>
@@ -325,7 +325,7 @@ Full terms governed by the laws of England and Wales.
                     </p>
                 </div>
 
-                <iframe class="tutorial-video yt-video" src="https://www.youtube.com/embed/kS9mE0PNE_o?si=LXf2Rk-aG3eM74F0"
+                <iframe class="tutorial-video yt-video" src="https://www.youtube.com/embed/_5CvzVlXlvw?si=OtHDGZzScHNhL8oI"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -418,19 +418,16 @@ Full terms governed by the laws of England and Wales.
                     <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
-                            <p>What are companies?</p>
+                            <p>How do I join someone's mission?</p>
                         </summary>
 
                         <div>
                             <p>
-                                Companies are one of your primary goals in Missions. They are specialised groups you can join to access exclusive, high-paying missions.<br>
-                                Companies are often focused on different fields, so pick the one you want! Note that companies are very expensive to join, so you will need to complete missions and earn money to be able to join one.
-                            </p>
-                            
-                            <p>
-                                Use <span class="highlight">?companies</span> in-game to see a list of companies, their requirements and their benefits.<br>
-                                Additionally, you can use <span class="highlight">?join [company name]</span> to join a company once you meet its requirements.<br>
-                                <p class="note-text">Note: <span class="highlight">[company name]</span> can be partial, like a Google search. "jaKe" would be the same as "Jake Logistics".</p>
+                                If someone has started a mission and you would like to join them, simply head to the
+                                starting location of the mission and type <span class="highlight">?start</span>.<br>
+                                Alternatively, you can type <span class="highlight">?start (player name/ID)</span> to
+                                join someone's mission remotely. The player name can be partial and is case-insensitive,
+                                like a Google search.
                             </p>
                         </div>
                     </details>
@@ -438,14 +435,36 @@ Full terms governed by the laws of England and Wales.
                     <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
-                            <p>Can I switch companies?</p>
+                            <p>What are companies?</p>
                         </summary>
 
                         <div>
                             <p>
-                                Yes, you can switch companies at any time. Use <span class="highlight">?leave</span> to leave your current company,
-                                then use <span class="highlight">?join [company name]</span> to join another company.<br>
-                                <span class="note-text">Note: <span class="highlight">[company name]</span> can be partial, like a Google search. "jaKe" would be the same as "Jake Logistics".</span>
+                                Companies are one of your primary goals in Missions. They are specialised groups you can join to access exclusive, high-paying missions.<br>
+                                Companies are often focused on different fields, so pick the ones you want! Note that companies are very expensive to join, so you will need to complete missions and earn money to be able to join one.
+                            </p>
+                            
+                            <p>
+                                Use <span class="highlight">?companies</span> in-game to see a list of companies, their requirements and what to expect.<br>
+                                Additionally, you can use <span class="highlight">?apply [company name]</span> to join a company once you meet its requirements.<br>
+                                You can join more companies as your rank increases or if you support us.
+                            </p>
+    
+                            <p class="note-text">Note: <span class="highlight">[company name]</span> can be partial, like a Google search. "jaKe" would be the same as "Jake Logistics".</p>
+                        </div>
+                    </details>
+
+                    <details name="faq">
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How do I leave a company?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                To leave a company, simply type <span class="highlight">?leave (company name)</span> in-game.<br>
+                                The company name can be partial, like a Google search.<br>
+                                To see the companies you are in, type <span class="highlight">?mycom</span> in-game.
                             </p>
                         </div>
                     </details>
@@ -459,7 +478,7 @@ Full terms governed by the laws of England and Wales.
                         <div>
                             <p>
                                 Missions have various requirements such as rank, reputation, company membership and money (for the entrance fee).<br>
-                                If you do not meet any of a mission's requirements, you will not be able to join it. The gamemode will notify you of this, often through notifications
+                                If you do not meet any of a mission's requirements, you will not be able to join it. The server will notify you of this, often through notifications
                                 on the right of your screen.
                             </p>
                         </div>
@@ -473,14 +492,63 @@ Full terms governed by the laws of England and Wales.
 
                         <div>
                             <p>
-                                You can find missions on the map or by using the <span class="highlight">?missions</span> command to see a list of available missions and their information.<br>
+                                You can find missions on the map or by using the <span class="highlight">?missions</span> command to see a list of available missions and their information
+                                starting with closest first.<br>
                                 Additionally, the mission icons on the map are color-coded!
                             </p>
 
                             <ul>
                                 <li><span class="highlight">Red</span> icons are for missions that are not available to you (e.g. you do not meet requirements).</li>
-                                <li><span class="highlight">Grey</span> icons are for missions that are not available in general, or in-progress (but you do meet requirements).</li>
+                                <li><span class="highlight">Grey</span> icons are for missions that are not available in general (but you do meet requirements).</li>
                                 <li>Any other colour icons represent the type of mission and all mean that you are eligible to partake.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details name="faq">
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>How does fishing work?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Fishing is simple: Collect fish/lobsters/crabs, transport them to a fish depot, and sell them for money.<br>
+                                Fishing only spawn in fishing hotspots (marked on the map) and in pure ocean tiles. If there is a slight bit of land in the area, fish likely
+                                will not spawn for you.<br>
+                                Fish can take a while to spawn, so be patient while fishing.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details name="faq">
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Why won't fish spawn near me?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                Fish may not spawn for the following reasons:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    You're at the fish limit. Patiently wait for fish allocated to you to despawn so more
+                                    can spawn.
+                                </li>
+
+                                <li>
+                                    There's too much land in the area. Fish only spawn in pure ocean tiles.
+                                </li>
+
+                                <li>
+                                    You're not in a fishing hotspot. Fish only spawn in fishing hotspots (marked on the map).
+                                </li>
+
+                                <li>
+                                    You're too high up in terms of altitude. You must be close to the sea.
+                                </li>
                             </ul>
                         </div>
                     </details>
@@ -493,9 +561,13 @@ Full terms governed by the laws of England and Wales.
 
                         <div>
                             <p>
-                                Look for a bright green icon on the map. These represent loan missions where an NPC will generously give you just enough money to
-                                reach the money you started with when you first joined. These only work if you have less money than your starting money, so they are a safety net to ensure you can always keep playing and progressing.
+                                If you lose all your money and cannot progress whatsoever, you have two options.
                             </p>
+
+                            <ul>
+                                <li>Ask another player to donate to you using <span class="highlight">?pay</span>.</li>
+                                <li>Use <span class="highlight">?reset</span> to start over from scratch.</li>
+                            </ul>
                         </div>
                     </details>
 
