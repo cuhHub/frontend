@@ -114,7 +114,9 @@ Full terms governed by the laws of England and Wales.
                     <div class="background-stack">
                         <div class="background-grid"></div>
                         <div class="background-shadow"></div>
-                        <img class="background-image" src="/images/game-screenshots/z-works-1.png" alt="A screenshot from within the server">
+                        <video id="hero-video" class="background-video" playsinline autoplay muted loop>
+                            <source src="/videos/z-works.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
 
@@ -124,10 +126,10 @@ Full terms governed by the laws of England and Wales.
                     <div class="vertical-separator"></div>
 
                     <div class="hero-section-inner-text">
-                        <h4>The open-world zombie survival server Stormworks always needed.</h4>
+                        <h4>The city-based zombie survival server Stormworks always needed.</h4>
                         <p>
                             Fight against diverse zombies with unique abilities, earn money through dynamic world events
-                            like ambushes and airdrops, and band up with other survivors.
+                            like airdrops, and band up with other players.
                         </p>
                         <p>
                             This is your survival story.
@@ -172,17 +174,17 @@ Full terms governed by the laws of England and Wales.
                     </h4>
 
                     <p class="z-works-info-text view-anim">
-                        Z-Works is our <span class="special-text">custom open-world zombie survival server</span>
-                        set in the arid area of Stormworks, focused on progression and
+                        Z-Works is our <span class="special-text">custom zombie survival server</span>
+                        set in a custom city map, focused on progression and
                         <span class="special-text">intense, unforgettable gameplay</span>.
                         Fight a multitude of zombies featuring <span class="special-text">unique types and abilities</span>,
-                        and earn money and XP through combat and dynamic world events like <span class="special-text">ambushes</span>
-                        and airdrops - all supported by a <span class="special-text">per-player economy system</span>
+                        and earn money and XP through combat and dynamic world events like <span class="special-text">airdrops</span>
+                        - all supported by a <span class="special-text">per-player economy system</span>
                         <span class="special-text">and persistent progression.</span>
                     </p>
 
                     <p class="z-works-info-text view-anim">
-                        Liked cuhHub Missions? You'll be happy to know that the best features from Missions
+                        Liked <a href="/servers/missions">cuhHub Missions?</a> You'll be happy to know that the best features from Missions
                         have been <span class="special-text">carried over and improved.</span>
                     </p>
                 </div>
@@ -213,8 +215,8 @@ Full terms governed by the laws of England and Wales.
                             <p>
                                 Just like cuhHub Missions, Z-Works also features a strong progression system.
                                 As you progress through the server, you'll unlock <span class="special-text">rank milestones</span>
-                                that grant you access to new features and content. Use <span class="highlight">?milestones</span> to
-                                see all unlockable milestones.
+                                that grant you access to new features and content. Use <span class="highlight">?milestones</span>/<span class="highlight">?ms</span>
+                                to see all unlockable milestones.
                             </p>
                         </div>
                     </div>
@@ -307,6 +309,7 @@ Full terms governed by the laws of England and Wales.
                             <p>
                                 Our servers aim to guide you and make your experience <span class="special-text">as smooth as possible</span>, and Z-Works is no exception.
                                 With a custom UI, helpful occasional tips, and a focus on user-friendliness, you can focus on the fun parts of the server without getting confused.
+                                Z-Works also features in-game guides, accessible with <span class="highlight">?zguide</span>.
                             </p>
                         </div>
                     </div>
@@ -321,6 +324,21 @@ Full terms governed by the laws of England and Wales.
                             <p>
                                 Just like our other servers, Z-Works comes with a custom anti-lag system to ensure laggy vehicles do not stick around.
                                 This allows for the server to remain at high performance, <span class="special-text">keeping your experience smooth.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card view-anim">
+                        <div class="card-header">
+                            <iconify-icon class="card-icon" icon="ion:cube-outline"></iconify-icon>
+                            <h4 class="card-title">Cargo</h4>
+                        </div>
+
+                        <div class="card-content">
+                            <p>
+                                Just like cuhHub Missions, Z-Works features cargo! Retrieve cargo by heading to a <span class="special-text">cargo depot</span>
+                                marked on the map and typing <span class="highlight">?cargo</span>/<span class="highlight">?ca</span> in chat.
+                                Cargo will spawn for you, and it is your responsibility to deliver it to its destination <span class="special-text">for a reward</span>.
                             </p>
                         </div>
                     </div>
@@ -349,8 +367,12 @@ Full terms governed by the laws of England and Wales.
                         for you to check out below.
                     </p>
                     <p>
-                        You can also ask for help in our <a href="https://cuhhub.com/discord" target="_blank">Discord server</a>. We have a
-                        very helpful community!
+                        You can also type <span class="highlight">?help</span>/<span class="highlight">?h</span> in the server to see a list of all commands.
+                        Additionally, you can access the in-game guide by typing <span class="highlight">?zguide</span>.
+                    </p>
+                    <p>
+                        If you ever get stuck, you can also ask for help in our <a href="https://cuhhub.com/discord" target="_blank">Discord server</a>.
+                        We have a very helpful community!
                     </p>
                 </div>
 
@@ -444,6 +466,7 @@ Full terms governed by the laws of England and Wales.
                                 <li>At too high of an altitude</li>
                                 <li>In a safe zone</li>
                                 <li>On a short spawn cooldown</li>
+                                <li>Peace time is active</li>
                             </ul>
                         </div>
                     </details>
@@ -508,6 +531,29 @@ Full terms governed by the laws of England and Wales.
                     <details name="faq">
                         <summary>
                             <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
+                            <p>Is the city map a public mod?</p>
+                        </summary>
+
+                        <div>
+                            <p>
+                                The city map used in Z-Works is indeed a public mod (although it has been modified), and the creator has given us permission
+                                to use it in Z-Works.
+                            </p>
+
+                            <p>
+                                If you would like to use it yourself, check it out through the button below.
+                            </p>
+
+                            <a class="primary-button button no-link" target="_blank" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3809647695">
+                                <iconify-icon icon="ion:arrow-forward-circle-outline"></iconify-icon>
+                                Get The City Map
+                            </a>
+                        </div>
+                    </details>
+
+                    <details name="faq">
+                        <summary>
+                            <iconify-icon icon="ion:help-circle-outline"></iconify-icon>
                             <p>What are airdrops?</p>
                         </summary>
 
@@ -520,7 +566,7 @@ Full terms governed by the laws of England and Wales.
                                 On these airdrops is an activation button, which you can press to receive XP and money rewards.
                             </p>
                             <p>
-                                Airdrops are marked on the map! Hover your mouse over them to see information such as the reward.
+                                Airdrops are marked on the map, and are announced when they spawn. Happy airdrop hunting!
                             </p>
                         </div>
                     </details>
