@@ -1,0 +1,66 @@
+/*
+Source-Available No-Redistribution License
+Copyright (c) 2026 cuhHub. All rights reserved.
+
+IMPORTANT: This source code is NOT Open Source.
+
+1. PERMISSIONS (Limited):
+* View and read the source code.
+* Modify for private, non-public use only.
+* Contributions back to the project are permitted.
+
+2. PROHIBITIONS (Strict):
+* You MAY NOT copy, redistribute, publish, or share the code (modified or unmodified).
+* You MAY NOT use this code in ANY public or commercial project or service.
+
+Any violation automatically terminates your rights.
+Provided "AS IS" without warranty.
+Full terms governed by the laws of England and Wales.
+*/
+
+body:has(> .header-with-banner) {
+    overflow-x: clip;
+}
+
+.header-with-banner {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header-with-banner > header {
+    position: relative;
+}
+
+.banner {
+    padding: var(--gap-2) var(--content-horizontal-padding);
+    background-color: var(--banner-background, var(--bg-color-lighter));
+    border-bottom: 2px solid var(--banner-accent, var(--accent-color));
+}
+
+.banner:not([hidden]) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-1);
+}
+
+.banner p {
+    flex: 1 1 32rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.banner-warning {
+    --banner-background: hsl(38, 38%, 13%);
+    --banner-accent: hsl(40, 85%, 65%);
+}
+
+.banner-alert {
+    --banner-background: hsl(355, 36%, 14%);
+    --banner-accent: hsl(355, 78%, 71%);
+}
+
+.header-with-banner + main > section:first-child {
+    padding-top: var(--first-section-vertical-padding);
+}
